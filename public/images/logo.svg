@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <!-- Shield with portable toilet icon -->
+  <g transform="translate(0, 5)">
+    <!-- Shield outline -->
+    <path d="M35 5 L60 12 C63 13 65 16 65 19 L65 40 C65 55 52 65 35 72 C18 65 5 55 5 40 L5 19 C5 16 7 13 10 12 L35 5 Z" fill="#1B3A5C" stroke="#4CAF50" stroke-width="3"/>
+
+    <!-- Portable toilet body -->
+    <g transform="translate(20, 18)">
+      <!-- Main body -->
+      <rect x="5" y="8" width="24" height="32" rx="2" fill="#7CB342"/>
+      <!-- Roof -->
+      <path d="M3 8 L17 2 L31 8 L31 10 L3 10 Z" fill="#7CB342"/>
+      <!-- Vent -->
+      <rect x="14" y="3" width="6" height="4" rx="1" fill="#558B2F"/>
+      <!-- Door -->
+      <rect x="9" y="12" width="16" height="24" rx="1" fill="#5D8C2E"/>
+      <!-- Door handle -->
+      <circle cx="22" cy="24" r="2" fill="#1B3A5C"/>
+      <!-- Vents -->
+      <rect x="11" y="15" width="12" height="2" rx="0.5" fill="#1B3A5C" opacity="0.4"/>
+      <rect x="11" y="19" width="12" height="2" rx="0.5" fill="#1B3A5C" opacity="0.4"/>
+    </g>
+
+    <!-- Checkmark circle -->
+    <circle cx="52" cy="22" r="10" fill="#4CAF50"/>
+    <path d="M47 22 L50 25 L58 17" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Text positioned to the right of shield -->
+  <text x="80" y="38" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#1B3A5C" letter-spacing="1">PORTABLE TOILETS</text>
+  <text x="80" y="58" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#4CAF50" letter-spacing="2">CHAMP</text>
+</svg>

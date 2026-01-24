@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-sans text-navy-900 bg-white antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* Primary Button - Lime accent for CTAs */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-navy-950 bg-lime-400 rounded-lg hover:bg-lime-500 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+
+  /* Secondary Button - Navy outline */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-navy-900 bg-white border-2 border-navy-900 rounded-lg hover:bg-navy-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-navy-500 focus:ring-offset-2 transition-all duration-200;
+  }
+
+  /* Tertiary Button - Teal for secondary actions */
+  .btn-tertiary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-teal-600 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all duration-200;
+  }
+
+  /* Ghost Button - Minimal */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-4 py-2 text-base font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg transition-all duration-200;
+  }
+
+  /* Section container */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-sm {
+    @apply py-8 md:py-12;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-gray-200;
+  }
+
+  .card-body {
+    @apply p-6 md:p-8;
+  }
+
+  /* Badge styles */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 text-sm font-medium rounded-full;
+  }
+
+  .badge-teal {
+    @apply bg-teal-100 text-teal-800;
+  }
+
+  .badge-navy {
+    @apply bg-navy-100 text-navy-800;
+  }
+
+  .badge-lime {
+    @apply bg-lime-100 text-lime-800;
+  }
+
+  /* Feature icon container */
+  .feature-icon {
+    @apply flex items-center justify-center w-14 h-14 rounded-xl bg-teal-100 text-teal-600;
+  }
+
+  /* Trust badge */
+  .trust-badge {
+    @apply flex items-center gap-2 text-sm font-medium text-navy-600;
+  }
+
+  /* Stats highlight */
+  .stat-number {
+    @apply text-4xl md:text-5xl font-bold text-navy-900;
+  }
+
+  .stat-label {
+    @apply text-sm font-medium text-navy-500 uppercase tracking-wide;
+  }
+
+  /* Form inputs */
+  .input {
+    @apply w-full px-4 py-3 text-navy-900 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 placeholder:text-gray-400;
+  }
+
+  .input-label {
+    @apply block text-sm font-medium text-navy-700 mb-2;
+  }
+
+  /* Navigation link */
+  .nav-link {
+    @apply text-navy-600 hover:text-navy-900 font-medium transition-colors duration-200;
+  }
+
+  .nav-link-active {
+    @apply text-navy-900 font-semibold;
+  }
+
+  /* Hero gradient overlay */
+  .hero-gradient {
+    @apply absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/80 to-navy-900/60;
+  }
+
+  /* Section divider */
+  .divider {
+    @apply w-16 h-1 bg-teal-500 rounded-full;
+  }
+
+  /* Floating CTA bar (mobile) */
+  .floating-cta {
+    @apply fixed bottom-0 left-0 right-0 bg-navy-900 text-white p-4 z-50 md:hidden;
+  }
+}
+
+@layer utilities {
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400;
+  }
+
+  /* Smooth shadow */
+  .shadow-smooth {
+    box-shadow: 0 4px 20px -2px rgba(16, 42, 67, 0.1), 0 2px 8px -2px rgba(16, 42, 67, 0.06);
+  }
+
+  /* Container max widths */
+  .container-tight {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
