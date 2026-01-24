@@ -7,8 +7,8 @@ interface TrustBadgeProps {
 
 function TrustBadge({ icon, label }: TrustBadgeProps) {
   return (
-    <div className="flex flex-col items-center">
-      <div className="relative w-16 h-16 mb-2">
+    <div className="flex flex-col items-center max-w-[120px]">
+      <div className="relative w-16 h-16 mb-4">
         {/* Circular border */}
         <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none">
           <circle cx="32" cy="32" r="30" stroke="#14b8a6" strokeWidth="2" />
@@ -24,7 +24,7 @@ function TrustBadge({ icon, label }: TrustBadgeProps) {
           </svg>
         </div>
       </div>
-      <span className="text-xs font-semibold text-navy-700 uppercase tracking-wide text-center">
+      <span className="text-xs font-semibold text-navy-700 uppercase tracking-wide text-center leading-tight">
         {label}
       </span>
     </div>
