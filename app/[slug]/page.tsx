@@ -9,6 +9,8 @@ import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import ServiceSchema from '@/components/schema/ServiceSchema'
+import UnitComparisonTable from '@/components/UnitComparisonTable'
+import HighRiseROICalculator from '@/components/HighRiseROICalculator'
 
 const PHONE = '(833) 435-6610'
 const PHONE_HREF = 'tel:8334356610'
@@ -526,6 +528,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
         </div>
       </section>
+
+      {/* High-Rise ROI Calculator — construction page only */}
+      {slug === 'construction-site-portable-toilet-rental' && (
+        <HighRiseROICalculator />
+      )}
+
+      {/* Unit Comparison Table */}
+      <UnitComparisonTable />
 
       {/* Related Services Section - Internal Linking */}
       {relatedServices.length > 0 && (

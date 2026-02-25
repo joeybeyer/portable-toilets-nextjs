@@ -358,6 +358,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Unit Comparison Table — moved up per CRO audit: users want to see product diff early */}
+      <UnitComparisonTable />
+
       {/* 3 Pillars Section */}
       <section className="section bg-gray-50">
         <div className="container-wide">
@@ -389,9 +392,6 @@ export default function Home() {
 
       {/* Unit Calculator */}
       <UnitCalculator />
-
-      {/* Unit Comparison Table */}
-      <UnitComparisonTable />
 
       {/* Services Section */}
       <section className="section">

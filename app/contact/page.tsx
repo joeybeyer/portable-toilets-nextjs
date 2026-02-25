@@ -73,15 +73,23 @@ export default function ContactPage() {
     phone: '',
   })
 
+  const [locationContext, setLocationContext] = useState<{ city: string; state: string } | null>(null)
+
   // Set form start time and auto-fill from URL params when component mounts
   useEffect(() => {
     setFormStartTime(Date.now())
 
-    // Auto-fill from URL params (e.g., /contact?zip=90210&project=construction&unit=standard)
+    // Auto-fill from URL params (e.g., /contact?zip=90210&project=construction&unit=standard&city=Chicago&state=IL)
     const urlParams = new URLSearchParams(window.location.search)
     const zipParam = urlParams.get('zip')
     const projectParam = urlParams.get('project')
     const unitParam = urlParams.get('unit')
+    const cityParam = urlParams.get('city')
+    const stateParam = urlParams.get('state')
+
+    if (cityParam) {
+      setLocationContext({ city: cityParam, state: stateParam || '' })
+    }
 
     if (zipParam && /^\d{5}$/.test(zipParam)) {
       setFormData(prev => ({ ...prev, zipCode: zipParam }))
@@ -258,18 +266,21 @@ export default function ContactPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
         </svg>
       </div>
-      <h2 className="text-2xl font-bold text-navy-900 mb-4">Quote Request Received!</h2>
-      <p className="text-navy-600 mb-6">
+      <h2 className="text-2xl font-bold text-navy-900 mb-2">Quote Request Received!</h2>
+      <p className="text-navy-600 mb-2">
         Thank you, {formData.firstName}! We&apos;re reviewing your request for zip code {formData.zipCode}.
       </p>
+      <p className="text-sm text-teal-700 font-medium mb-8">
+        Most customers hear back within 15 minutes.
+      </p>
 
-      <div className="bg-navy-50 rounded-xl p-6 mb-6">
-        <p className="text-navy-700 mb-3">Need immediate assistance?</p>
+      <div className="bg-navy-900 rounded-xl p-6 mb-4">
+        <p className="text-navy-300 text-sm mb-4">Need it faster? Call our dispatch team directly:</p>
         <a
           href={PHONE_HREF}
-          className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-lg"
+          className="flex items-center justify-center gap-3 bg-teal-500 hover:bg-teal-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors w-full"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
           Call {PHONE}
@@ -329,6 +340,17 @@ export default function ContactPage() {
                     {/* Step 1: Location */}
                     {currentStep === 1 && (
                       <div className="space-y-6">
+                        {locationContext && (
+                          <div className="flex items-center gap-2 bg-teal-50 border border-teal-200 rounded-lg px-4 py-3">
+                            <svg className="w-4 h-4 text-teal-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <p className="text-sm text-teal-800 font-medium">
+                              Checking availability in {locationContext.city}{locationContext.state ? `, ${locationContext.state}` : ''} — enter your zip to confirm
+                            </p>
+                          </div>
+                        )}
                         <div>
                           <label htmlFor="zipCode" className="input-label">Zip Code *</label>
                           <input
@@ -340,6 +362,7 @@ export default function ContactPage() {
                             placeholder="Enter your zip code"
                             maxLength={5}
                             autoComplete="postal-code"
+                            autoFocus
                           />
                           <p className="text-sm text-navy-500 mt-2">We&apos;ll check availability in your area</p>
                         </div>
@@ -358,7 +381,7 @@ export default function ContactPage() {
                     {/* Step 2: Project Details */}
                     {currentStep === 2 && (
                       <div className="space-y-6">
-                        {/* Urgency Banner */}
+                        {/* Urgency Banner — persistent at top */}
                         <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 flex items-center gap-3">
                           <div className="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
                             <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -384,18 +407,50 @@ export default function ContactPage() {
                           </select>
                         </div>
 
+                        {/* Unit Type — Card selectors */}
                         <div>
-                          <label htmlFor="unitType" className="input-label">Unit Type *</label>
-                          <select
-                            id="unitType"
-                            value={formData.unitType}
-                            onChange={(e) => updateFormData('unitType', e.target.value)}
-                            className="input"
-                          >
-                            {unitTypes.map((type) => (
-                              <option key={type.value} value={type.value}>{type.label}</option>
+                          <label className="input-label">Unit Type *</label>
+                          <div className="grid grid-cols-1 gap-3 mt-2">
+                            {[
+                              { value: 'standard', icon: '🏗️', label: 'Standard', desc: 'Basic & durable — ideal for job sites', price: '$', limited: false },
+                              { value: 'deluxe', icon: '🥂', label: 'Deluxe / Flushable', desc: 'Flushing toilet + hand sink — great for events', price: '$$', limited: false },
+                              { value: 'ada', icon: '♿', label: 'ADA Accessible', desc: 'Wheelchair ramp + wide door', price: '$$', limited: false },
+                              { value: 'handwashing', icon: '🚿', label: 'Handwashing Station', desc: 'Standalone hand wash unit', price: '$', limited: false },
+                              { value: 'not-sure', icon: '💬', label: 'Not Sure', desc: 'We\'ll help you pick the right unit', price: '', limited: false },
+                            ].map((unit) => (
+                              <button
+                                key={unit.value}
+                                type="button"
+                                onClick={() => updateFormData('unitType', unit.value)}
+                                className={`relative flex items-center gap-4 w-full text-left px-4 py-3 rounded-xl border-2 transition-all ${
+                                  formData.unitType === unit.value
+                                    ? 'border-teal-500 bg-teal-50 shadow-sm'
+                                    : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
+                                }`}
+                              >
+                                <span className="text-2xl flex-shrink-0">{unit.icon}</span>
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center gap-2">
+                                    <span className="font-semibold text-navy-900 text-sm">{unit.label}</span>
+                                    {unit.price && (
+                                      <span className="text-xs font-bold text-teal-600">{unit.price}</span>
+                                    )}
+                                    {unit.limited && (
+                                      <span className="text-xs font-semibold text-orange-600 bg-orange-50 border border-orange-200 px-2 py-0.5 rounded-full">
+                                        Limited
+                                      </span>
+                                    )}
+                                  </div>
+                                  <p className="text-xs text-navy-500 mt-0.5">{unit.desc}</p>
+                                </div>
+                                {formData.unitType === unit.value && (
+                                  <svg className="w-5 h-5 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                                  </svg>
+                                )}
+                              </button>
                             ))}
-                          </select>
+                          </div>
                         </div>
 
                         <div className="flex gap-4">
@@ -476,9 +531,17 @@ export default function ContactPage() {
                           </div>
                         )}
 
-                        {/* Trust Badges */}
+                        {/* Trust Badges — above submit for last-moment reassurance */}
                         <div className="bg-gray-50 rounded-lg p-4">
                           <TrustSection variant="compact" />
+                        </div>
+
+                        {/* Callback expectation */}
+                        <div className="flex items-center gap-2 text-sm text-navy-600">
+                          <svg className="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          Our team typically calls back within <strong className="text-navy-900 mx-1">15 minutes</strong> with your custom quote.
                         </div>
 
                         <div className="flex gap-4">

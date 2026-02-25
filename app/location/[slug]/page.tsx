@@ -184,7 +184,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
               Clean units, on-time delivery, simple pricing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-primary">
+              <Link href={`/contact?city=${encodeURIComponent(location.city)}&state=${location.stateCode}`} className="btn-primary">
                 Get Free Quote
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -350,7 +350,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                     </div>
                   )}
                   <Link
-                    href="/contact"
+                    href={`/contact?city=${encodeURIComponent(location.city)}&state=${location.stateCode}`}
                     className="btn-primary w-full justify-center"
                   >
                     Request Quote
@@ -1098,7 +1098,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
             Get your free quote in minutes. Professional service, competitive pricing, zero hassle.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary bg-white text-teal-700 hover:bg-gray-100">
+            <Link href={`/contact?city=${encodeURIComponent(location.city)}&state=${location.stateCode}`} className="btn-primary bg-white text-teal-700 hover:bg-gray-100">
               Get Free Quote
             </Link>
             <a href={PHONE_HREF} className="btn-secondary bg-transparent border-white text-white hover:bg-white/10">
