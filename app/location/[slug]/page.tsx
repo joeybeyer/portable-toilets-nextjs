@@ -247,6 +247,162 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                 </div>
               </div>
 
+              {/* Pricing Section - Only show if location has pricing data */}
+              {location.pricing && (
+                <div>
+                  <h3 className="text-xl font-bold text-navy-900 mb-6">
+                    Portable Toilet Rental Pricing in {location.city}
+                  </h3>
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {/* Standard */}
+                    <div className="bg-white border border-gray-200 rounded-xl p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
+                          <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                          </svg>
+                        </div>
+                        <h4 className="font-bold text-navy-900">Standard</h4>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between">
+                          <span className="text-sm text-navy-600">Daily</span>
+                          <span className="font-medium text-navy-900">{location.pricing.standard.daily}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-sm text-navy-600">Weekly</span>
+                          <span className="font-medium text-navy-900">{location.pricing.standard.weekly}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-sm text-navy-600">Monthly</span>
+                          <span className="font-medium text-navy-900">{location.pricing.standard.monthly}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Deluxe */}
+                    <div className="bg-white border border-gray-200 rounded-xl p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
+                          <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                          </svg>
+                        </div>
+                        <h4 className="font-bold text-navy-900">Deluxe</h4>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between">
+                          <span className="text-sm text-navy-600">Daily</span>
+                          <span className="font-medium text-navy-900">{location.pricing.deluxe.daily}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-sm text-navy-600">Weekly</span>
+                          <span className="font-medium text-navy-900">{location.pricing.deluxe.weekly}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-sm text-navy-600">Monthly</span>
+                          <span className="font-medium text-navy-900">{location.pricing.deluxe.monthly}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* ADA Accessible */}
+                    <div className="bg-white border border-gray-200 rounded-xl p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
+                          <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.5v15m7.5-7.5h-15" />
+                          </svg>
+                        </div>
+                        <h4 className="font-bold text-navy-900">ADA Accessible</h4>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between">
+                          <span className="text-sm text-navy-600">Daily</span>
+                          <span className="font-medium text-navy-900">{location.pricing.ada.daily}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-sm text-navy-600">Weekly</span>
+                          <span className="font-medium text-navy-900">{location.pricing.ada.weekly}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-sm text-navy-600">Monthly</span>
+                          <span className="font-medium text-navy-900">{location.pricing.ada.monthly}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Luxury Trailer */}
+                    <div className="bg-white border border-gray-200 rounded-xl p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
+                          <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                          </svg>
+                        </div>
+                        <h4 className="font-bold text-navy-900">Luxury Trailer</h4>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between">
+                          <span className="text-sm text-navy-600">Daily</span>
+                          <span className="font-medium text-navy-900">{location.pricing.luxury.daily}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-sm text-navy-600">Weekly</span>
+                          <span className="font-medium text-navy-900">{location.pricing.luxury.weekly}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-sm text-navy-600">Monthly</span>
+                          <span className="font-medium text-navy-900">{location.pricing.luxury.monthly}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-sm text-navy-600 mt-4">
+                    * Prices shown are estimates. Final pricing depends on rental duration, unit quantity, delivery location, and servicing needs. Contact us for an exact quote for your {location.city} event or project.
+                  </p>
+                </div>
+              )}
+
+              {/* Process Steps - Only show if location has process steps */}
+              {location.processSteps && location.processSteps.length > 0 && (
+                <div className="bg-navy-900 rounded-2xl p-8">
+                  <h3 className="text-xl font-bold text-white mb-6">
+                    How It Works - Rent Portable Toilets in {location.city}
+                  </h3>
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                    {location.processSteps.map((proc) => (
+                      <div key={proc.step} className="text-center">
+                        <div className="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <span className="text-white font-bold text-lg">{proc.step}</span>
+                        </div>
+                        <h4 className="font-bold text-white mb-2">{proc.title}</h4>
+                        <p className="text-sm text-navy-300">{proc.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Neighborhoods Served - Show if location has neighborhoods array */}
+              {location.neighborhoods && location.neighborhoods.length > 0 && (
+                <div>
+                  <h3 className="text-xl font-bold text-navy-900 mb-6">
+                    {location.city} Neighborhoods We Serve
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {location.neighborhoods.map((hood) => (
+                      <span
+                        key={hood}
+                        className="px-4 py-2 bg-gray-100 text-navy-700 rounded-full text-sm font-medium"
+                      >
+                        {hood}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Services */}
               <div>
                 <h3 className="text-xl font-bold text-navy-900 mb-6">
