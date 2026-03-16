@@ -609,12 +609,12 @@ Our service area encompasses all of Miami-Dade and Broward Counties, including M
       { type: 'Weekly Event Rental', price: '$350-$500/week', description: 'Perfect for week-long festivals, sports tournaments, and multi-day events.' }
     ],
     processSteps: [
-      'Request a Quote: Call (833) 435-6610 or visit our website to describe your event or project needs, location, date, and expected attendance.',
-      'Receive Custom Quote: Our Miami team will provide a detailed quote within 2 hours during business hours, including unit recommendations, delivery schedule, and pricing.',
-      'Confirm Your Order: Accept the quote and provide a deposit to reserve your units. We recommend confirming at least 7 days before your event.',
-      'Delivery: Our team delivers units to your Miami location on the scheduled date, sets them up professionally, and ensures proper placement.',
-      'Servicing (for multi-day rentals): We perform scheduled servicing throughout your rental period to maintain cleanliness.',
-      'Pickup: After your event or project completion, we remove the units and handle waste disposal properly.'
+      { step: 1, title: 'Request a Quote', description: 'Call (833) 435-6610 or visit our website to describe your event or project needs, location, date, and expected attendance.' },
+      { step: 2, title: 'Receive Custom Quote', description: 'Our Miami team will provide a detailed quote within 2 hours during business hours, including unit recommendations, delivery schedule, and pricing.' },
+      { step: 3, title: 'Confirm Your Order', description: 'Accept the quote and provide a deposit to reserve your units. We recommend confirming at least 7 days before your event.' },
+      { step: 4, title: 'Delivery', description: 'Our team delivers units to your Miami location on the scheduled date, sets them up professionally, and ensures proper placement.' },
+      { step: 5, title: 'Servicing', description: 'We perform scheduled servicing throughout your rental period to maintain cleanliness.' },
+      { step: 6, title: 'Pickup', description: 'After your event or project completion, we remove the units and handle waste disposal properly.' }
     ]
   },
   {
@@ -1268,12 +1268,12 @@ Our service area covers all of Harris County and extends to Montgomery, Fort Ben
       { type: 'High-Rise Unit', price: '$350-$400/month', description: 'Specialized units for downtown Houston high-rise construction projects.' }
     ],
     processSteps: [
-      'Request a Quote: Contact us at (833) 435-6610 or online to describe your Houston event or construction project, including location, date, expected attendance, and duration.',
-      'Receive Custom Quote: Our Houston team will provide a detailed quote within 2 hours during business hours, with unit recommendations, delivery schedule, and transparent pricing.',
-      'Confirm Your Order: Accept the quote and provide a deposit to reserve your units. We recommend booking at least 7 days in advance for events, and 3 days for construction rentals.',
-      'Delivery: Our team delivers units to your Houston location on the scheduled date, sets them up professionally, and ensures proper placement for optimal access and user convenience.',
-      'Servicing (for multi-day rentals): We perform scheduled servicing throughout your rental period to maintain cleanliness and hygiene standards.',
-      'Pickup: After your event or project completion, we remove the units promptly and handle all waste disposal according to Texas environmental regulations.'
+      { step: 1, title: 'Request a Quote', description: 'Contact us at (833) 435-6610 or online to describe your Houston event or construction project, including location, date, expected attendance, and duration.' },
+      { step: 2, title: 'Receive Custom Quote', description: 'Our Houston team will provide a detailed quote within 2 hours during business hours, with unit recommendations, delivery schedule, and transparent pricing.' },
+      { step: 3, title: 'Confirm Your Order', description: 'Accept the quote and provide a deposit to reserve your units. We recommend booking at least 7 days in advance for events, and 3 days for construction rentals.' },
+      { step: 4, title: 'Delivery', description: 'Our team delivers units to your Houston location on the scheduled date, sets them up professionally, and ensures proper placement for optimal access and user convenience.' },
+      { step: 5, title: 'Servicing', description: 'We perform scheduled servicing throughout your rental period to maintain cleanliness and hygiene standards.' },
+      { step: 6, title: 'Pickup', description: 'After your event or project completion, we remove the units promptly and handle all waste disposal according to Texas environmental regulations.' }
     ]
   },
   {
