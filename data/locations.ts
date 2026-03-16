@@ -14,6 +14,7 @@ export interface Location {
   latitude?: number
   longitude?: number
   neighborhoods?: string[]
+  description?: string
   pricing?: {
     standard: { daily: string; weekly: string; monthly: string }
     deluxe: { daily: string; weekly: string; monthly: string }
