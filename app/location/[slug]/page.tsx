@@ -45,15 +45,19 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
     otherMeta['ICBM'] = `${coordinates.lat}, ${coordinates.lng}`
   }
 
+  // Use location-specific title/metaDescription if available, otherwise use defaults
+  const pageTitle = location.title || `Portable Toilet Rental ${location.city}, ${location.stateCode} [Same-Day Delivery]`
+  const pageDescription = location.metaDescription || `Need portable toilets in ${location.city}? Get clean units delivered fast with same-day service available. Starting at $250. Call ${PHONE} for your free quote today.`
+
   return {
-    title: `Portable Toilet Rental ${location.city}, ${location.stateCode} [Same-Day Delivery]`,
-    description: `Need portable toilets in ${location.city}? Get clean units delivered fast with same-day service available. Starting at $250. Call ${PHONE} for your free quote today.`,
+    title: pageTitle,
+    description: pageDescription,
     alternates: {
       canonical: `https://portabletoiletschamp.com/location/${slug}`,
     },
     openGraph: {
-      title: `Portable Toilet Rental ${location.city}, ${location.stateCode} [Same-Day Delivery]`,
-      description: `Need portable toilets in ${location.city}? Get clean units delivered fast with same-day service available. Starting at $250.`,
+      title: pageTitle,
+      description: pageDescription,
       type: 'website',
     },
     other: otherMeta,
