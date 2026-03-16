@@ -597,7 +597,7 @@ Our service area encompasses all of Miami-Dade and Broward Counties, including M
       },
       {
         question: 'Do I need a permit for portable toilets in Miami?',
-        answer: 'For private property events in Miami, no permit is typically required. However, for public spaces, beach locations, or right-of-way placements, permits may be required from Miami-Dade County or the specific city (Miami Beach, Coral Gables, etc.). Our team can help guide you through the permit process and may coordinate with local authorities on your behalf. Construction site placements typically don't require special permits but must comply with OSHA and Florida health department regulations.'
+        answer: 'For private property events in Miami, no permit is typically required. However, for public spaces, beach locations, or right-of-way placements, permits may be required from Miami-Dade County or the specific city (Miami Beach, Coral Gables, etc.). Our team can help guide you through the permit process and may coordinate with local authorities on your behalf. Construction site placements typically don\'t require special permits but must comply with OSHA and Florida health department regulations.'
       }
     ],
     pricingRanges: [
