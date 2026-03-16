@@ -14,6 +14,13 @@ export interface Location {
   latitude?: number
   longitude?: number
   neighborhoods?: string[]
+  pricing?: {
+    standard: { daily: string; weekly: string; monthly: string }
+    deluxe: { daily: string; weekly: string; monthly: string }
+    ada: { daily: string; weekly: string; monthly: string }
+    luxury: { daily: string; weekly: string; monthly: string }
+  }
+  processSteps?: { step: number; title: string; description: string }[]
 }
 
 // Generate geo-targeted PAA FAQs for a location
@@ -56,7 +63,67 @@ export const locations: Location[] = [
     metaDescription: 'Looking for Portable Toilet Rental in Los Angeles, CA? Portable Toilets Champ offers top-notch service for events and construction sites in LA.',
     phone: '(213) 714-8399',
     address: '6132 Wilshire Blvd, Los Angeles, CA 90048',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9795.267287888637!2d-118.3626757!3d34.0629217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b900025eb477%3A0xe2a174376deff14b!2sPortable%20Toilets%20Champ!5e1!3m2!1sen!2sus!4v1767702668217!5m2!1sen!2sus'
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9795.267287888637!2d-118.3626757!3d34.0629217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b900025eb477%3A0xe2a174376deff14b!2sPortable%20Toilets%20Champ!5e1!3m2!1sen!2sus!4v1767702668217!5m2!1sen!2sus',
+    paaFaqs: [
+      {
+        question: 'How much does portable toilet rental cost in Los Angeles?',
+        answer: 'Portable toilet rental in Los Angeles typically ranges from $250-$350 for a standard 28-day rental period with weekly servicing. Daily rates start at $75-$125 per unit, while weekly rentals cost $150-$200. Deluxe units with hand-washing stations run $175-$275 per week. Luxury restroom trailers, popular for Hollywood events and upscale gatherings, start at $400-$600 per day. Los Angeles pricing accounts for traffic, parking, and permit considerations. Call (213) 714-8399 for your custom quote.'
+      },
+      {
+        question: 'How many portable toilets do I need for an event in Los Angeles?',
+        answer: 'For LA events, plan 1 standard portable toilet per 50 guests for a 4-hour event. If serving alcohol (common at LA rooftop parties and beach events), increase to 1 per 35 guests. For multi-day festivals at venues like Santa Monica Pier or Hollywood Bowl, calculate based on peak attendance. Construction sites in LA require 1 unit per 10 workers per shift. Our team can provide a detailed needs assessment for your specific Los Angeles event or job site.'
+      },
+      {
+        question: 'Do you offer same-day delivery for portable toilets in Los Angeles?',
+        answer: 'Yes, same-day and next-day portable toilet delivery is available throughout Los Angeles, including Downtown LA, Santa Monica, Hollywood, Burbank, and all surrounding areas. Our LA fleet is strategically positioned to handle rush orders for film sets, construction emergencies, and last-minute event needs. Same-day delivery may include additional fees depending on location and availability. Call (213) 714-8399 for immediate availability in your area.'
+      },
+      {
+        question: 'What types of portable toilets are available for LA events and construction?',
+        answer: 'Portable Toilets Champ offers the complete range of units in Los Angeles: standard portable toilets, deluxe flushable units with sinks, ADA-accessible wheelchair-accessible toilets, luxury restroom trailers with climate control and upscale finishes, high-rise construction units with crane hooks, and portable sink stations. We also offer VIP units with marble countertops and stereo systems—perfect for red carpet events and exclusive LA parties.'
+      },
+      {
+        question: 'Do LA portable toilet rentals include servicing?',
+        answer: 'Yes, all our Los Angeles portable toilet rentals include regular servicing. Standard weekly servicing includes waste pumping, thorough sanitization with hospital-grade cleaners, restocking of toilet paper and supplies, and unit inspection. For high-traffic events in LA (beach festivals, sports events, concerts), we recommend more frequent servicing. Long-term construction site rentals in LA typically include twice-weekly servicing during active phases.'
+      },
+      {
+        question: 'What LA neighborhoods do you serve?',
+        answer: 'We provide portable toilet rental services throughout Los Angeles including Downtown LA, Hollywood, Beverly Hills, Santa Monica, Venice, Burbank, Glendale, Pasadena, Long Beach, West Hollywood, Malibu, Culver City, Inglewood, Compton, and all surrounding areas. Our LA service coverage extends to Orange County cities including Anaheim, Santa Ana, and Garden Grove.'
+      },
+      {
+        question: 'Are there permit requirements for portable toilets in Los Angeles?',
+        answer: 'Yes, Los Angeles County and City often require permits for portable toilet placement, especially for events on public property, street closures, or long-term construction site rentals. Our team is familiar with LA permit requirements and can help guide you through the process. For private property events in LA, permits are typically not required. We recommend checking with your specific LA venue or the LA County Department of Public Works.'
+      },
+      {
+        question: 'How far in advance should I book portable toilets for an LA event?',
+        answer: 'For best availability in Los Angeles, we recommend booking 2-4 weeks in advance for standard events. For large-scale events (500+ guests), film productions, or luxury trailer rentals during peak season (spring/summer), book 4-6 weeks ahead. However, we often accommodate last-minute orders in LA due to our large fleet and multiple service routes. Emergency same-day service is available for urgent needs.'
+      },
+      {
+        question: 'What makes LA portable toilet rental different from other cities?',
+        answer: 'Los Angeles presents unique challenges: heavy traffic affecting delivery times, limited parking requiring strategic placement, permit requirements for many venues, beach/sand placement needs in Santa Monica and Venice, high-rise construction in Downtown LA, and the need for premium units for Hollywood events. Our LA team has experience with all these situations and provides specialized solutions including sand-friendly units, crane-accessible high-rise toilets, and luxury trailers for celebrity events.'
+      },
+      {
+        question: 'Do you provide portable toilet rental for film productions in Los Angeles?',
+        answer: 'Absolutely. We specialize in film and TV production portable restroom services throughout Los Angeles. Our film industry offerings include: restroom trailers with Hollywood-style amenities, on-set units for cast and crew, makeup stations with vanities, portable showers for location shoots, and VIP units for talent. We understand union requirements, studio access protocols, and the need for discreet, high-quality facilities. Our Burbank and Hollywood location ensures fast response to studio lots.'
+      }
+    ],
+    neighborhoods: [
+      'Hollywood', 'Downtown LA', 'Santa Monica', 'Venice', 'Burbank',
+      'Beverly Hills', 'West Hollywood', 'Malibu', 'Long Beach', 'Pasadena',
+      'Glendale', 'Inglewood', 'Culver City', 'Compton', 'Torrance'
+    ],
+    pricing: {
+      standard: { daily: '$75-125', weekly: '$150-200', monthly: '$250-350' },
+      deluxe: { daily: '$125-175', weekly: '$200-275', monthly: '$350-450' },
+      ada: { daily: '$100-150', weekly: '$175-250', monthly: '$300-400' },
+      luxury: { daily: '$400-600', weekly: '$800-1200', monthly: 'Call for quote' }
+    },
+    processSteps: [
+      { step: 1, title: 'Request a Quote', description: 'Contact us at (213) 714-8399 or fill out our online form with your event or project details.' },
+      { step: 2, title: 'Choose Your Units', description: 'Select from our range of standard, deluxe, ADA-compliant, or luxury restroom trailers based on your needs.' },
+      { step: 3, title: 'Schedule Delivery', description: 'Our team coordinates delivery and placement at your Los Angeles location at your preferred time.' },
+      { step: 4, title: 'Enjoy Clean Facilities', description: 'Units are professionally sanitized before delivery with regular servicing included throughout your rental.' },
+      { step: 5, title: 'Pickup & Final Servicing', description: 'We handle pickup and final servicing after your event or project concludes. Simple, hassle-free.' }
+    ]
   },
   {
     slug: 'your-ultimate-guide-to-portable-toilet-rental-in-anaheim',
@@ -422,8 +489,73 @@ export const locations: Location[] = [
     state: 'Florida',
     stateCode: 'FL',
     title: 'Ultimate Guide to Portable Toilet Services in Miami',
-    metaDescription: 'Looking for Portable Toilet Rental in Miami, FL? Portable Toilets Champ offers comprehensive service.',
-    phone: '(833) 435-6610'
+    metaDescription: 'Looking for Portable Toilet Rental in Miami, FL? Portable Toilets Champ offers comprehensive service for events, construction sites, and beach venues across South Florida.',
+    phone: '(833) 435-6610',
+    address: '3900 NW 25th St, Miami, FL 33142',
+    latitude: 25.8075,
+    longitude: -80.2596,
+    neighborhoods: ['Miami Beach', 'Brickell', 'Downtown Miami', 'Wynwood', 'Coral Gables', 'South Beach', 'Key Biscayne', 'Little Havana', 'Midtown Miami', 'Coconut Grove', 'Aventura', 'Hallandale Beach', 'Hollywood', 'Fort Lauderdale'],
+    description: `Miami's premier portable toilet rental service serving the entire South Florida metropolitan area from Miami Beach to Fort Lauderdale. Whether you're organizing a beach festival in South Beach, managing a construction project in Brickell, or hosting a backyard celebration in Coral Gables, we deliver clean, well-maintained portable toilets directly to your location.
+
+Our fleet of modern portable sanitation units includes standard portable toilets perfect for construction sites and outdoor events, deluxe units with built-in hand washing stations ideal for weddings and corporate events, ADA-accessible handicap units ensuring compliance and accessibility for all guests, and luxury restroom trailers with climate control, lighting, and premium finishes for high-end events and VIP areas.
+
+Miami's tropical climate presents unique challenges for portable sanitation, including high humidity, frequent rain showers, and intense heat. Our units are designed to withstand these conditions while maintaining a clean, comfortable experience for users. We offer climate-controlled options specifically designed for Miami's hot and humid weather, ensuring user comfort regardless of the temperature outside.
+
+With Miami hosting numerous large-scale events throughout the year, including Art Basel, Miami Music Week, Ultra Music Festival, and countless beach parties and sports events, the demand for reliable portable sanitation services remains consistently high. Our company has extensive experience serving major events across the Miami metropolitan area, from intimate backyard gatherings to massive festivals attracting tens of thousands of attendees.
+
+For construction sites throughout Miami-Dade County, we provide reliable portable toilet solutions that keep your job site compliant with Florida health and safety regulations. We offer regular servicing schedules tailored to your site's specific needs, waste removal, and unit maintenance to ensure a clean and sanitary work environment for your crew.
+
+Our service area encompasses all of Miami-Dade and Broward Counties, including Miami Beach, Fort Lauderdale, Hollywood, Hallandale Beach, Aventura, and surrounding areas. We offer flexible delivery schedules, competitive pricing, and exceptional customer service backed by years of experience in the South Florida portable sanitation industry.`,
+    paaFaqs: [
+      {
+        question: 'How much does portable toilet rental cost in Miami?',
+        answer: 'Portable toilet rental in Miami, FL typically costs $275-$350 for a standard 28-day rental cycle with weekly servicing. Standard units for construction sites start at $275 per month, while deluxe units with hand washing stations range from $300-$350. Luxury restroom trailers for high-end events start at $500 per day. Same-day delivery available in Miami-Dade and Broward Counties for an additional rush fee. Call (833) 435-6610 for a free quote tailored to your specific Miami event or project.'
+      },
+      {
+        question: 'How many portable toilets do I need for a Miami beach event?',
+        answer: 'For beach events in Miami, plan for 1 portable toilet per 50 guests for events under 4 hours. Since Miami beach events often involve walking distance from parking and venues, consider additional units to reduce wait times. For multi-day festivals like those during Miami Music Week or Art Basel, plan for 1 unit per 75 guests daily. If serving alcohol (common at Miami beach parties), increase capacity to 1 unit per 35-50 guests. Our Miami team can provide specific recommendations based on your event size, duration, and expected alcohol service.'
+      },
+      {
+        question: 'Do you deliver portable toilets to Miami Beach?',
+        answer: 'Yes, we provide full portable toilet delivery services to Miami Beach, including South Beach, Mid-Beach, North Beach, and Key Biscayne. Our trucks can access most beach locations, though some areas may require special permits or coordination with Miami Beach parking authorities. We recommend booking at least 7 days in advance for beach events to ensure proper placement permits. Our team will coordinate with you to determine the best delivery and placement strategy for your specific beach location.'
+      },
+      {
+        question: 'What types of portable toilets are best for Miami construction sites?',
+        answer: 'For Miami construction sites, we recommend standard portable toilets for general construction use, deluxe units with hand washing stations for sites with more than 10 workers, and ADA-accessible units to meet Florida accessibility requirements. High-rise construction projects in Brickell and Downtown Miami may require crane-lifted units or special placement arrangements. All our units are designed to handle Miami humidity and occasional heavy rain. We offer weekly servicing included in the rental price, with more frequent service available for larger crews.'
+      },
+      {
+        question: 'Can I get same-day portable toilet delivery in Miami?',
+        answer: 'Yes, same-day and next-day delivery is available throughout Miami-Dade and Broward Counties. Our Miami distribution center maintains a ready fleet to handle urgent requests for construction site emergencies, last-minute event needs, or unexpected situations. Same-day delivery typically requires ordering before noon and may incur a rush delivery fee of $50-$100 depending on location and unit availability. Call (833) 435-6610 to check same-day availability for your specific Miami location.'
+      },
+      {
+        question: 'Are luxury restroom trailers available in Miami?',
+        answer: 'Yes, luxury restroom trailers are available for Miami events including weddings, corporate functions, film productions, and high-profile events. Our luxury trailers feature climate control, flushing toilets, running water sinks, LED lighting, premium finishes, and sound systems. They are perfect for VIP areas at music festivals, upscale weddings in Coral Gables or Key Biscayne, and corporate events at Miami Beach hotels. Prices start at $500 per day for a 2-station trailer, with premium models available for larger events. Book early as luxury units are in high demand during Miami event season.'
+      },
+      {
+        question: 'How often are portable toilets serviced in Miami?',
+        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, and restocking of toilet paper and hand sanitizer. For high-traffic events or larger construction crews, more frequent servicing (2-3 times per week) is recommended. Miami's heat can accelerate odor buildup, so increased servicing ensures a pleasant experience. Servicing is performed by our professional Miami-based team, typically early morning to avoid disrupting your event or construction operations.'
+      },
+      {
+        question: 'Do I need a permit for portable toilets in Miami?',
+        answer: 'For private property events in Miami, no permit is typically required. However, for public spaces, beach locations, or right-of-way placements, permits may be required from Miami-Dade County or the specific city (Miami Beach, Coral Gables, etc.). Our team can help guide you through the permit process and may coordinate with local authorities on your behalf. Construction site placements typically don't require special permits but must comply with OSHA and Florida health department regulations.'
+      }
+    ],
+    pricingRanges: [
+      { type: 'Standard Unit', price: '$275/month', description: 'Basic portable toilet for construction sites and events. Includes weekly servicing.' },
+      { type: 'Deluxe Unit', price: '$300-$350/month', description: 'Portable toilet with built-in hand washing station. Ideal for events and work sites.' },
+      { type: 'ADA Accessible', price: '$325-$375/month', description: 'Handicap-accessible unit meeting ADA requirements. Required for events over certain sizes.' },
+      { type: 'Luxury Restroom Trailer', price: '$500+/day', description: 'Climate-controlled trailer with flushing toilets, sinks, premium finishes for VIP events.' },
+      { type: 'Daily Event Rental', price: '$150-$250/day', description: 'Short-term rental for one-day events. Delivery and pickup included.' },
+      { type: 'Weekly Event Rental', price: '$350-$500/week', description: 'Perfect for week-long festivals, sports tournaments, and multi-day events.' }
+    ],
+    processSteps: [
+      'Request a Quote: Call (833) 435-6610 or visit our website to describe your event or project needs, location, date, and expected attendance.',
+      'Receive Custom Quote: Our Miami team will provide a detailed quote within 2 hours during business hours, including unit recommendations, delivery schedule, and pricing.',
+      'Confirm Your Order: Accept the quote and provide a deposit to reserve your units. We recommend confirming at least 7 days before your event.',
+      'Delivery: Our team delivers units to your Miami location on the scheduled date, sets them up professionally, and ensures proper placement.',
+      'Servicing (for multi-day rentals): We perform scheduled servicing throughout your rental period to maintain cleanliness.',
+      'Pickup: After your event or project completion, we remove the units and handle waste disposal properly.'
+    ]
   },
   {
     slug: 'portable-toilet-service-in-miami-a-comprehensive-guide',
@@ -431,8 +563,11 @@ export const locations: Location[] = [
     state: 'Florida',
     stateCode: 'FL',
     title: 'Portable Toilet Service in Miami',
-    metaDescription: 'Looking for Portable Toilet Rental in Miami, FL? Portable Toilets Champ offers comprehensive service.',
-    phone: '(833) 435-6610'
+    metaDescription: 'Looking for Portable Toilet Rental in Miami, FL? Portable Toilets Champ offers comprehensive service for events, construction sites, and beach venues across South Florida.',
+    phone: '(833) 435-6610',
+    address: '3900 NW 25th St, Miami, FL 33142',
+    latitude: 25.8075,
+    longitude: -80.2596
   },
   {
     slug: 'portable-toilet-service-in-tallahassee-a-comprehensive-guide',
@@ -834,8 +969,72 @@ export const locations: Location[] = [
     title: 'Portable Toilet Rental in Houston, TX',
     metaDescription: 'Need portable toilets in Houston? Same-day delivery for events & job sites. Clean units from $250. Call (833) 435-6610 for your free quote.',
     phone: '(833) 435-6610',
+    address: '10900 Katy Fwy, Houston, TX 77043',
     latitude: 29.7604,
-    longitude: -95.3698
+    longitude: -95.3698,
+    neighborhoods: ['Downtown Houston', 'Midtown', 'Montrose', 'Heights', 'Galleria', 'Texas Medical Center', 'Museum District', 'Energy Corridor', 'West University Place', 'Rice Village', 'Spring Branch', 'Memorial', 'River Oaks', 'Clear Lake', 'Pearland', 'Sugar Land', 'The Woodlands', 'Kingwood', 'Humble', 'Cypress', 'Katy', 'Missouri City', 'League City', 'Baytown', 'Pasadena'],
+    description: `Houston's trusted portable toilet rental service serving the entire Greater Houston metropolitan area, from Downtown Houston to The Woodlands, Sugar Land, and beyond. Whether you're managing a construction project in the Energy Corridor, hosting a community event in Miller Outdoor Theatre, or organizing a large-scale festival, we deliver clean, well-maintained portable sanitation units to locations throughout Harris County and surrounding areas.
+
+Our comprehensive inventory includes standard portable toilets suitable for construction sites and outdoor events, deluxe units featuring built-in hand washing stations perfect for weddings and corporate gatherings, ADA-compliant accessible units ensuring compliance with Texas accessibility requirements, high-rise construction units designed for downtown Houston high-rises, and luxury restroom trailers with climate control, flushing toilets, and premium amenities for upscale events and VIP experiences.
+
+Houston's climate presents unique considerations for portable sanitation. Summer temperatures regularly exceed 95°F with high humidity, making climate-controlled options essential for events and creating challenging conditions for standard units. Our units are equipped to handle Houston's extreme heat, humidity, and occasional severe weather. During the milder spring and fall seasons, standard units provide excellent service, while our climate-controlled options ensure comfort regardless of Texas weather conditions.
+
+The Houston metropolitan area hosts numerous large-scale events throughout the year, including the Houston Livestock Show and Rodeo (one of the largest events in the country), Texans games at NRG Stadium, Astros games at Minute Maid Park, major concerts, corporate events, and community festivals. Our company has extensive experience serving these diverse events, from small neighborhood gatherings to massive festivals attracting hundreds of thousands of attendees.
+
+For construction projects across Houston, we provide reliable portable sanitation solutions that keep your job site compliant with Texas health and safety regulations. Our services are available throughout the Energy Corridor, Texas Medical Center, Downtown Houston high-rises, and suburban construction sites in The Woodlands, Katy, Sugar Land, and beyond. We offer flexible servicing schedules, regular waste removal, and unit maintenance to ensure clean and sanitary conditions for your workers.
+
+Our service area covers all of Harris County and extends to Montgomery, Fort Bend, Brazoria, Galveston, and Liberty Counties. We offer same-day and next-day delivery throughout the Houston area, competitive pricing, and exceptional customer service from our locally-based team with deep roots in the Houston community.`,
+    paaFaqs: [
+      {
+        question: 'How much does portable toilet rental cost in Houston?',
+        answer: 'Portable toilet rental in Houston, TX costs $250-$300 per month for a standard 28-day rental cycle with weekly servicing included. Deluxe units with hand washing stations range from $275-$325 per month. ADA-accessible units are $300-$350 per month. Luxury restroom trailers for events start at $450 per day. Daily event rentals begin at $125-$175 per unit. Same-day delivery available throughout Harris County for rush orders. Call (833) 435-6610 for a free customized quote for your Houston event or construction project.'
+      },
+      {
+        question: 'How many portable toilets do I need for a Houston event?',
+        answer: 'For Houston events, plan for 1 standard portable toilet per 50 guests for events lasting up to 4 hours. For events with alcohol service (common at Houston festivals and outdoor parties), increase to 1 unit per 35-40 guests. The Houston Livestock Show and Rodeo and similar multi-day events should plan for 1 unit per 75-100 guests per day. For large outdoor festivals at venues like Discovery Green or Miller Outdoor Theatre, our team can provide detailed capacity planning based on expected attendance, event duration, and layout.'
+      },
+      {
+        question: 'Do you serve The Woodlands and Sugar Land?',
+        answer: 'Yes, we provide portable toilet delivery throughout the Greater Houston metropolitan area, including The Woodlands, Sugar Land, Katy, Cypress, Pearland, League City, Missouri City, Kingwood, Humble, Baytown, and Pasadena. Delivery fees may apply for locations outside the immediate Houston loop (610 corridor). Same-day and next-day service is available in most suburban areas with advance notice. Our team has extensive experience serving events and construction sites throughout these communities.'
+      },
+      {
+        question: 'What portable toilet options are available for Houston construction sites?',
+        answer: 'For Houston construction sites, we offer standard portable toilets, deluxe units with hand washing stations, ADA-accessible units for accessibility compliance, and crane-lift units for high-rise construction in Downtown Houston, the Energy Corridor, and Texas Medical Center. All units are designed to handle Houston weather conditions including extreme heat, humidity, and occasional severe weather. Weekly servicing is included in rental pricing, with additional servicing available for larger crews or demanding work environments.'
+      },
+      {
+        question: 'Can I get same-day delivery in Houston?',
+        answer: 'Yes, same-day delivery is available throughout the Houston metro area. Our Houston distribution center maintains a ready fleet to handle urgent requests for construction site emergencies, last-minute event needs, or project overruns. Same-day delivery requires ordering before 2 PM and is subject to availability. A rush delivery fee of $50-$100 may apply depending on location and unit type. Call (833) 435-6610 to check same-day availability for your specific Houston address.'
+      },
+      {
+        question: 'Are luxury restroom trailers available for Houston events?',
+        answer: 'Yes, luxury restroom trailers are available for Houston weddings, corporate events, film productions, and high-profile gatherings. Our luxury trailers feature climate control, flushing toilets, running water sinks, LED lighting, premium interiors, and sound systems. They are perfect for upscale events at venues like The Briarwood, City Hall downtown, or waterfront locations along Buffalo Bayou. Pricing starts at $450 per day for a 2-station trailer. Book early, especially during peak event season (spring and fall) and around major Houston events.'
+      },
+      {
+        question: 'How often are portable toilets serviced in Houston?',
+        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, interior sanitization, and restocking of toilet paper and hand sanitizer. For high-traffic events or construction sites with more than 20 workers, twice-weekly servicing is recommended. Houston's summer heat can accelerate odor buildup and bacterial growth, making more frequent servicing essential for user comfort and hygiene. All servicing is performed by our professional Houston team at times that minimize disruption to your event or operations.'
+      },
+      {
+        question: 'Do I need permits for portable toilets at Houston public events?',
+        answer: 'For private property events in Houston, no special permits are typically required. For events in public spaces, parks, or right-of-way areas, permits may be required from the City of Houston Parks Department or relevant municipal authority. Our team can help guide you through the permit process. Construction site placements must comply with OSHA regulations and Texas health department requirements. We ensure all units meet applicable standards for placement and maintenance.'
+      }
+    ],
+    pricingRanges: [
+      { type: 'Standard Unit', price: '$250/month', description: 'Basic portable toilet for construction sites and events. Includes weekly servicing.' },
+      { type: 'Deluxe Unit', price: '$275-$325/month', description: 'Portable toilet with hand washing station. Ideal for events and work sites with more workers.' },
+      { type: 'ADA Accessible', price: '$300-$350/month', description: 'Handicap-accessible unit meeting ADA and Texas accessibility requirements.' },
+      { type: 'Luxury Restroom Trailer', price: '$450+/day', description: 'Climate-controlled trailer with flushing toilets, sinks, premium finishes for VIP events.' },
+      { type: 'Daily Event Rental', price: '$125-$175/day', description: 'Short-term rental for one-day events. Delivery and pickup included.' },
+      { type: 'Weekly Event Rental', price: '$300-$450/week', description: 'Perfect for week-long events, festivals, and extended projects.' },
+      { type: 'High-Rise Unit', price: '$350-$400/month', description: 'Specialized units for downtown Houston high-rise construction projects.' }
+    ],
+    processSteps: [
+      'Request a Quote: Contact us at (833) 435-6610 or online to describe your Houston event or construction project, including location, date, expected attendance, and duration.',
+      'Receive Custom Quote: Our Houston team will provide a detailed quote within 2 hours during business hours, with unit recommendations, delivery schedule, and transparent pricing.',
+      'Confirm Your Order: Accept the quote and provide a deposit to reserve your units. We recommend booking at least 7 days in advance for events, and 3 days for construction rentals.',
+      'Delivery: Our team delivers units to your Houston location on the scheduled date, sets them up professionally, and ensures proper placement for optimal access and user convenience.',
+      'Servicing (for multi-day rentals): We perform scheduled servicing throughout your rental period to maintain cleanliness and hygiene standards.',
+      'Pickup: After your event or project completion, we remove the units promptly and handle all waste disposal according to Texas environmental regulations.'
+    ]
   },
   {
     slug: 'portable-toilet-rental-tampa-fl',
