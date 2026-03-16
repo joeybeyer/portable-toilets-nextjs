@@ -21,6 +21,7 @@ export interface Location {
     ada: { daily: string; weekly: string; monthly: string }
     luxury: { daily: string; weekly: string; monthly: string }
   }
+  pricingRanges?: { type: string; price: string; description: string }[]
   processSteps?: { step: number; title: string; description: string }[]
 }
 
