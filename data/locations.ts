@@ -369,7 +369,7 @@ export const locations: Location[] = [
     latitude: 34.122924,
     longitude: -117.693395,
     neighborhoods: ['Claremont Village', 'Claremont Colleges', 'Indian Hill', 'North Claremont', 'South Claremont', 'East Claremont', 'The Claremont Hills', 'Pomona', 'La Verne', 'San Dimas', 'Upland', 'Montclair', 'Ontario', 'Chino', 'Claremont Meadows', 'Blaisdell', 'Chapparal', 'Canyon View', 'York Manor', 'Miramar', 'Glenhurst'],
-    description: `Claremont's premier portable toilet rental service serving the entire Pomona Valley region from the Claremont Colleges to Pomona, La Verne, San Dimas, and surrounding communities. Whether you're managing a construction project at the Claremont Village, organizing a community event at the Claremont Folk Festival, hosting a graduation event at Pomona College, or managing a project at the Claremont Colleges, we deliver clean, well-maintained portable sanitation units directly to your location.
+    description: `Claremont\'s premier portable toilet rental service serving the entire Pomona Valley region from the Claremont Colleges to Pomona, La Verne, San Dimas, and surrounding communities. Whether you're managing a construction project at the Claremont Village, organizing a community event at the Claremont Folk Festival, hosting a graduation event at Pomona College, or managing a project at the Claremont Colleges, we deliver clean, well-maintained portable sanitation units directly to your location.
 
 Our comprehensive inventory includes standard portable toilets perfect for construction sites and outdoor events, deluxe units featuring built-in hand washing stations ideal for weddings and corporate gatherings, ADA-compliant accessible units ensuring compliance with California accessibility requirements, and luxury restroom trailers with climate control, flushing toilets, and premium amenities for upscale events and VIP experiences.
 
@@ -407,7 +407,7 @@ Our service area covers all of Claremont and surrounding communities including P
       },
       {
         question: 'How often are portable toilets serviced in Claremont?',
-        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, interior sanitization, and restocking of toilet paper and hand sanitizer. For high-traffic events or construction sites with more than 20 workers, twice-weekly servicing is recommended. Claremont's hot summer temperatures can accelerate odor buildup, making regular servicing essential for user comfort and hygiene. All servicing is performed by our professional Claremont team at times that minimize disruption to your event or operations.'
+        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, interior sanitization, and restocking of toilet paper and hand sanitizer. For high-traffic events or construction sites with more than 20 workers, twice-weekly servicing is recommended. Claremont\'s hot summer temperatures can accelerate odor buildup, making regular servicing essential for user comfort and hygiene. All servicing is performed by our professional Claremont team at times that minimize disruption to your event or operations.'
       },
       {
         question: 'Do I need permits for portable toilets at Claremont public events?',
@@ -555,11 +555,11 @@ Our service area covers all of Claremont and surrounding communities including P
     latitude: 25.8075,
     longitude: -80.2596,
     neighborhoods: ['Miami Beach', 'Brickell', 'Downtown Miami', 'Wynwood', 'Coral Gables', 'South Beach', 'Key Biscayne', 'Little Havana', 'Midtown Miami', 'Coconut Grove', 'Aventura', 'Hallandale Beach', 'Hollywood', 'Fort Lauderdale'],
-    description: `Miami's premier portable toilet rental service serving the entire South Florida metropolitan area from Miami Beach to Fort Lauderdale. Whether you're organizing a beach festival in South Beach, managing a construction project in Brickell, or hosting a backyard celebration in Coral Gables, we deliver clean, well-maintained portable toilets directly to your location.
+    description: `Miami\'s premier portable toilet rental service serving the entire South Florida metropolitan area from Miami Beach to Fort Lauderdale. Whether you're organizing a beach festival in South Beach, managing a construction project in Brickell, or hosting a backyard celebration in Coral Gables, we deliver clean, well-maintained portable toilets directly to your location.
 
 Our fleet of modern portable sanitation units includes standard portable toilets perfect for construction sites and outdoor events, deluxe units with built-in hand washing stations ideal for weddings and corporate events, ADA-accessible handicap units ensuring compliance and accessibility for all guests, and luxury restroom trailers with climate control, lighting, and premium finishes for high-end events and VIP areas.
 
-Miami's tropical climate presents unique challenges for portable sanitation, including high humidity, frequent rain showers, and intense heat. Our units are designed to withstand these conditions while maintaining a clean, comfortable experience for users. We offer climate-controlled options specifically designed for Miami's hot and humid weather, ensuring user comfort regardless of the temperature outside.
+Miami\'s tropical climate presents unique challenges for portable sanitation, including high humidity, frequent rain showers, and intense heat. Our units are designed to withstand these conditions while maintaining a clean, comfortable experience for users. We offer climate-controlled options specifically designed for Miami\'s hot and humid weather, ensuring user comfort regardless of the temperature outside.
 
 With Miami hosting numerous large-scale events throughout the year, including Art Basel, Miami Music Week, Ultra Music Festival, and countless beach parties and sports events, the demand for reliable portable sanitation services remains consistently high. Our company has extensive experience serving major events across the Miami metropolitan area, from intimate backyard gatherings to massive festivals attracting tens of thousands of attendees.
 
@@ -593,7 +593,7 @@ Our service area encompasses all of Miami-Dade and Broward Counties, including M
       },
       {
         question: 'How often are portable toilets serviced in Miami?',
-        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, and restocking of toilet paper and hand sanitizer. For high-traffic events or larger construction crews, more frequent servicing (2-3 times per week) is recommended. Miami's heat can accelerate odor buildup, so increased servicing ensures a pleasant experience. Servicing is performed by our professional Miami-based team, typically early morning to avoid disrupting your event or construction operations.'
+        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, and restocking of toilet paper and hand sanitizer. For high-traffic events or larger construction crews, more frequent servicing (2-3 times per week) is recommended. Miami\'s heat can accelerate odor buildup, so increased servicing ensures a pleasant experience. Servicing is performed by our professional Miami-based team, typically early morning to avoid disrupting your event or construction operations.'
       },
       {
         question: 'Do I need a permit for portable toilets in Miami?',
@@ -671,7 +671,7 @@ Our service area encompasses all of Miami-Dade and Broward Counties, including M
     latitude: 40.6936,
     longitude: -89.5890,
     neighborhoods: ['Downtown Peoria', 'North Peoria', 'South Peoria', 'East Peoria', 'Peoria Heights', 'West Bluff', 'Garden Street', 'University District', 'Bradley University Area', 'Bartonville', 'Germantown Hills', 'Metamora', 'Washington', 'Dunlap', 'Mossville', 'Bellevue', 'Mapleton', 'Hanna City', 'Wyoming', 'Toulon', 'St. Francisville'],
-    description: `Peoria's trusted portable toilet rental service serving the entire Central Illinois region from downtown Peoria to East Peoria, Washington, and surrounding communities. Whether you're managing a construction project at the Peoria Riverfront, organizing a community event at the Peoria Civic Center, or hosting a backyard celebration in the Peoria Heights neighborhood, we deliver clean, well-maintained portable sanitation units directly to your location.
+    description: `Peoria\'s trusted portable toilet rental service serving the entire Central Illinois region from downtown Peoria to East Peoria, Washington, and surrounding communities. Whether you're managing a construction project at the Peoria Riverfront, organizing a community event at the Peoria Civic Center, or hosting a backyard celebration in the Peoria Heights neighborhood, we deliver clean, well-maintained portable sanitation units directly to your location.
 
 Our comprehensive inventory includes standard portable toilets perfect for construction sites and outdoor events, deluxe units featuring built-in hand washing stations ideal for weddings and corporate gatherings, ADA-compliant accessible units ensuring compliance with Illinois accessibility requirements, and luxury restroom trailers with climate control, flushing toilets, and premium amenities for upscale events and VIP experiences.
 
@@ -709,7 +709,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
       },
       {
         question: 'How often are portable toilets serviced in Peoria?',
-        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, interior sanitization, and restocking of toilet paper and hand sanitizer. For high-traffic events or construction sites with more than 20 workers, twice-weekly servicing is recommended. Peoria's humid summers can accelerate odor buildup, making regular servicing essential for user comfort and hygiene. All servicing is performed by our professional Peoria team at times that minimize disruption to your event or operations.'
+        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, interior sanitization, and restocking of toilet paper and hand sanitizer. For high-traffic events or construction sites with more than 20 workers, twice-weekly servicing is recommended. Peoria\'s humid summers can accelerate odor buildup, making regular servicing essential for user comfort and hygiene. All servicing is performed by our professional Peoria team at times that minimize disruption to your event or operations.'
       },
       {
         question: 'Do I need permits for portable toilets at Peoria public events?',
@@ -887,11 +887,11 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     latitude: 39.521126,
     longitude: -119.8127126,
     neighborhoods: ['Downtown Reno', 'Midtown', 'Sparks', 'North Valleys', 'South Reno', 'Old Southwest', 'Caughlin Ranch', 'McRan', 'Double Diamond', 'Damonte Ranch', 'South Truckee Meadows', 'Verdi', 'Incline Village', 'Crystal Bay', 'Sun Valley', 'Spanish Springs'],
-    description: `Reno's trusted portable toilet rental service serving the entire Truckee Meadows region from downtown Reno to Sparks, Incline Village, and surrounding Northern Nevada communities. Whether you're managing a construction project at the Reno/Tahoe Industrial Center, organizing a community event at Wingfield Park, or hosting a backyard celebration in the Caughlin Ranch neighborhood, we deliver clean, well-maintained portable sanitation units directly to your location.
+    description: `Reno\'s trusted portable toilet rental service serving the entire Truckee Meadows region from downtown Reno to Sparks, Incline Village, and surrounding Northern Nevada communities. Whether you're managing a construction project at the Reno/Tahoe Industrial Center, organizing a community event at Wingfield Park, or hosting a backyard celebration in the Caughlin Ranch neighborhood, we deliver clean, well-maintained portable sanitation units directly to your location.
 
 Our comprehensive inventory includes standard portable toilets perfect for construction sites and outdoor events, deluxe units featuring built-in hand washing stations ideal for weddings and corporate gatherings, ADA-compliant accessible units ensuring compliance with Nevada accessibility requirements, and luxury restroom trailers with climate control, flushing toilets, and premium amenities for upscale events and VIP experiences.
 
-Reno's high desert climate presents unique considerations for portable sanitation. Summer temperatures regularly exceed 100°F, while winter temperatures can drop below freezing. Our units are designed to handle these extreme conditions, and we offer climate-controlled options specifically designed for both hot summer events and winter gatherings. During the popular spring and fall seasons, standard units provide excellent service, while our heated units ensure comfort during colder months.
+Reno\'s high desert climate presents unique considerations for portable sanitation. Summer temperatures regularly exceed 100°F, while winter temperatures can drop below freezing. Our units are designed to handle these extreme conditions, and we offer climate-controlled options specifically designed for both hot summer events and winter gatherings. During the popular spring and fall seasons, standard units provide excellent service, while our heated units ensure comfort during colder months.
 
 The Reno area hosts numerous large-scale events throughout the year, including the Reno Air Races, Hot August Nights, the Reno Rodeo, Artown, the Lake Tahoe Jazz Jubilee, and countless festivals, concerts, and community gatherings. Our company has extensive experience serving these diverse events, from small neighborhood gatherings to massive festivals attracting hundreds of thousands of attendees. We're also proud to serve the construction industry that drives Northern Nevada's growth, from commercial developments in the South Meadows to residential projects throughout Sparks and Reno.
 
@@ -925,7 +925,7 @@ Our service area covers all of Reno, Sparks, and surrounding communities includi
       },
       {
         question: 'How often are portable toilets serviced in Reno?',
-        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, interior sanitization, and restocking of toilet paper and hand sanitizer. For high-traffic events or construction sites with more than 20 workers, twice-weekly servicing is recommended. Reno's extreme temperatures can accelerate odor buildup, making regular servicing essential for user comfort and hygiene. All servicing is performed by our professional Reno team at times that minimize disruption to your event or operations.'
+        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, interior sanitization, and restocking of toilet paper and hand sanitizer. For high-traffic events or construction sites with more than 20 workers, twice-weekly servicing is recommended. Reno\'s extreme temperatures can accelerate odor buildup, making regular servicing essential for user comfort and hygiene. All servicing is performed by our professional Reno team at times that minimize disruption to your event or operations.'
       },
       {
         question: 'Do I need permits for portable toilets at Reno public events?',
@@ -979,11 +979,11 @@ Our service area covers all of Reno, Sparks, and surrounding communities includi
     latitude: 43.157168,
     longitude: -88.0531039,
     neighborhoods: ['Downtown Milwaukee', 'Historic Third Ward', 'East Side', 'Bay View', 'Walker\'s Point', 'Riverwest', 'Bronzeville', 'Hayti', 'Harbor View', 'Merrill Park', 'River Hills', 'Whitefish Bay', 'Shorewood', 'Cudahy', 'St. Francis', 'South Milwaukee', 'Oak Creek', 'Wauwatosa', 'West Allis', 'Greenfield', 'Franklin', 'Greendale', 'Hales Corners', 'New Berlin', 'Brookfield', 'Elm Grove', 'Waukesha', 'Pewaukee', 'Sussex', 'Menomonee Falls', 'Germantown'],
-    description: `Milwaukee's premier portable toilet rental service serving the entire southeastern Wisconsin region from downtown Milwaukee to Waukesha, Brookfield, and surrounding communities. Whether you're managing a construction project at the Milwaukee Intermodal Station, organizing a community event at Henry Maier Festival Park, or hosting a backyard celebration in Bay View, we deliver clean, well-maintained portable sanitation units directly to your location.
+    description: `Milwaukee\'s premier portable toilet rental service serving the entire southeastern Wisconsin region from downtown Milwaukee to Waukesha, Brookfield, and surrounding communities. Whether you're managing a construction project at the Milwaukee Intermodal Station, organizing a community event at Henry Maier Festival Park, or hosting a backyard celebration in Bay View, we deliver clean, well-maintained portable sanitation units directly to your location.
 
 Our comprehensive inventory includes standard portable toilets perfect for construction sites and outdoor events, deluxe units featuring built-in hand washing stations ideal for weddings and corporate gatherings, ADA-compliant accessible units ensuring compliance with Wisconsin accessibility requirements, and luxury restroom trailers with climate control, flushing toilets, and premium amenities for upscale events and VIP experiences.
 
-Milwaukee's climate presents unique considerations for portable sanitation. Summers are warm and humid with temperatures reaching the 80s and 90s, while winters are cold and snowy with temperatures regularly dropping below freezing. Our units are designed to handle these extreme conditions year-round, and we offer heated units specifically for winter events and construction projects. Spring and fall typically provide ideal conditions for outdoor events in the Milwaukee area.
+Milwaukee\'s climate presents unique considerations for portable sanitation. Summers are warm and humid with temperatures reaching the 80s and 90s, while winters are cold and snowy with temperatures regularly dropping below freezing. Our units are designed to handle these extreme conditions year-round, and we offer heated units specifically for winter events and construction projects. Spring and fall typically provide ideal conditions for outdoor events in the Milwaukee area.
 
 The Milwaukee region hosts numerous large-scale events throughout the year, including Summerfest (one of the largest music festivals in the world), Milwaukee Air & Water Show, Wisconsin State Fair, Brewers baseball games at American Family Field, Bucks games at Fiserv Forum, Harley-Davidson Anniversary celebrations, and countless festivals, concerts, and community gatherings throughout the year. Our company has extensive experience serving these diverse events, from small neighborhood gatherings to massive festivals attracting over 1 million attendees. We're also proud to serve the construction industry that drives southeastern Wisconsin's growth, from commercial developments downtown to residential projects throughout the metro area.
 
@@ -1017,7 +1017,7 @@ Our service area covers all of Milwaukee and surrounding communities including W
       },
       {
         question: 'How often are portable toilets serviced in Milwaukee?',
-        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, interior sanitization, and restocking of toilet paper and hand sanitizer. For high-traffic events like Summerfest or construction sites with more than 20 workers, twice-weekly or daily servicing is recommended. Milwaukee's humid summer weather can accelerate odor buildup, making regular servicing essential for user comfort and hygiene. All servicing is performed by our professional Milwaukee team at times that minimize disruption to your event or operations.'
+        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, interior sanitization, and restocking of toilet paper and hand sanitizer. For high-traffic events like Summerfest or construction sites with more than 20 workers, twice-weekly or daily servicing is recommended. Milwaukee\'s humid summer weather can accelerate odor buildup, making regular servicing essential for user comfort and hygiene. All servicing is performed by our professional Milwaukee team at times that minimize disruption to your event or operations.'
       },
       {
         question: 'Do I need permits for portable toilets at Milwaukee public events?',
@@ -1213,11 +1213,11 @@ Our service area covers all of Milwaukee and surrounding communities including W
     latitude: 29.7604,
     longitude: -95.3698,
     neighborhoods: ['Downtown Houston', 'Midtown', 'Montrose', 'Heights', 'Galleria', 'Texas Medical Center', 'Museum District', 'Energy Corridor', 'West University Place', 'Rice Village', 'Spring Branch', 'Memorial', 'River Oaks', 'Clear Lake', 'Pearland', 'Sugar Land', 'The Woodlands', 'Kingwood', 'Humble', 'Cypress', 'Katy', 'Missouri City', 'League City', 'Baytown', 'Pasadena'],
-    description: `Houston's trusted portable toilet rental service serving the entire Greater Houston metropolitan area, from Downtown Houston to The Woodlands, Sugar Land, and beyond. Whether you're managing a construction project in the Energy Corridor, hosting a community event in Miller Outdoor Theatre, or organizing a large-scale festival, we deliver clean, well-maintained portable sanitation units to locations throughout Harris County and surrounding areas.
+    description: `Houston\'s trusted portable toilet rental service serving the entire Greater Houston metropolitan area, from Downtown Houston to The Woodlands, Sugar Land, and beyond. Whether you're managing a construction project in the Energy Corridor, hosting a community event in Miller Outdoor Theatre, or organizing a large-scale festival, we deliver clean, well-maintained portable sanitation units to locations throughout Harris County and surrounding areas.
 
 Our comprehensive inventory includes standard portable toilets suitable for construction sites and outdoor events, deluxe units featuring built-in hand washing stations perfect for weddings and corporate gatherings, ADA-compliant accessible units ensuring compliance with Texas accessibility requirements, high-rise construction units designed for downtown Houston high-rises, and luxury restroom trailers with climate control, flushing toilets, and premium amenities for upscale events and VIP experiences.
 
-Houston's climate presents unique considerations for portable sanitation. Summer temperatures regularly exceed 95°F with high humidity, making climate-controlled options essential for events and creating challenging conditions for standard units. Our units are equipped to handle Houston's extreme heat, humidity, and occasional severe weather. During the milder spring and fall seasons, standard units provide excellent service, while our climate-controlled options ensure comfort regardless of Texas weather conditions.
+Houston\'s climate presents unique considerations for portable sanitation. Summer temperatures regularly exceed 95°F with high humidity, making climate-controlled options essential for events and creating challenging conditions for standard units. Our units are equipped to handle Houston\'s extreme heat, humidity, and occasional severe weather. During the milder spring and fall seasons, standard units provide excellent service, while our climate-controlled options ensure comfort regardless of Texas weather conditions.
 
 The Houston metropolitan area hosts numerous large-scale events throughout the year, including the Houston Livestock Show and Rodeo (one of the largest events in the country), Texans games at NRG Stadium, Astros games at Minute Maid Park, major concerts, corporate events, and community festivals. Our company has extensive experience serving these diverse events, from small neighborhood gatherings to massive festivals attracting hundreds of thousands of attendees.
 
@@ -1251,7 +1251,7 @@ Our service area covers all of Harris County and extends to Montgomery, Fort Ben
       },
       {
         question: 'How often are portable toilets serviced in Houston?',
-        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, interior sanitization, and restocking of toilet paper and hand sanitizer. For high-traffic events or construction sites with more than 20 workers, twice-weekly servicing is recommended. Houston's summer heat can accelerate odor buildup and bacterial growth, making more frequent servicing essential for user comfort and hygiene. All servicing is performed by our professional Houston team at times that minimize disruption to your event or operations.'
+        answer: 'Standard rental includes weekly servicing: waste pumping, unit cleaning, interior sanitization, and restocking of toilet paper and hand sanitizer. For high-traffic events or construction sites with more than 20 workers, twice-weekly servicing is recommended. Houston\'s summer heat can accelerate odor buildup and bacterial growth, making more frequent servicing essential for user comfort and hygiene. All servicing is performed by our professional Houston team at times that minimize disruption to your event or operations.'
       },
       {
         question: 'Do I need permits for portable toilets at Houston public events?',
