@@ -104,8 +104,8 @@ export default function PricingGuidePage() {
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
                 <p className="text-sm text-navy-500">Low End</p>
-                <p className="text-2xl md:text-3xl font-bold text-navy-900">$75</p>
-                <p className="text-xs text-navy-400">per day (event)</p>
+                <p className="text-2xl md:text-3xl font-bold text-navy-900">$200</p>
+                <p className="text-xs text-navy-400">per month</p>
               </div>
               <div className="border-x border-gray-200">
                 <p className="text-sm text-teal-600 font-medium">Average</p>
@@ -251,7 +251,7 @@ export default function PricingGuidePage() {
                 Get Your Exact Quote in 60 Seconds
               </h2>
               <p className="text-navy-300 text-lg">
-                Starting at $75/day. Free delivery. No hidden fees.
+                Starting at $200/month. Free delivery. No hidden fees.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
