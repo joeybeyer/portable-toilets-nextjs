@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Portable Toilet Rental Cost 2026 | Complete Pricing Guide",
   description:
-    "How much does portable toilet rental cost? Standard units $150-$250/month, event rentals $75-$200/day, luxury trailers $800-$2,000. Complete 2026 pricing breakdown.",
+    "How much does portable toilet rental cost? Standard units $200-$250 per 28-day cycle, event rentals $75-$200/day, luxury trailers $800-$2,000. Complete 2026 pricing breakdown.",
   openGraph: {
     title: "Portable Toilet Rental Cost 2026 — Complete Pricing Guide",
     description:
@@ -18,7 +18,7 @@ const PHONE_HREF = "tel:8334356610";
 const faq = [
   {
     q: "How much does it cost to rent a portable toilet?",
-    a: "Standard portable toilet rental costs $150-$250 per month for construction sites. Short-term event rentals range from $75-$200 per day depending on unit type and location.",
+    a: "Standard portable toilet rental costs $200-$250 per 28-day cycle for construction sites, including weekly servicing. Short-term event rentals range from $75-$200 per day depending on unit type and location.",
   },
   {
     q: "How much is a porta potty for a day?",
@@ -84,7 +84,7 @@ export default function PricingGuidePage() {
               How Much Does Portable Toilet Rental Cost in 2026?
             </h1>
             <p className="text-lg text-navy-300 mb-8">
-              Portable toilet rental costs <strong className="text-white">$150-$250 per month</strong> for standard construction site units. Event rentals range from <strong className="text-white">$75-$200 per day</strong>. This guide breaks down every cost so you know exactly what to expect.
+              Portable toilet rental costs <strong className="text-white">$200-$250 per 28-day cycle</strong> for standard construction site units. Event rentals range from <strong className="text-white">$75-$200 per day</strong>. This guide breaks down every cost so you know exactly what to expect.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href={PHONE_HREF} className="btn-primary">
@@ -109,8 +109,8 @@ export default function PricingGuidePage() {
               </div>
               <div className="border-x border-gray-200">
                 <p className="text-sm text-teal-600 font-medium">Average</p>
-                <p className="text-2xl md:text-3xl font-bold text-teal-600">$175</p>
-                <p className="text-xs text-navy-400">per month</p>
+                <p className="text-2xl md:text-3xl font-bold text-teal-600">$225</p>
+                <p className="text-xs text-navy-400">per 28-day cycle</p>
               </div>
               <div>
                 <p className="text-sm text-navy-500">High End</p>
@@ -128,7 +128,7 @@ export default function PricingGuidePage() {
               <thead>
                 <tr className="bg-navy-950 text-white">
                   <th className="px-6 py-4 text-left font-semibold">Unit Type</th>
-                  <th className="px-6 py-4 text-left font-semibold">Monthly Rate</th>
+                  <th className="px-6 py-4 text-left font-semibold">28-Day Rate</th>
                   <th className="px-6 py-4 text-left font-semibold">Daily Rate (Events)</th>
                   <th className="px-6 py-4 text-left font-semibold">Best For</th>
                 </tr>
@@ -136,7 +136,7 @@ export default function PricingGuidePage() {
               <tbody className="divide-y divide-gray-100">
                 <tr className="hover:bg-gray-50">
                   <td className="px-6 py-4 font-medium text-navy-900">Standard Porta Potty</td>
-                  <td className="px-6 py-4 text-teal-600 font-semibold">$150-$250</td>
+                  <td className="px-6 py-4 text-teal-600 font-semibold">$200-$250</td>
                   <td className="px-6 py-4 text-teal-600 font-semibold">$75-$125</td>
                   <td className="px-6 py-4 text-navy-600">Construction, basic events</td>
                 </tr>
