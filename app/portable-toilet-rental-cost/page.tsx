@@ -4,11 +4,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Portable Toilet Rental Cost 2026 | Complete Pricing Guide",
   description:
-    "How much does portable toilet rental cost? Standard units $200-$250 per 28-day cycle, event rentals $75-$200/day, luxury trailers $800-$2,000. Complete 2026 pricing breakdown.",
+    "How much does portable toilet rental cost? Standard units $200-$250 per rental, luxury trailers $800-$2,000. Flat-rate pricing includes delivery, pickup, and servicing. Complete 2026 pricing breakdown.",
   openGraph: {
     title: "Portable Toilet Rental Cost 2026 — Complete Pricing Guide",
     description:
-      "Standard porta potty $150-$250/month. Event rental $75-$200/day. Luxury trailers $800-$2,000. All costs explained.",
+      "Standard porta potty $200-$250 per rental. Luxury trailers $800-$2,000. Flat-rate pricing, no daily charges. All costs explained.",
   },
 };
 
@@ -18,7 +18,7 @@ const PHONE_HREF = "tel:8334356610";
 const faq = [
   {
     q: "How much does it cost to rent a portable toilet?",
-    a: "Standard portable toilet rental costs $200-$250 per 28-day cycle for construction sites, including weekly servicing. Short-term event rentals range from $75-$200 per day depending on unit type and location.",
+    a: "Standard portable toilet rental costs $200-$250 per rental, whether it's a one-day event or a month-long construction project. Price includes delivery, pickup, and servicing. Luxury trailers start at $800.",
   },
   {
     q: "How much is a porta potty for a day?",
@@ -84,7 +84,7 @@ export default function PricingGuidePage() {
               How Much Does Portable Toilet Rental Cost in 2026?
             </h1>
             <p className="text-lg text-navy-300 mb-8">
-              Portable toilet rental costs <strong className="text-white">$200-$250 per 28-day cycle</strong> for standard construction site units. Event rentals range from <strong className="text-white">$75-$200 per day</strong>. This guide breaks down every cost so you know exactly what to expect.
+              Portable toilet rental costs <strong className="text-white">$200-$250 per rental</strong> for standard units — whether it's a one-day event or a full month on a construction site. <strong className="text-white">Flat-rate pricing</strong> includes delivery, pickup, and servicing. This guide breaks down every cost so you know exactly what to expect.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href={PHONE_HREF} className="btn-primary">
@@ -128,8 +128,7 @@ export default function PricingGuidePage() {
               <thead>
                 <tr className="bg-navy-950 text-white">
                   <th className="px-6 py-4 text-left font-semibold">Unit Type</th>
-                  <th className="px-6 py-4 text-left font-semibold">28-Day Rate</th>
-                  <th className="px-6 py-4 text-left font-semibold">Daily Rate (Events)</th>
+                  <th className="px-6 py-4 text-left font-semibold">Rental Price</th>
                   <th className="px-6 py-4 text-left font-semibold">Best For</th>
                 </tr>
               </thead>
@@ -137,30 +136,25 @@ export default function PricingGuidePage() {
                 <tr className="hover:bg-gray-50">
                   <td className="px-6 py-4 font-medium text-navy-900">Standard Porta Potty</td>
                   <td className="px-6 py-4 text-teal-600 font-semibold">$200-$250</td>
-                  <td className="px-6 py-4 text-teal-600 font-semibold">$75-$125</td>
-                  <td className="px-6 py-4 text-navy-600">Construction, basic events</td>
+                  <td className="px-6 py-4 text-navy-600">Construction, events, general use</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="px-6 py-4 font-medium text-navy-900">Deluxe / Flushable</td>
                   <td className="px-6 py-4 text-teal-600 font-semibold">$250-$400</td>
-                  <td className="px-6 py-4 text-teal-600 font-semibold">$150-$250</td>
-                  <td className="px-6 py-4 text-navy-600">Upscale events, 1-2 day rentals</td>
+                  <td className="px-6 py-4 text-navy-600">Upscale events, weddings</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="px-6 py-4 font-medium text-navy-900">ADA Accessible</td>
                   <td className="px-6 py-4 text-teal-600 font-semibold">$175-$300</td>
-                  <td className="px-6 py-4 text-teal-600 font-semibold">$100-$175</td>
                   <td className="px-6 py-4 text-navy-600">ADA compliance required</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="px-6 py-4 font-medium text-navy-900">Hand Wash Station</td>
                   <td className="px-6 py-4 text-teal-600 font-semibold">$75-$150</td>
-                  <td className="px-6 py-4 text-teal-600 font-semibold">$50-$100</td>
                   <td className="px-6 py-4 text-navy-600">Add-on for any rental</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="px-6 py-4 font-medium text-navy-900">Luxury Restroom Trailer</td>
-                  <td className="px-6 py-4 text-teal-600 font-semibold">$1,500-$3,000</td>
                   <td className="px-6 py-4 text-teal-600 font-semibold">$800-$2,000</td>
                   <td className="px-6 py-4 text-navy-600">Weddings, corporate, VIP</td>
                 </tr>
@@ -184,10 +178,10 @@ export default function PricingGuidePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Unit Type", desc: "Standard units are cheapest. Flushable, ADA, and luxury trailers cost more due to features, size, and maintenance requirements." },
-              { title: "Rental Duration", desc: "Monthly rentals offer the best per-day value. Short-term event rentals cost more per day but include delivery and pickup." },
+              { title: "Rental Duration", desc: "Standard rentals are flat-rate whether you need a unit for a day or a month. Longer construction contracts (3+ months) may qualify for volume discounts." },
               { title: "Quantity", desc: "Bulk discounts of 10-20% are standard for 5+ units. Large events and long-term construction contracts get the best rates." },
               { title: "Delivery Distance", desc: "Most companies include delivery within 25-50 miles. Beyond that, expect $1-$3 per mile in additional fees." },
-              { title: "Servicing Frequency", desc: "Standard monthly rental includes weekly service. Events under 8 hours typically need no mid-event service. Multi-day events need daily pumping." },
+              { title: "Servicing Frequency", desc: "Standard rental includes weekly service. Events under 8 hours typically need no mid-event service. Multi-day events may need additional pumping." },
               { title: "Season", desc: "Peak season (May-September) may have 10-15% higher prices due to demand from weddings, festivals, and outdoor events. Book early for best rates." },
               { title: "Location", desc: "Urban areas with more competition tend to have lower prices. Rural or remote deliveries may cost more due to travel distance." },
               { title: "Permits", desc: "Some cities require portable toilet permits ($25-$200). Your rental company can usually advise on local requirements." },
@@ -210,7 +204,7 @@ export default function PricingGuidePage() {
             {[
               { tip: "Book early for events", desc: "Reserve 2-4 weeks ahead for standard units, 1-3 months for luxury trailers. Last-minute bookings may incur rush fees." },
               { tip: "Rent in bulk", desc: "Need 5+ units? Ask for volume pricing. Most companies offer 10-20% discounts on bulk orders." },
-              { tip: "Choose monthly over daily", desc: "If you need a unit for more than 5-7 days, a monthly rental is almost always cheaper than daily rates." },
+              { tip: "Book early for events", desc: "Reserve 2-4 weeks ahead for standard units. Peak season (May-October) fills up fast, especially for weekend events." },
               { tip: "Skip the upgrades you do not need", desc: "Standard units are perfectly fine for construction sites and casual outdoor events. Save luxury trailers for weddings and corporate events." },
               { tip: "Bundle hand wash stations", desc: "Adding hand wash stations to an existing order is cheaper than renting them separately. Ask about package deals." },
               { tip: "Off-season discounts", desc: "October through March is the slow season. Many companies offer 10-15% lower rates during winter months." },
