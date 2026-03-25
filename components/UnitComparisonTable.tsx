@@ -137,9 +137,9 @@ export default function UnitComparisonTable() {
               <tr className="bg-navy-900 text-white">
                 <th className="px-6 py-4 text-left text-sm font-semibold w-36">Feature</th>
                 {units.map((unit) => (
-                  <th key={unit.id} className="px-6 py-4 text-center text-sm font-semibold relative">
+                  <th key={unit.id} className="px-6 py-4 text-center text-sm font-semibold">
                     {unit.popular && (
-                      <span className="absolute -top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-teal-400 text-navy-900 text-xs font-bold px-3 py-0.5 rounded-full whitespace-nowrap">
+                      <span className="block mb-2 bg-teal-400 text-navy-900 text-xs font-bold px-3 py-0.5 rounded-full whitespace-nowrap w-fit mx-auto">
                         Most Popular
                       </span>
                     )}

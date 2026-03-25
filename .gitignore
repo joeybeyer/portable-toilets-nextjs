@@ -45,3 +45,6 @@ Thumbs.db
 nul
 *.png
 !public/**/*.png
+
+.vercel
+.env*.local
