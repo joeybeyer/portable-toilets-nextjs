@@ -2,15 +2,28 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const PHONE = '(833) 435-6610'
 const PHONE_HREF = 'tel:8334356610'
+
+const serviceDropdownLinks = [
+  { href: '/standard-portable-toilet-rental', label: 'Portable Toilet Rental' },
+  { href: '/event-portable-toilet-rental', label: 'Event Portable Toilets' },
+  { href: '/construction-site-portable-toilet-rental', label: 'Construction Site Toilets' },
+  { href: '/handicap-accessible-portable-toilet-rental', label: 'ADA Accessible Units' },
+  { href: '/luxury-portable-restroom-trailer-rental', label: 'Luxury Restroom Trailers' },
+  { href: '/emergency-portable-toilet-rental', label: 'Emergency Rentals' },
+  { href: '/portable-sink-station-rental', label: 'Portable Sink Stations' },
+]
 
 export default function Header() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showMobileFooter, setShowMobileFooter] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   // Show mobile sticky footer after 200px scroll
   useEffect(() => {
@@ -21,7 +34,18 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navLinks = [
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setServicesOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  const topNavLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/location', label: 'Service Areas' },
@@ -33,6 +57,8 @@ export default function Header() {
     if (href === '/') return pathname === '/'
     return pathname.startsWith(href)
   }
+
+  const isServiceActive = () => serviceDropdownLinks.some(l => pathname.startsWith(l.href))
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
@@ -78,7 +104,63 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {/* Home */}
+            <Link
+              href="/"
+              className={`text-sm font-medium transition-colors ${
+                isActive('/') ? 'text-navy-900' : 'text-navy-600 hover:text-navy-900'
+              }`}
+            >
+              Home
+            </Link>
+
+            {/* Services Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                className={`flex items-center gap-1 text-sm font-medium transition-colors ${
+                  isServiceActive() ? 'text-navy-900' : 'text-navy-600 hover:text-navy-900'
+                }`}
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+                onClick={() => setServicesOpen(!servicesOpen)}
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+              >
+                Services
+                <svg className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {servicesOpen && (
+                <div
+                  className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50"
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  {serviceDropdownLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={`block px-4 py-2.5 text-sm transition-colors hover:bg-teal-50 hover:text-teal-700 ${
+                        pathname.startsWith(link.href) ? 'text-teal-700 bg-teal-50 font-medium' : 'text-navy-700'
+                      }`}
+                      onClick={() => setServicesOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Remaining nav links */}
+            {[
+              { href: '/about', label: 'About' },
+              { href: '/location', label: 'Service Areas' },
+              { href: '/blog', label: 'Blog' },
+              { href: '/contact', label: 'Contact' },
+            ].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -129,7 +211,55 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-gray-100 py-4">
             <nav className="flex flex-col gap-2">
-              {navLinks.map((link) => (
+              {/* Home */}
+              <Link
+                href="/"
+                className={`px-4 py-4 rounded-lg text-base font-medium transition-colors ${
+                  isActive('/') ? 'bg-navy-50 text-navy-900' : 'text-navy-600 hover:bg-gray-50'
+                }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+
+              {/* Mobile Services expandable */}
+              <div>
+                <button
+                  className={`w-full flex items-center justify-between px-4 py-4 rounded-lg text-base font-medium transition-colors ${
+                    isServiceActive() ? 'bg-navy-50 text-navy-900' : 'text-navy-600 hover:bg-gray-50'
+                  }`}
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                >
+                  Services
+                  <svg className={`w-5 h-5 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {mobileServicesOpen && (
+                  <div className="ml-4 mt-1 flex flex-col gap-1 border-l-2 border-teal-200 pl-4">
+                    {serviceDropdownLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={`py-2.5 text-sm font-medium transition-colors ${
+                          pathname.startsWith(link.href) ? 'text-teal-700' : 'text-navy-600 hover:text-teal-700'
+                        }`}
+                        onClick={() => { setMobileMenuOpen(false); setMobileServicesOpen(false) }}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Remaining links */}
+              {[
+                { href: '/about', label: 'About' },
+                { href: '/location', label: 'Service Areas' },
+                { href: '/blog', label: 'Blog' },
+                { href: '/contact', label: 'Contact' },
+              ].map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -143,6 +273,7 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
+
               <div className="mt-4 px-4 space-y-3">
                 <a href={PHONE_HREF} className="btn-secondary w-full justify-center">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
