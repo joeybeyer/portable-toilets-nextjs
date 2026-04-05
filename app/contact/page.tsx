@@ -147,6 +147,12 @@ export default function ContactPage() {
       phone: formData.phone,
       timestamp: new Date().toISOString(),
       timeOnForm: Math.round(timeSpent / 1000) + ' seconds',
+      // Lead Attribution
+      sourcePage: typeof window !== 'undefined' ? window.location.href : '',
+      referrer: typeof document !== 'undefined' ? document.referrer : '',
+      utmSource: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_source') || '' : '',
+      utmMedium: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_medium') || '' : '',
+      utmCampaign: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_campaign') || '' : '',
     }
 
     try {
@@ -172,6 +178,12 @@ export default function ContactPage() {
       web3FormData.append('First Name', formData.firstName)
       web3FormData.append('Email', formData.email)
       web3FormData.append('Phone', formData.phone)
+      // Lead Attribution
+      web3FormData.append('Source Page', submissionData.sourcePage)
+      web3FormData.append('Referrer', submissionData.referrer)
+      web3FormData.append('UTM Source', submissionData.utmSource)
+      web3FormData.append('UTM Medium', submissionData.utmMedium)
+      web3FormData.append('UTM Campaign', submissionData.utmCampaign)
 
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
