@@ -156,43 +156,54 @@ export default function ContactPage() {
     }
 
     try {
-      // Send to n8n webhook (fire and forget)
-      fetch('https://timefreedom.app.n8n.cloud/webhook/d131c6a9-96f2-44ec-8405-1fb7356cc99b', {
+      // Primary: Save to our own DB + send via Resend
+      const primaryResponse = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(submissionData)
-      }).catch(() => null)
+        body: JSON.stringify({
+          name: formData.firstName,
+          email: formData.email,
+          phone: formData.phone,
+          message: `Project: ${formData.projectType} | Unit: ${formData.unitType} | Zip: ${formData.zipCode} | Source: ${submissionData.sourcePage} | Referrer: ${submissionData.referrer} | UTM: ${submissionData.utmSource}/${submissionData.utmMedium}/${submissionData.utmCampaign}`,
+          source: submissionData.sourcePage,
+          referrer: submissionData.referrer,
+          utm_source: submissionData.utmSource,
+          utm_medium: submissionData.utmMedium,
+          utm_campaign: submissionData.utmCampaign,
+          project_type: formData.projectType,
+          unit_type: formData.unitType,
+          zip_code: formData.zipCode,
+        }),
+      })
 
-      // Send email via Web3Forms
+      // Backup: Web3Forms (fire and forget)
       const web3FormData = new FormData()
       web3FormData.append('access_key', '04e455b1-736f-43f1-a84e-75eb649f1c43')
       web3FormData.append('subject', `New Quote Request: ${formData.firstName} - ${formData.projectType} - ${formData.zipCode}`)
       web3FormData.append('from_name', 'Portable Toilets Champ Website')
       web3FormData.append('to', 'info@portabletoiletschamp.com')
       web3FormData.append('bcc', 'Garrett@primedumpster.com, leads@primedumpster.com')
-
-      // Add all form fields
       web3FormData.append('Zip Code', formData.zipCode)
       web3FormData.append('Project Type', formData.projectType)
       web3FormData.append('Unit Type', formData.unitType)
       web3FormData.append('First Name', formData.firstName)
       web3FormData.append('Email', formData.email)
       web3FormData.append('Phone', formData.phone)
-      // Lead Attribution
       web3FormData.append('Source Page', submissionData.sourcePage)
       web3FormData.append('Referrer', submissionData.referrer)
       web3FormData.append('UTM Source', submissionData.utmSource)
       web3FormData.append('UTM Medium', submissionData.utmMedium)
       web3FormData.append('UTM Campaign', submissionData.utmCampaign)
+      fetch('https://api.web3forms.com/submit', { method: 'POST', body: web3FormData }).catch(() => null)
 
-      const response = await fetch('https://api.web3forms.com/submit', {
+      // Keep: n8n webhook (fire and forget)
+      fetch('https://timefreedom.app.n8n.cloud/webhook/d131c6a9-96f2-44ec-8405-1fb7356cc99b', {
         method: 'POST',
-        body: web3FormData
-      })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(submissionData)
+      }).catch(() => null)
 
-      const result = await response.json()
-
-      if (result.success) {
+      if (primaryResponse.ok) {
         setFormStatus('success')
       } else {
         setFormStatus('error')
