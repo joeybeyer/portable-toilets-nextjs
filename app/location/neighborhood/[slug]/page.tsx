@@ -6,6 +6,8 @@ import { getLocationBySlug } from '@/data/locations'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
+import TLDRSummary from '@/components/TLDRSummary'
+import LastUpdated from '@/components/LastUpdated'
 
 const PHONE = '(833) 435-6610'
 const PHONE_HREF = 'tel:8334356610'
@@ -177,6 +179,26 @@ export default async function NeighborhoodPage({ params }: Props) {
                 Local Service Team
               </span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TLDR + Last Updated */}
+      <section className="bg-white">
+        <div className="container-wide pt-8">
+          <div className="max-w-3xl">
+            <LastUpdated date={new Date().toISOString().split('T')[0]} className="mb-4 block" />
+            <TLDRSummary
+              items={[
+                `Portable toilet delivery to ${neighborhood.name}, ${neighborhood.city} and surrounding neighborhoods`,
+                `Same-day and next-day availability in ${neighborhood.name}`,
+                `Clean units starting at $250 — standard, deluxe, ADA, and luxury options`,
+                neighborhood.zipCodes.length >= 2
+                  ? `Serving ${neighborhood.zipCodes[0]}, ${neighborhood.zipCodes[1]}, and nearby zip code areas`
+                  : `Serving ${neighborhood.name} and nearby zip code areas`,
+                `Call (833) 435-6610 for a free ${neighborhood.name} quote in 60 seconds`,
+              ]}
+            />
           </div>
         </div>
       </section>

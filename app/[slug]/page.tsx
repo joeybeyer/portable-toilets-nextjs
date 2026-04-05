@@ -11,6 +11,8 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import UnitComparisonTable from '@/components/UnitComparisonTable'
 import HighRiseROICalculator from '@/components/HighRiseROICalculator'
+import TLDRSummary from '@/components/TLDRSummary'
+import LastUpdated from '@/components/LastUpdated'
 
 const PHONE = '(833) 435-6610'
 const PHONE_HREF = 'tel:8334356610'
@@ -329,6 +331,18 @@ const serviceDescriptions: Record<string, { intro: string; features: string[]; b
   }
 }
 
+function getServiceKeyTakeaways(service: Service, description: { intro: string; features: string[]; benefits: string; useCases: string[] }): string[] {
+  if (service.keyTakeaways && service.keyTakeaways.length > 0) return service.keyTakeaways
+  const topFeatures = description.features.slice(0, 2).join(' and ').toLowerCase()
+  return [
+    `${service.title} delivered same-day in all 50 states`,
+    `Includes ${topFeatures}`,
+    `Starting at $250 — clean, sanitized units, no hidden fees`,
+    `Serving construction sites, events, and emergency needs nationwide`,
+    `Call (833) 435-6610 for a free quote in 60 seconds`,
+  ]
+}
+
 export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params
   const service = getServiceBySlug(slug)
@@ -345,6 +359,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
   }
 
   const serviceFaqs = service.paaFaqs || []
+  const keyTakeaways = getServiceKeyTakeaways(service, description)
+  const lastUpdated = service.lastUpdated || new Date().toISOString().split('T')[0]
 
   // Get related services for internal linking
   const relatedServices = getRelatedServices(slug)
@@ -413,6 +429,16 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
       </section>
 
+      {/* TLDR + Last Updated */}
+      <section className="section-sm bg-white">
+        <div className="container-wide">
+          <div className="max-w-3xl">
+            <LastUpdated date={lastUpdated} className="mb-4 block" />
+            <TLDRSummary items={keyTakeaways} />
+          </div>
+        </div>
+      </section>
+
       {/* Main Content */}
       <section className="section">
         <div className="container-wide">
@@ -422,7 +448,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
               {/* Overview */}
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-4">
-                  Overview
+                  What {service.title} Includes
                 </h2>
                 <p className="text-navy-600 leading-relaxed">
                   {description.intro}
@@ -542,7 +568,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         <section className="section bg-gray-50">
           <div className="container-wide">
             <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-8">
-              Related Services
+              Other Sanitation Solutions You May Need
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedServices.map((relatedService) => (

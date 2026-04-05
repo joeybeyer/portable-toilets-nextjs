@@ -7,6 +7,8 @@ import { getNeighborhoodsByCitySlug } from '@/data/neighborhoods'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
+import TLDRSummary from '@/components/TLDRSummary'
+import LastUpdated from '@/components/LastUpdated'
 
 const PHONE = '(833) 435-6610'
 const PHONE_HREF = 'tel:8334356610'
@@ -205,6 +207,26 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
         </div>
       </section>
 
+      {/* TLDR + Last Updated */}
+      <section className="bg-white">
+        <div className="container-wide pt-8">
+          <div className="max-w-3xl">
+            <LastUpdated date={new Date().toISOString().split('T')[0]} className="mb-4 block" />
+            <TLDRSummary
+              items={[
+                `Portable toilet delivery to ${location.city}, ${location.stateCode} and surrounding neighborhoods`,
+                `Same-day and next-day availability in ${location.city}`,
+                `Clean units starting at $250 — standard, deluxe, ADA, and luxury options`,
+                location.neighborhoods && location.neighborhoods.length >= 2
+                  ? `Serving ${location.neighborhoods[0]}, ${location.neighborhoods[1]}, and nearby areas`
+                  : `Serving all neighborhoods and surrounding areas of ${location.city}`,
+                `Call (833) 435-6610 for a free ${location.city} quote in 60 seconds`,
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Main Content */}
       <section className="section">
         <div className="container-wide">
@@ -213,7 +235,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
             <div className="lg:col-span-2 space-y-8">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-4">
-                  Trusted Portable Toilet Rentals in {location.city}
+                  Why {location.city} Trusts Us for On-Site Sanitation
                 </h2>
                 <div className="prose prose-navy max-w-none space-y-4 text-navy-600">
                   <p>
@@ -1113,7 +1135,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
         <section className="section bg-gray-50">
           <div className="container-wide">
             <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-4">
-              Portable Toilet Rental by {location.city} Neighborhood
+              Neighborhoods We Serve Across {location.city}
             </h2>
             <p className="text-navy-600 mb-8">
               We provide specialized portable toilet services across all {location.city} neighborhoods.
@@ -1152,7 +1174,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
         <section className="section">
           <div className="container-wide">
             <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-4">
-              Portable Toilet Rental in Nearby {location.state} Cities
+              Nearby {location.state} Cities in Our Coverage Area
             </h2>
             <p className="text-navy-600 mb-8">
               We also provide portable toilet rental services throughout {location.state}. Find professional restroom solutions in these nearby cities:
@@ -1201,7 +1223,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
         <section className="section">
           <div className="container-wide">
             <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-4">
-              Portable Toilet Rental Tips & Guides
+              Expert Tips and Industry Guides
             </h2>
             <p className="text-navy-600 mb-8">
               Learn more about portable toilet rentals, planning tips, and industry best practices.

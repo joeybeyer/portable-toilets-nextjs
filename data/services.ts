@@ -9,6 +9,8 @@ export interface Service {
   image: string
   imageAlt: string
   paaFaqs?: FAQItem[]
+  keyTakeaways?: string[]
+  lastUpdated?: string
 }
 
 // Service image mapping for conversion-optimized images
