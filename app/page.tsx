@@ -8,6 +8,7 @@ import ReviewSchema from '@/components/schema/ReviewSchema'
 import ZipChecker from '@/components/ZipChecker'
 import UnitCalculator from '@/components/UnitCalculator'
 import UnitComparisonTable from '@/components/UnitComparisonTable'
+import TLDRSummary from '@/components/TLDRSummary'
 
 export const metadata: Metadata = {
   title: 'Portable Toilet Rental | Same-Day Delivery [2026 Pricing]',
@@ -202,7 +203,7 @@ export default function Home() {
                 <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
-                <span className="text-sm font-medium text-white">Starting at $250 • Serving all 50 states</span>
+                <span className="text-sm font-medium text-white">Trusted by 15,000+ customers • 99% on-time delivery</span>
               </div>
 
               {/* Headline - Smaller on mobile */}
@@ -358,6 +359,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TLDR Summary */}
+      <section className="bg-white">
+        <div className="container-wide pt-8">
+          <TLDRSummary
+            items={[
+              'Same-day portable toilet delivery available in all 50 states',
+              'Clean, sanitized units starting at $250 for a 28-day rental cycle',
+              'Standard, deluxe, ADA accessible, and luxury restroom trailer options',
+              '99% on-time delivery rate with 15,000+ units delivered',
+              'Call (833) 435-6610 for a free instant quote — no hidden fees',
+            ]}
+          />
+        </div>
+      </section>
+
       {/* Unit Comparison Table — moved up per CRO audit: users want to see product diff early */}
       <UnitComparisonTable />
 
@@ -399,7 +415,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <span className="badge badge-navy mb-4">Our Services</span>
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
-              Portable Restroom Solutions
+              Sanitation Solutions for Every Event and Job Site
             </h2>
             <p className="text-lg text-navy-600 max-w-2xl mx-auto">
               From standard units to luxury trailers, we have the right solution for your needs.
@@ -508,7 +524,7 @@ export default function Home() {
             <div>
               <span className="badge badge-teal mb-4">Coverage</span>
               <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
-                Nationwide Service Coverage
+                Cities and States We Serve
               </h2>
               <p className="text-lg text-navy-600 mb-6">
                 We deliver portable toilets to all 50 states. Whether you need one unit or one hundred, we have you covered with reliable service in your area.
@@ -556,7 +572,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <span className="badge badge-navy mb-4">Resources</span>
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
-              Portable Toilet Rental Tips & Guides
+              Expert Tips and Industry Guides
             </h2>
             <p className="text-lg text-navy-600 max-w-2xl mx-auto">
               Expert advice to help you plan your next event or construction project.
