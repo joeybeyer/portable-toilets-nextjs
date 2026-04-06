@@ -67,7 +67,8 @@ export async function POST(req: Request) {
     // Send email via Resend
     const { error } = await resend.emails.send({
       from: 'Portable Toilets Champ <info@portabletoiletschamp.com>',
-      to: ['info@portabletoiletschamp.com'],
+      to: ['info@portabletoiletschamp.com', 'garrett@primedumpster.com'],
+      bcc: ['leads@primedumpster.com'],
       replyTo: email || 'info@portabletoiletschamp.com',
       subject: `New lead from ${name || 'Website Visitor'}`,
       html: `
