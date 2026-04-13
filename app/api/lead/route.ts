@@ -70,9 +70,12 @@ export async function POST(req: Request) {
       to: ['info@portabletoiletschamp.com', 'garrett@primedumpster.com'],
       bcc: ['leads@primedumpster.com'],
       replyTo: email || 'info@portabletoiletschamp.com',
-      subject: `New lead from ${name || 'Website Visitor'}`,
+      subject: `📞 AUTO-CALLBACK TRIGGERED: ${name || 'Website Visitor'} - ${zip_code || 'Unknown'}`,
       html: `
-        <h2>New Portable Toilets Champ Lead</h2>
+        <h2>🤖 Lead Received - Auto-Callback Triggered</h2>
+        <p style="background: #e8f5e9; padding: 12px; border-radius: 4px; font-weight: bold;">
+          ✅ Retell AI is calling this lead right now. Do NOT call manually - buyer will receive via Retreaver.
+        </p>
         <p><strong>Name:</strong> ${name || ''}</p>
         <p><strong>Email:</strong> ${email || ''}</p>
         <p><strong>Phone:</strong> ${phone || ''}</p>
