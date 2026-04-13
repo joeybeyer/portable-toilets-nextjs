@@ -101,6 +101,27 @@ export async function POST(req: Request) {
       );
     }
 
+    // Trigger Retell AI auto-callback
+    if (phone) {
+      try {
+        await fetch('https://n8n.agencycommandcenter.ai/webhook/pt-lead-retell', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            full_name: name || '',
+            phone_number: phone,
+            email: email || '',
+            zip_code: zip_code || '',
+            unit_type: unit_type || 'Not specified',
+            source: 'portabletoiletschamp.com'
+          }),
+        });
+        console.log('Retell callback triggered for:', phone);
+      } catch (retellError) {
+        console.error('Failed to trigger Retell callback:', retellError);
+      }
+    }
+
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error(error);
