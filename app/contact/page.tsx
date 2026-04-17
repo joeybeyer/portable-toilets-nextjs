@@ -291,10 +291,10 @@ export default function ContactPage() {
       </div>
       <h2 className="text-2xl font-bold text-navy-900 mb-2">Quote Request Received!</h2>
       <p className="text-navy-600 mb-2">
-        Thank you, {formData.firstName}! We&apos;re reviewing your request for zip code {formData.zipCode}.
+        Thank you, {formData.firstName}! We&apos;re calling you right now to connect you with a specialist.
       </p>
       <p className="text-sm text-teal-700 font-medium mb-8">
-        Most customers hear back within 15 minutes.
+        Your phone should ring within seconds — please pick up!
       </p>
 
       <div className="bg-navy-900 rounded-xl p-6 mb-4">
@@ -564,7 +564,7 @@ export default function ContactPage() {
                           <svg className="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
-                          Our team typically calls back within <strong className="text-navy-900 mx-1">15 minutes</strong> with your custom quote.
+                          You'll receive a call back within <strong className="text-navy-900 mx-1">seconds</strong> with your custom quote.
                         </div>
 
                         <div className="flex gap-4">
