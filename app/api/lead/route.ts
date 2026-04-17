@@ -101,22 +101,48 @@ export async function POST(req: Request) {
       );
     }
 
-    // Trigger Retell AI auto-callback
+    // Trigger Retell AI auto-callback directly (no n8n middleman)
     if (phone) {
       try {
-        await fetch('https://n8n.agencycommandcenter.ai/webhook/pt-lead-retell', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            full_name: name || '',
-            phone_number: phone,
-            email: email || '',
-            zip_code: zip_code || '',
-            unit_type: unit_type || 'Not specified',
-            source: 'portabletoiletschamp.com'
-          }),
-        });
-        console.log('Retell callback triggered for:', phone);
+        // Clean phone number to E.164 format
+        let cleanPhone = phone.replace(/[^0-9+]/g, '');
+        if (!cleanPhone.startsWith('+')) {
+          if (cleanPhone.startsWith('1') && cleanPhone.length === 11) cleanPhone = '+' + cleanPhone;
+          else if (cleanPhone.length === 10) cleanPhone = '+1' + cleanPhone;
+        }
+
+        if (cleanPhone.length >= 11) {
+          // 5 second buffer before calling
+          await new Promise(resolve => setTimeout(resolve, 5000));
+
+          const retellResponse = await fetch('https://api.retellai.com/v2/create-phone-call', {
+            method: 'POST',
+            headers: {
+              'Authorization': 'Bearer key_6ef3d7fd02d31572ed6c569095a5',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              from_number: '+13312811097',
+              to_number: cleanPhone,
+              override_agent_id: 'agent_5c8956552ec7250e9526fe07c2',
+              retell_llm_dynamic_variables: {
+                customer_name: (name || '').split(' ')[0] || 'there'
+              },
+              metadata: {
+                source: 'portabletoiletschamp.com',
+                lead_name: name || '',
+                lead_phone: cleanPhone,
+                lead_email: email || '',
+                lead_zip: zip_code || '',
+                unit_type: unit_type || 'Not specified',
+                timestamp: new Date().toISOString()
+              }
+            }),
+          });
+
+          const retellData = await retellResponse.json();
+          console.log('Retell callback:', retellResponse.status, retellData.call_id || retellData.message);
+        }
       } catch (retellError) {
         console.error('Failed to trigger Retell callback:', retellError);
       }
