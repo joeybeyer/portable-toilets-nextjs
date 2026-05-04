@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { db } from '@/lib/db';
+import { isBusinessHours, getLocalHour } from '@/lib/businessHours';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -64,18 +65,33 @@ export async function POST(req: Request) {
       ],
     });
 
+    // Check business hours for this lead
+    const afterHours = phone ? !isBusinessHours(phone) : false;
+
+    const emailSubject = afterHours
+      ? `🌙 AFTER HOURS LEAD: ${name || 'Website Visitor'} - ${zip_code || 'Unknown'} - CALL AT 9AM`
+      : `📞 AUTO-CALLBACK TRIGGERED: ${name || 'Website Visitor'} - ${zip_code || 'Unknown'}`;
+
+    const emailBanner = afterHours
+      ? `<p style="background: #fff3e0; padding: 12px; border-radius: 4px; font-weight: bold;">
+          🌙 After-hours lead — Retell callback skipped (outside 9am-9pm local time). Please call this lead first thing in the morning.
+        </p>`
+      : `<p style="background: #e8f5e9; padding: 12px; border-radius: 4px; font-weight: bold;">
+          ✅ Retell AI is calling this lead right now. Do NOT call manually - buyer will receive via Retreaver.
+        </p>`;
+
+    const emailHeading = afterHours ? '🌙 After-Hours Lead Received' : '🤖 Lead Received - Auto-Callback Triggered';
+
     // Send email via Resend
     const { error } = await resend.emails.send({
       from: 'Portable Toilets Champ <info@portabletoiletschamp.com>',
       to: ['info@portabletoiletschamp.com', 'garrett@primedumpster.com'],
       bcc: ['leads@primedumpster.com'],
       replyTo: email || 'info@portabletoiletschamp.com',
-      subject: `📞 AUTO-CALLBACK TRIGGERED: ${name || 'Website Visitor'} - ${zip_code || 'Unknown'}`,
+      subject: emailSubject,
       html: `
-        <h2>🤖 Lead Received - Auto-Callback Triggered</h2>
-        <p style="background: #e8f5e9; padding: 12px; border-radius: 4px; font-weight: bold;">
-          ✅ Retell AI is calling this lead right now. Do NOT call manually - buyer will receive via Retreaver.
-        </p>
+        <h2>${emailHeading}</h2>
+        ${emailBanner}
         <p><strong>Name:</strong> ${name || ''}</p>
         <p><strong>Email:</strong> ${email || ''}</p>
         <p><strong>Phone:</strong> ${phone || ''}</p>
@@ -101,8 +117,8 @@ export async function POST(req: Request) {
       );
     }
 
-    // Trigger Retell AI auto-callback directly (no n8n middleman)
-    if (phone) {
+    // Trigger Retell AI auto-callback directly (only during business hours)
+    if (phone && !afterHours) {
       try {
         // Clean phone number to E.164 format
         let cleanPhone = phone.replace(/[^0-9+]/g, '');
@@ -146,6 +162,9 @@ export async function POST(req: Request) {
       } catch (retellError) {
         console.error('Failed to trigger Retell callback:', retellError);
       }
+    } else if (phone && afterHours) {
+      const localHr = getLocalHour(phone);
+      console.log(`Retell callback SKIPPED: outside business hours (local hour: ${localHr}) for ${phone}`);
     }
 
     return NextResponse.json({ success: true });
