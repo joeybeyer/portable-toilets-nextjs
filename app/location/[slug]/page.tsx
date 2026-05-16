@@ -11,7 +11,6 @@ import TLDRSummary from '@/components/TLDRSummary'
 import LastUpdated from '@/components/LastUpdated'
 
 const PHONE = '(833) 435-6610'
-const PHONE_HREF = 'tel:8334356610'
 
 interface LocationPageProps {
   params: Promise<{ slug: string }>
@@ -68,12 +67,15 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
 
 function LocationSchema({ location }: { location: Location }) {
   const coordinates = getLocationCoordinates(location.city)
+  const latitude = location.latitude ?? coordinates?.lat
+  const longitude = location.longitude ?? coordinates?.lng
 
   const schema: Record<string, unknown> = {
-    "@context": "http://schema.org",
-    "@type": "LocalBusiness",
+    "@context": "https://schema.org",
+    "@type": location.county ? "HomeAndConstructionBusiness" : "LocalBusiness",
     "name": "Portable Toilets Champ",
     "logo": "https://portabletoiletschamp.com/images/logo.svg",
+    "image": "https://portabletoiletschamp.com/images/logo.png",
     "telephone": location.phone,
     "url": `https://portabletoiletschamp.com/location/${location.slug}`,
     "description": `Professional portable toilet rentals in ${location.city}, ${location.stateCode}. Clean units, on-time delivery, simple pricing.`,
@@ -83,6 +85,7 @@ function LocationSchema({ location }: { location: Location }) {
       ...(location.address && { "streetAddress": location.address.split(',')[0] }),
       "addressLocality": location.city,
       "addressRegion": location.stateCode,
+      ...(location.postalCode && { "postalCode": location.postalCode }),
       "addressCountry": "US"
     },
     "areaServed": {
@@ -100,15 +103,16 @@ function LocationSchema({ location }: { location: Location }) {
       ],
       "opens": "00:00",
       "closes": "23:59"
-    }
+    },
+    ...(location.hasMap && { "hasMap": location.hasMap }),
+    ...(location.sameAs && { "sameAs": location.sameAs })
   }
 
-  // Add geo coordinates if available
-  if (coordinates) {
+  if (latitude && longitude) {
     schema.geo = {
       "@type": "GeoCoordinates",
-      "latitude": coordinates.lat,
-      "longitude": coordinates.lng
+      "latitude": latitude,
+      "longitude": longitude
     }
   }
 
@@ -158,6 +162,9 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
   const locationFaqs = getLocationFAQs(location)
   const nearbyCities = getNearbyCities(slug, 6)
   const cityNeighborhoods = getNeighborhoodsByCitySlug(slug)
+  const locationPhoneHref = `tel:${location.phone.replace(/[^0-9]/g, '')}`
+  const isGmbPage = Boolean(location.entityH2)
+  const h1Text = isGmbPage ? `Portable Toilet Rental ${location.city}` : `Portable Toilet Rental in ${location.city}`
 
   // Get blog posts - rotate through clusters based on location slug hash
   const clusters = ['event-rentals', 'construction-site', 'luxury-premium', 'ada-accessibility']
@@ -183,11 +190,11 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
           <div className="max-w-3xl">
             <span className="badge bg-teal-500/20 text-teal-400 mb-4">{location.stateCode}</span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Portable Toilet Rental in {location.city}
+              {h1Text}
             </h1>
             <p className="text-lg text-navy-300 mb-8">
-              Professional portable restroom services for {location.city} and surrounding areas.
-              Clean units, on-time delivery, simple pricing.
+              {location.sidekick || `Professional portable restroom services for ${location.city} and surrounding areas.`}
+              {!location.sidekick && ' Clean units, on-time delivery, simple pricing.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href={`/contact?city=${encodeURIComponent(location.city)}&state=${location.stateCode}`} className="btn-primary">
@@ -196,11 +203,11 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-              <a href={PHONE_HREF} className="btn-secondary bg-transparent border-white/20 text-white hover:bg-white/10">
+              <a href={locationPhoneHref} className="btn-secondary bg-transparent border-white/20 text-white hover:bg-white/10">
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                {PHONE}
+                {location.phone}
               </a>
             </div>
           </div>
@@ -220,7 +227,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                 location.neighborhoods && location.neighborhoods.length >= 2
                   ? `Serving ${location.neighborhoods[0]}, ${location.neighborhoods[1]}, and nearby areas`
                   : `Serving all neighborhoods and surrounding areas of ${location.city}`,
-                `Call (833) 435-6610 for a free ${location.city} quote in 60 seconds`,
+                `Call ${location.phone} for a free ${location.city} quote in 60 seconds`,
               ]}
             />
           </div>
@@ -235,26 +242,92 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
             <div className="lg:col-span-2 space-y-8">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-4">
-                  Why {location.city} Trusts Us for On-Site Sanitation
+                  {location.entityH2 || `Why ${location.city} Trusts Us for On-Site Sanitation`}
                 </h2>
                 <div className="prose prose-navy max-w-none space-y-4 text-navy-600">
-                  <p>
-                    When planning events or managing projects in {location.city}, reliable restroom facilities
-                    are essential. Portable Toilets Champ delivers professional portable toilet rental services
-                    that meet the highest standards of cleanliness and reliability.
-                  </p>
-                  <p>
-                    Our {location.city} service includes delivery, setup, regular maintenance, and pickup.
-                    Whether you need a single unit for a small project or dozens for a large event, we have
-                    the inventory and logistics to meet your needs.
-                  </p>
-                  <p>
-                    Every unit is professionally sanitized before delivery using hospital-grade cleaning
-                    products. We understand that restroom quality directly impacts guest satisfaction and
-                    worker productivity, which is why we never compromise on cleanliness.
-                  </p>
+                  {isGmbPage ? (
+                    <>
+                      <p>{location.localIntro}</p>
+                      <p>
+                        Service covers {location.city}, {location.stateCode} in {location.county}, including
+                        {' '}{location.neighborhoods?.slice(0, 5).join(', ')}. Deliveries are commonly planned for
+                        {' '}{location.venues?.slice(0, 2).join(' and ')}, along with construction sites, outdoor
+                        events, and temporary work zones.
+                      </p>
+                      <p>
+                        The word official matters here because the page is built around the current GMB service point,
+                        not a generic statewide listing. Address, phone, neighborhood, seasonal, and authority details
+                        are used to plan a cleaner local rental experience.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p>
+                        When planning events or managing projects in {location.city}, reliable restroom facilities
+                        are essential. Portable Toilets Champ delivers professional portable toilet rental services
+                        that meet the highest standards of cleanliness and reliability.
+                      </p>
+                      <p>
+                        Our {location.city} service includes delivery, setup, regular maintenance, and pickup.
+                        Whether you need a single unit for a small project or dozens for a large event, we have
+                        the inventory and logistics to meet your needs.
+                      </p>
+                      <p>
+                        Every unit is professionally sanitized before delivery using hospital-grade cleaning
+                        products. We understand that restroom quality directly impacts guest satisfaction and
+                        worker productivity, which is why we never compromise on cleanliness.
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
+
+              {isGmbPage && (
+                <>
+                  <div>
+                    <h2 className="text-2xl font-bold text-navy-900 mb-4">
+                      Use Cases for {location.city} Events and Jobsites
+                    </h2>
+                    <div className="grid md:grid-cols-3 gap-4">
+                      {location.useCases?.map((useCase) => (
+                        <div key={useCase.title} className="bg-white border border-gray-100 rounded-xl p-5">
+                          <h3 className="font-bold text-navy-900 mb-2">{useCase.title}</h3>
+                          <p className="text-sm text-navy-600">{useCase.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h2 className="text-2xl font-bold text-navy-900 mb-4">
+                      {location.city} Permits, Placement, and Seasonal Notes
+                    </h2>
+                    <div className="prose prose-navy max-w-none text-navy-600">
+                      <p>
+                        For public property, parks, sidewalks, street closures, or permitted events, check placement
+                        requirements with {location.permitAuthority}. Private property placements are usually simpler,
+                        but gates, slopes, fire lanes, and truck access still need to be confirmed before delivery.
+                      </p>
+                      <p>{location.seasonalNotes}</p>
+                      <p>
+                        Local demand often comes from {location.industryClusters?.join(', ')}. For those sites, the
+                        best setup is usually one that separates guest traffic from service access while keeping units
+                        visible, level, and close enough to the work or event area.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h2 className="text-2xl font-bold text-navy-900 mb-4">
+                      Neighborhoods and Venues Served in {location.city}
+                    </h2>
+                    <p className="text-navy-600 mb-4">
+                      Delivery routes include {location.neighborhoods?.join(', ')}. Common venue and landmark
+                      planning points include {location.venues?.join(', ')}.
+                    </p>
+                  </div>
+                </>
+              )}
 
               {/* Why Choose Us */}
               <div className="bg-gray-50 rounded-2xl p-8">
@@ -431,9 +504,15 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
 
               {/* Services */}
               <div>
-                <h3 className="text-xl font-bold text-navy-900 mb-6">
-                  Portable Toilet Services in {location.city}
-                </h3>
+                {isGmbPage ? (
+                  <h2 className="text-2xl font-bold text-navy-900 mb-6">
+                    Portable Toilet Services in {location.city}
+                  </h2>
+                ) : (
+                  <h3 className="text-xl font-bold text-navy-900 mb-6">
+                    Portable Toilet Services in {location.city}
+                  </h3>
+                )}
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   {services.map((service) => (
                     <Link
@@ -464,12 +543,93 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                 </div>
               </div>
 
+              {isGmbPage && location.recommendationRows && (
+                <div>
+                  <h2 className="text-2xl font-bold text-navy-900 mb-4">
+                    {location.city} Portable Toilet Quantity Guide
+                  </h2>
+                  <div className="overflow-x-auto border border-gray-200 rounded-xl">
+                    <table className="min-w-full divide-y divide-gray-200 bg-white text-sm">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Need</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Attendance or crew</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Recommended units</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Servicing plan</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        {location.recommendationRows.map((row) => (
+                          <tr key={`${row.need}-${row.units}`}>
+                            <td className="px-4 py-3 text-navy-700">{row.need}</td>
+                            <td className="px-4 py-3 text-navy-600">{row.attendance}</td>
+                            <td className="px-4 py-3 text-navy-600">{row.units}</td>
+                            <td className="px-4 py-3 text-navy-600">{row.servicing}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
+              {isGmbPage && location.localPricingRows && (
+                <div>
+                  <h2 className="text-2xl font-bold text-navy-900 mb-4">
+                    Portable Toilet Rental Pricing in {location.city}
+                  </h2>
+                  <div className="overflow-x-auto border border-gray-200 rounded-xl">
+                    <table className="min-w-full divide-y divide-gray-200 bg-white text-sm">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Unit type</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Typical range</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Best for</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Notes</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        {location.localPricingRows.map((row) => (
+                          <tr key={`${row.unit}-${row.range}`}>
+                            <td className="px-4 py-3 font-medium text-navy-800">{row.unit}</td>
+                            <td className="px-4 py-3 text-navy-600">{row.range}</td>
+                            <td className="px-4 py-3 text-navy-600">{row.bestFor}</td>
+                            <td className="px-4 py-3 text-navy-600">{row.notes}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-sm text-navy-500 mt-3">
+                    Final pricing depends on unit count, rental duration, delivery timing, placement access, and service frequency.
+                  </p>
+                </div>
+              )}
+
               {/* FAQ - PAA Optimized */}
               <div>
-                <h3 className="text-xl font-bold text-navy-900 mb-6">
-                  Frequently Asked Questions About Portable Toilet Rental in {location.city}
-                </h3>
-                <FAQ items={locationFaqs} allowMultiple={true} />
+                {isGmbPage ? (
+                  <>
+                    <h2 className="text-2xl font-bold text-navy-900 mb-6">
+                      FAQs About Portable Toilet Rental in {location.city}
+                    </h2>
+                    <div className="space-y-5">
+                      {locationFaqs.map((item) => (
+                        <div key={item.question} className="border-b border-gray-100 pb-5">
+                          <p className="font-semibold text-navy-900 mb-2">{item.question}</p>
+                          <p className="text-navy-600 leading-relaxed">{item.answer}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <h3 className="text-xl font-bold text-navy-900 mb-6">
+                      Frequently Asked Questions About Portable Toilet Rental in {location.city}
+                    </h3>
+                    <FAQ items={locationFaqs} allowMultiple={true} />
+                  </>
+                )}
               </div>
 
               {/* Google Map Embed */}
@@ -504,7 +664,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                 </p>
                 <div className="space-y-4">
                   <a
-                    href={`tel:${location.phone.replace(/[^0-9]/g, '')}`}
+                    href={locationPhoneHref}
                     className="flex items-center gap-3 p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors"
                   >
                     <div className="w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center">
@@ -1283,8 +1443,8 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
             <Link href={`/contact?city=${encodeURIComponent(location.city)}&state=${location.stateCode}`} className="btn-primary bg-white text-teal-700 hover:bg-gray-100">
               Get Free Quote
             </Link>
-            <a href={PHONE_HREF} className="btn-secondary bg-transparent border-white text-white hover:bg-white/10">
-              Call {PHONE}
+            <a href={locationPhoneHref} className="btn-secondary bg-transparent border-white text-white hover:bg-white/10">
+              Call {location.phone}
             </a>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { FAQItem } from './types'
+import { gmbLocations } from './gmbLocations'
 
 export interface Location {
   slug: string
@@ -10,6 +11,20 @@ export interface Location {
   phone: string
   address?: string
   mapEmbed?: string
+  hasMap?: string
+  sameAs?: string[]
+  county?: string
+  postalCode?: string
+  sidekick?: string
+  entityH2?: string
+  permitAuthority?: string
+  venues?: string[]
+  industryClusters?: string[]
+  seasonalNotes?: string
+  localIntro?: string
+  useCases?: { title: string; description: string }[]
+  recommendationRows?: { need: string; attendance: string; units: string; servicing: string }[]
+  localPricingRows?: { unit: string; range: string; bestFor: string; notes: string }[]
   paaFaqs?: FAQItem[]
   latitude?: number
   longitude?: number
@@ -1208,11 +1223,12 @@ Our service area covers all of Milwaukee and surrounding communities including W
     state: 'Texas',
     stateCode: 'TX',
     title: 'Portable Toilet Rental in Houston, TX',
-    metaDescription: 'Need portable toilets in Houston? Same-day delivery for events & job sites. Clean units from $250. Call (833) 435-6610 for your free quote.',
-    phone: '(833) 435-6610',
+    metaDescription: 'Need portable toilets in Houston? Same-day delivery for events & job sites. Clean units from $250. Call (346) 680-0708 for your free quote.',
+    phone: '(346) 680-0708',
     address: '10900 Katy Fwy, Houston, TX 77043',
     latitude: 29.7604,
     longitude: -95.3698,
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.53872706806!2d-95.4193265!3d29.7331181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c1e1d63f519b%3A0xd30622b9f829562d!2sPortable%20Toilets%20Champ!5e0!3m2!1sen!2sus!4v1777555318819!5m2!1sen!2sus',
     neighborhoods: ['Downtown Houston', 'Midtown', 'Montrose', 'Heights', 'Galleria', 'Texas Medical Center', 'Museum District', 'Energy Corridor', 'West University Place', 'Rice Village', 'Spring Branch', 'Memorial', 'River Oaks', 'Clear Lake', 'Pearland', 'Sugar Land', 'The Woodlands', 'Kingwood', 'Humble', 'Cypress', 'Katy', 'Missouri City', 'League City', 'Baytown', 'Pasadena'],
     description: `Houston\'s trusted portable toilet rental service serving the entire Greater Houston metropolitan area, from Downtown Houston to The Woodlands, Sugar Land, and beyond. Whether you're managing a construction project in the Energy Corridor, hosting a community event in Miller Outdoor Theatre, or organizing a large-scale festival, we deliver clean, well-maintained portable sanitation units to locations throughout Harris County and surrounding areas.
 
@@ -1228,7 +1244,7 @@ Our service area covers all of Harris County and extends to Montgomery, Fort Ben
     paaFaqs: [
       {
         question: 'How much does portable toilet rental cost in Houston?',
-        answer: 'Portable toilet rental in Houston, TX costs $250-$300 per month for a standard 28-day rental cycle with weekly servicing included. Deluxe units with hand washing stations range from $275-$325 per month. ADA-accessible units are $300-$350 per month. Luxury restroom trailers for events start at $450 per day. Daily event rentals begin at $125-$175 per unit. Same-day delivery available throughout Harris County for rush orders. Call (833) 435-6610 for a free customized quote for your Houston event or construction project.'
+        answer: 'Portable toilet rental in Houston, TX costs $250-$300 per month for a standard 28-day rental cycle with weekly servicing included. Deluxe units with hand washing stations range from $275-$325 per month. ADA-accessible units are $300-$350 per month. Luxury restroom trailers for events start at $450 per day. Daily event rentals begin at $125-$175 per unit. Same-day delivery available throughout Harris County for rush orders. Call (346) 680-0708 for a free customized quote for your Houston event or construction project.'
       },
       {
         question: 'How many portable toilets do I need for a Houston event?',
@@ -1244,7 +1260,7 @@ Our service area covers all of Harris County and extends to Montgomery, Fort Ben
       },
       {
         question: 'Can I get same-day delivery in Houston?',
-        answer: 'Yes, same-day delivery is available throughout the Houston metro area. Our Houston distribution center maintains a ready fleet to handle urgent requests for construction site emergencies, last-minute event needs, or project overruns. Same-day delivery requires ordering before 2 PM and is subject to availability. A rush delivery fee of $50-$100 may apply depending on location and unit type. Call (833) 435-6610 to check same-day availability for your specific Houston address.'
+        answer: 'Yes, same-day delivery is available throughout the Houston metro area. Our Houston distribution center maintains a ready fleet to handle urgent requests for construction site emergencies, last-minute event needs, or project overruns. Same-day delivery requires ordering before 2 PM and is subject to availability. A rush delivery fee of $50-$100 may apply depending on location and unit type. Call (346) 680-0708 to check same-day availability for your specific Houston address.'
       },
       {
         question: 'Are luxury restroom trailers available for Houston events?',
@@ -1269,7 +1285,7 @@ Our service area covers all of Harris County and extends to Montgomery, Fort Ben
       { type: 'High-Rise Unit', price: '$350-$400/month', description: 'Specialized units for downtown Houston high-rise construction projects.' }
     ],
     processSteps: [
-      { step: 1, title: 'Request a Quote', description: 'Contact us at (833) 435-6610 or online to describe your Houston event or construction project, including location, date, expected attendance, and duration.' },
+      { step: 1, title: 'Request a Quote', description: 'Contact us at (346) 680-0708 or online to describe your Houston event or construction project, including location, date, expected attendance, and duration.' },
       { step: 2, title: 'Receive Custom Quote', description: 'Our Houston team will provide a detailed quote within 2 hours during business hours, with unit recommendations, delivery schedule, and transparent pricing.' },
       { step: 3, title: 'Confirm Your Order', description: 'Accept the quote and provide a deposit to reserve your units. We recommend booking at least 7 days in advance for events, and 3 days for construction rentals.' },
       { step: 4, title: 'Delivery', description: 'Our team delivers units to your Houston location on the scheduled date, sets them up professionally, and ensures proper placement for optimal access and user convenience.' },
@@ -1298,7 +1314,8 @@ Our service area covers all of Harris County and extends to Montgomery, Fort Ben
     phone: '(833) 435-6610',
     latitude: 28.5383,
     longitude: -81.3792
-  }
+  },
+  ...gmbLocations
 ]
 
 export function getLocationBySlug(slug: string): Location | undefined {
