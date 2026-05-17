@@ -1061,7 +1061,11 @@ Our service area covers all of Milwaukee and surrounding communities including W
     stateCode: 'CT',
     title: 'Comprehensive Guide to Portable Toilet Services in Bridgeport',
     metaDescription: 'Looking for Portable Toilet Rental in Bridgeport, CT? Portable Toilets Champ offers comprehensive service.',
-    phone: '(833) 435-6610'
+    phone: '(833) 435-6610',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4449.446391153683!2d-73.2056212!3d41.182751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e80f535f886a5f%3A0xf41770db1b1c403c!2sPortable%20Toilets%20Champ!5e1!3m2!1sen!2sus!4v1779057794887!5m2!1sen!2sus',
+    hasMap: 'https://www.google.com/maps?cid=17588650956073746492',
+    latitude: 41.182751,
+    longitude: -73.2056212
   },
   {
     slug: 'comprehensive-guide-to-portable-toilet-services-in-gilbert',
