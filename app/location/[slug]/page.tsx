@@ -723,7 +723,19 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
               {/* Google Business Profile / Find Us */}
               <div className="bg-white border border-gray-100 rounded-xl overflow-hidden">
                 <div className="aspect-[4/3] bg-gray-100 relative">
-                  {location.city === 'Buffalo' ? (
+                  {location.mapEmbed ? (
+                    <iframe
+                      src={location.mapEmbed}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title={`Portable Toilets Champ - ${location.city}, ${location.stateCode} Location`}
+                      className="absolute inset-0"
+                    />
+                  ) : location.city === 'Buffalo' ? (
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.364095817818!2d-78.85820269999999!3d42.865158699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d31300141bdeeb%3A0x1902fc36358d2fe2!2sPortable%20Toilets%20Champ!5e0!3m2!1sen!2sus!4v1766848443086!5m2!1sen!2sus"
                       width="100%"
