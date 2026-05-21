@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Trust & Citations | Portable Toilets Champ [Verified Business]',
+  title: 'Trust & Citations Official',
   description: 'Want to verify our credentials? Find us on Google, BBB (A+ rated), Yelp & more. 4.9★ rating, 2,847+ reviews, 15K+ deliveries. Call (833) 435-6610.',
   alternates: {
     canonical: 'https://portabletoiletschamp.com/citations'

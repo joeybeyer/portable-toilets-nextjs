@@ -6,10 +6,10 @@ import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Portable Toilet Rental - Same-Day Delivery Nationwide [2026 Pricing]',
+    default: 'Portable Toilet Rental: Official Same-Day Delivery 2026',
     template: '%s'
   },
-  description: 'Need portable toilets fast? Same-day delivery in all 50 states. Clean units from $250. 99% on-time guarantee. Get your free quote: (833) 435-6610.',
+  description: 'Call (833) 435-6610 for same-day portable toilet delivery. Clean units from $250, all 50 states. 99% on-time guarantee.',
   keywords: ['portable toilet rental', 'porta potty rental', 'portable restroom', 'event restrooms', 'construction site toilets', 'ADA portable toilet', 'luxury restroom trailer'],
   authors: [{ name: 'Portable Toilets Champ' }],
   verification: {
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://portabletoiletschamp.com',
     siteName: 'Portable Toilets Champ',
-    title: 'Portable Toilet Rental - Same-Day Delivery Nationwide [2026 Pricing]',
-    description: 'Need portable toilets fast? Same-day delivery in all 50 states. Clean units from $75/day. 99% on-time guarantee.',
+    title: 'Portable Toilet Rental: Official Same-Day Delivery 2026',
+    description: 'Call (833) 435-6610 for same-day portable toilet delivery. Clean units from $250, all 50 states. 99% on-time guarantee.',
     images: [
       {
         url: 'https://portabletoiletschamp.com/images/logo.svg',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portable Toilet Rental - Same-Day Delivery [2026 Pricing]',
-    description: 'Need portable toilets fast? Same-day delivery in all 50 states. Clean units from $75/day. 99% on-time guarantee.',
+    title: 'Portable Toilet Rental: Official Same-Day Delivery 2026',
+    description: 'Call (833) 435-6610 for same-day portable toilet delivery. Clean units from $250, all 50 states.',
     images: ['https://portabletoiletschamp.com/images/logo.svg'],
   },
   robots: {

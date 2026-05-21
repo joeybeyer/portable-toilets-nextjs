@@ -5,10 +5,10 @@ const PHONE = '(833) 435-6610'
 const PHONE_HREF = 'tel:8334356610'
 
 export const metadata: Metadata = {
-  title: 'About Portable Toilets Champ | Nationwide Rentals [Since 2010]',
+  title: 'About Portable Toilets Champ | Nationwide Rentals Official',
   description: 'Looking for reliable portable toilet rentals? Portable Toilets Champ serves all 50 states with 99% on-time delivery. Call (833) 435-6610 for your free quote.',
   openGraph: {
-    title: 'About Portable Toilets Champ | Nationwide Rentals [Since 2010]',
+    title: 'About Portable Toilets Champ | Nationwide Rentals Official',
     description: 'Looking for reliable portable toilet rentals? Portable Toilets Champ serves all 50 states with 99% on-time delivery.',
     type: 'website',
   },

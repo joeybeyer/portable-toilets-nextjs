@@ -3,7 +3,7 @@ import UnitCalculator from "@/components/UnitCalculator";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How Many Portable Toilets Do I Need? | Free Calculator [2026]",
+  title: "How Many Portable Toilets Do I Need? | Free Calculator 2026",
   description:
     "Use our free portable toilet calculator to find out exactly how many units you need for your event, construction site, or festival. Based on guest count, duration, and type.",
   openGraph: {

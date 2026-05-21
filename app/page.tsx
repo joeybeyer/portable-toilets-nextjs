@@ -11,10 +11,10 @@ import UnitComparisonTable from '@/components/UnitComparisonTable'
 import TLDRSummary from '@/components/TLDRSummary'
 
 export const metadata: Metadata = {
-  title: 'Portable Toilet Rental | Same-Day Delivery [2026 Pricing]',
+  title: 'Portable Toilet Rental | Same-Day Delivery Official 2026',
   description: 'Tired of unreliable porta potty rentals? Get spotless units delivered on-time, starting at $250. Serving all 50 states. Call (833) 435-6610 for your free quote.',
   openGraph: {
-    title: 'Portable Toilet Rental | Same-Day Delivery [2026 Pricing]',
+    title: 'Portable Toilet Rental | Same-Day Delivery Official 2026',
     description: 'Tired of unreliable porta potty rentals? Get spotless units delivered on-time, starting at $250. Serving all 50 states.',
   },
 }

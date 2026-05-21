@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Portable Toilets Champ',
+  title: 'Privacy Policy',
   description: 'Learn how Portable Toilets Champ protects your data. Our privacy policy covers information collection, usage, and your rights. Questions? Call (833) 435-6610.',
   robots: {
     index: false,

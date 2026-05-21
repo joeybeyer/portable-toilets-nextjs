@@ -18,13 +18,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!category) return {}
 
   return {
-    title: `${category.name} Articles | Portable Toilet Blog [2026 Guide]`,
+    title: `${category.name} Articles | Portable Toilet Blog Official 2026 Guide`,
     description: `${category.description} Expert tips, planning guides & compliance info. Call (833) 435-6610 for your free quote.`,
     alternates: {
       canonical: `https://portabletoiletschamp.com/blog/category/${category.slug}`
     },
     openGraph: {
-      title: `${category.name} Articles | Portable Toilet Blog [2026 Guide]`,
+      title: `${category.name} Articles | Portable Toilet Blog Official 2026 Guide`,
       description: category.description,
       url: `https://portabletoiletschamp.com/blog/category/${category.slug}`,
       type: 'website'

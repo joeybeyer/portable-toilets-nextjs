@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
 
   if (!stateEntry) {
     return {
-      title: 'State Not Found | Portable Toilets Champ',
+      title: 'State Not Found',
     }
   }
 

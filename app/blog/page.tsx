@@ -5,13 +5,13 @@ import { categories } from '@/data/clusters'
 import BlogCard from '@/components/blog/BlogCard'
 
 export const metadata: Metadata = {
-  title: 'Portable Toilet Rental Blog | Expert Tips & Guides [2026]',
+  title: 'Portable Toilet Rental Blog | Expert Tips & Guides 2026',
   description: 'Planning an event or project? Get expert tips on portable toilet rental, event planning guides, and OSHA compliance info. Updated for 2026. Start reading now.',
   alternates: {
     canonical: 'https://portabletoiletschamp.com/blog'
   },
   openGraph: {
-    title: 'Portable Toilet Rental Blog | Expert Tips & Guides [2026]',
+    title: 'Portable Toilet Rental Blog | Expert Tips & Guides 2026',
     description: 'Planning an event or project? Get expert tips on portable toilet rental, event planning guides, and OSHA compliance info.',
     url: 'https://portabletoiletschamp.com/blog',
     type: 'website'

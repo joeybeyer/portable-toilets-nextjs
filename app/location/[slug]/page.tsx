@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
 
   if (!location) {
     return {
-      title: 'Location Not Found | Portable Toilets Champ',
+      title: 'Location Not Found',
     }
   }
 
@@ -732,7 +732,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title={`Portable Toilets Champ - ${location.city}, ${location.stateCode} Location`}
+                      title={`${location.city}, ${location.stateCode} Location`}
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Buffalo' ? (
@@ -744,7 +744,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Buffalo, NY Location"
+                      title="Buffalo, NY Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Garden Grove' ? (
@@ -756,7 +756,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Garden Grove, CA Location"
+                      title="Garden Grove, CA Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Oklahoma City' ? (
@@ -768,7 +768,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Oklahoma City, OK Location"
+                      title="Oklahoma City, OK Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Claremont' ? (
@@ -780,7 +780,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Claremont, CA Location"
+                      title="Claremont, CA Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Peoria' && location.stateCode === 'AZ' ? (
@@ -792,7 +792,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Peoria, AZ Location"
+                      title="Peoria, AZ Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Baltimore' ? (
@@ -804,7 +804,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Baltimore, MD Location"
+                      title="Baltimore, MD Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Charlotte' ? (
@@ -816,7 +816,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Charlotte, NC Location"
+                      title="Charlotte, NC Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Detroit' ? (
@@ -828,7 +828,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Detroit, MI Location"
+                      title="Detroit, MI Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Santa Ana' ? (
@@ -840,7 +840,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Santa Ana, CA Location"
+                      title="Santa Ana, CA Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'San Francisco' ? (
@@ -852,7 +852,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - San Francisco, CA Location"
+                      title="San Francisco, CA Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Boca Raton' ? (
@@ -864,7 +864,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Boca Raton, FL Location"
+                      title="Boca Raton, FL Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Milwaukee' ? (
@@ -876,7 +876,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Milwaukee, WI Location"
+                      title="Milwaukee, WI Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Reno' ? (
@@ -888,7 +888,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Reno, NV Location"
+                      title="Reno, NV Location"
                       className="absolute inset-0"
                     />
                   ) : location.city === 'Fresno' ? (
@@ -900,7 +900,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Portable Toilets Champ - Fresno, CA Location"
+                      title="Fresno, CA Location"
                       className="absolute inset-0"
                     />
                   ) : (

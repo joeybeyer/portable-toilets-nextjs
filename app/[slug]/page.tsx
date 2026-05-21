@@ -34,12 +34,12 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
   if (!service) {
     return {
-      title: 'Service Not Found | Portable Toilets Champ',
+      title: 'Service Not Found',
     }
   }
 
   // SEO-optimized title: Primary Keyword + Benefit Hook [Modifier]
-  const seoTitle = `${service.title} - Same-Day Delivery [2026 Pricing]`
+  const seoTitle = `${service.title} - Same-Day Delivery Official 2026`
 
   return {
     title: seoTitle,

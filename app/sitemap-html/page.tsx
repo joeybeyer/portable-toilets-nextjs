@@ -8,7 +8,7 @@ import { problemPages } from '@/data/problems'
 import { neighborhoods, getNeighborhoodsByCitySlug } from '@/data/neighborhoods'
 
 export const metadata: Metadata = {
-  title: 'Site Map | Portable Toilets Champ',
+  title: 'Site Map',
   description: 'Complete site map of Portable Toilets Champ. Find all our services, locations, and resources for portable toilet rentals nationwide.',
   robots: {
     index: true,
@@ -38,7 +38,7 @@ export default function SitemapPage() {
             Site Map
           </h1>
           <p className="text-lg text-navy-300">
-            Find everything on Portable Toilets Champ - all services, locations, and resources.
+            Find everything on all services, locations, and resources.
           </p>
         </div>
       </section>
