@@ -1,7 +1,7 @@
 export default function OrganizationSchema() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'Organization',
     '@id': 'https://portabletoiletschamp.com/#organization',
     name: 'Portable Toilets Champ',
     url: 'https://portabletoiletschamp.com',
