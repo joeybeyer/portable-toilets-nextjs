@@ -606,6 +606,151 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                 </div>
               )}
 
+              {/* Default Recommendation Table — all city pages */}
+              {!isGmbPage && (
+                <div>
+                  <h2 className="text-2xl font-bold text-navy-900 mb-4">
+                    How Many Portable Toilets Do You Need in {location.city}?
+                  </h2>
+                  <p className="text-navy-600 mb-4">
+                    Use this guide to estimate portable toilet quantities for your {location.city} event or project.
+                    When in doubt, round up — nobody likes waiting in line.
+                  </p>
+                  <div className="overflow-x-auto border border-gray-200 rounded-xl">
+                    <table className="min-w-full divide-y divide-gray-200 bg-white text-sm">
+                      <thead className="bg-teal-50">
+                        <tr>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Event / Project Type</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Guests / Crew</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Recommended Units</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Servicing Plan</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        <tr>
+                          <td className="px-4 py-3 text-navy-700">Small outdoor gathering</td>
+                          <td className="px-4 py-3 text-navy-600">Up to 50</td>
+                          <td className="px-4 py-3 text-navy-600">1 standard</td>
+                          <td className="px-4 py-3 text-navy-600">Before &amp; after event</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-navy-700">Medium event (4 hrs)</td>
+                          <td className="px-4 py-3 text-navy-600">50–150</td>
+                          <td className="px-4 py-3 text-navy-600">2–3 standard</td>
+                          <td className="px-4 py-3 text-navy-600">Once during event</td>
+                        </tr>
+                        <tr className="bg-teal-50/40">
+                          <td className="px-4 py-3 text-navy-700">Large event with bar</td>
+                          <td className="px-4 py-3 text-navy-600">150–300</td>
+                          <td className="px-4 py-3 text-navy-600">4–6 (mix standard + ADA)</td>
+                          <td className="px-4 py-3 text-navy-600">Every 4 hours</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-navy-700">Festival / concert</td>
+                          <td className="px-4 py-3 text-navy-600">300–1,000</td>
+                          <td className="px-4 py-3 text-navy-600">8–15 (include 1 ADA per 10)</td>
+                          <td className="px-4 py-3 text-navy-600">Twice daily</td>
+                        </tr>
+                        <tr className="bg-teal-50/40">
+                          <td className="px-4 py-3 text-navy-700">Construction site</td>
+                          <td className="px-4 py-3 text-navy-600">1–10 workers</td>
+                          <td className="px-4 py-3 text-navy-600">1 standard</td>
+                          <td className="px-4 py-3 text-navy-600">Weekly</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-navy-700">Large jobsite</td>
+                          <td className="px-4 py-3 text-navy-600">10–30 workers</td>
+                          <td className="px-4 py-3 text-navy-600">2–3 standard + 1 handwash</td>
+                          <td className="px-4 py-3 text-navy-600">Weekly or twice-weekly</td>
+                        </tr>
+                        <tr className="bg-teal-50/40">
+                          <td className="px-4 py-3 text-navy-700">Wedding / upscale event</td>
+                          <td className="px-4 py-3 text-navy-600">50–200</td>
+                          <td className="px-4 py-3 text-navy-600">1–2 luxury trailers</td>
+                          <td className="px-4 py-3 text-navy-600">Pre-event + as needed</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-sm text-navy-500 mt-3">
+                    * These are general guidelines. Alcohol service, extreme heat, or longer events may require more units. Call {location.phone} for a custom recommendation.
+                  </p>
+                </div>
+              )}
+
+              {/* Default Pricing Table — all city pages */}
+              {!isGmbPage && !location.pricing && !location.pricingRanges && (
+                <div>
+                  <h2 className="text-2xl font-bold text-navy-900 mb-4">
+                    Portable Toilet Rental Pricing in {location.city}
+                  </h2>
+                  <p className="text-navy-600 mb-4">
+                    Typical rental rates for {location.city}, {location.stateCode}. All prices include delivery,
+                    setup, and standard weekly servicing.
+                  </p>
+                  <div className="overflow-x-auto border border-gray-200 rounded-xl">
+                    <table className="min-w-full divide-y divide-gray-200 bg-white text-sm">
+                      <thead className="bg-teal-50">
+                        <tr>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Unit Type</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Daily</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Weekly</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Monthly (28 days)</th>
+                          <th className="px-4 py-3 text-left font-semibold text-navy-900">Best For</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        <tr>
+                          <td className="px-4 py-3 font-medium text-navy-800">Standard Portable Toilet</td>
+                          <td className="px-4 py-3 text-navy-600">$75–$125</td>
+                          <td className="px-4 py-3 text-navy-600">$150–$200</td>
+                          <td className="px-4 py-3 text-navy-600">$250–$300</td>
+                          <td className="px-4 py-3 text-navy-600">Construction, small events</td>
+                        </tr>
+                        <tr className="bg-teal-50/40">
+                          <td className="px-4 py-3 font-medium text-navy-800">Deluxe (with sink)</td>
+                          <td className="px-4 py-3 text-navy-600">$125–$175</td>
+                          <td className="px-4 py-3 text-navy-600">$200–$275</td>
+                          <td className="px-4 py-3 text-navy-600">$300–$400</td>
+                          <td className="px-4 py-3 text-navy-600">Weddings, corporate events</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 font-medium text-navy-800">ADA Accessible</td>
+                          <td className="px-4 py-3 text-navy-600">$100–$150</td>
+                          <td className="px-4 py-3 text-navy-600">$175–$250</td>
+                          <td className="px-4 py-3 text-navy-600">$300–$375</td>
+                          <td className="px-4 py-3 text-navy-600">Compliance, public events</td>
+                        </tr>
+                        <tr className="bg-teal-50/40">
+                          <td className="px-4 py-3 font-medium text-navy-800">Luxury Restroom Trailer</td>
+                          <td className="px-4 py-3 text-navy-600">$500–$1,500</td>
+                          <td className="px-4 py-3 text-navy-600">$900–$2,500</td>
+                          <td className="px-4 py-3 text-navy-600">Call for quote</td>
+                          <td className="px-4 py-3 text-navy-600">Upscale events, VIP areas</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 font-medium text-navy-800">Portable Sink Station</td>
+                          <td className="px-4 py-3 text-navy-600">$50–$100</td>
+                          <td className="px-4 py-3 text-navy-600">$125–$175</td>
+                          <td className="px-4 py-3 text-navy-600">$200–$275</td>
+                          <td className="px-4 py-3 text-navy-600">Food-service events, hygiene</td>
+                        </tr>
+                        <tr className="bg-teal-50/40">
+                          <td className="px-4 py-3 font-medium text-navy-800">Hand Sanitizer Station</td>
+                          <td className="px-4 py-3 text-navy-600">$25–$50</td>
+                          <td className="px-4 py-3 text-navy-600">$50–$75</td>
+                          <td className="px-4 py-3 text-navy-600">$75–$125</td>
+                          <td className="px-4 py-3 text-navy-600">High-traffic areas, pandemic prep</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-sm text-navy-500 mt-3">
+                    * Prices shown are typical ranges for {location.city}, {location.stateCode}. Final pricing depends on unit count, rental duration, delivery timing, placement access, and service frequency. Contact us for an exact quote.
+                  </p>
+                </div>
+              )}
+
               {/* FAQ - PAA Optimized */}
               <div>
                 {isGmbPage ? (
