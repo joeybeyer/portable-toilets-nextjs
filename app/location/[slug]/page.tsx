@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   }
 
   // Use location-specific title/metaDescription if available, otherwise use defaults
-  const pageTitle = location.title || `Portable Toilet Rental ${location.city}, ${location.stateCode} [Same-Day Delivery]`
+  const pageTitle = location.title || `Portable Toilet Rental ${location.city}: Official Same-Day Delivery 2026`
   const pageDescription = location.metaDescription || `Need portable toilets in ${location.city}? Get clean units delivered fast with same-day service available. Starting at $250. Call ${PHONE} for your free quote today.`
 
   return {
