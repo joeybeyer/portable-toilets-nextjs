@@ -1139,7 +1139,7 @@ Our service area covers all of Milwaukee and surrounding communities including W
     state: 'Arizona',
     stateCode: 'AZ',
     title: 'Portable Toilet Rental in Phoenix: Official Same-Day Delivery 2026',
-    metaDescription: 'Phoenix portable toilet rental with same-day delivery. Climate-ready units for desert heat. From $250. Call (833) 435-6610 for free quote.',
+    metaDescription: 'On-site sanitation in Phoenix with same-day delivery. Climate-ready units for desert heat. From $250. Call (833) 435-6610 for free quote.',
     phone: '(833) 435-6610',
     latitude: 33.4484,
     longitude: -112.0740
@@ -1194,7 +1194,7 @@ Our service area covers all of Milwaukee and surrounding communities including W
     state: 'Texas',
     stateCode: 'TX',
     title: 'Portable Toilet Rental in Austin: Official Same-Day Delivery 2026',
-    metaDescription: 'Austin portable toilet rental with same-day delivery. Festival-ready units for SXSW & beyond. From $250. Call (833) 435-6610.',
+    metaDescription: 'On-site sanitation in Austin with same-day delivery. Festival-ready units for SXSW & beyond. From $250. Call (833) 435-6610.',
     phone: '(833) 435-6610',
     latitude: 30.2672,
     longitude: -97.7431
@@ -1216,7 +1216,7 @@ Our service area covers all of Milwaukee and surrounding communities including W
     state: 'Texas',
     stateCode: 'TX',
     title: 'Portable Toilet Rental in Dallas: Official Same-Day Delivery 2026',
-    metaDescription: 'Dallas portable toilet rental with same-day delivery. Events, construction & more. Clean units from $250. Call (833) 435-6610.',
+    metaDescription: 'Restroom solutions in Dallas with same-day delivery. Events, construction & more. Clean units from $250. Call (833) 435-6610.',
     phone: '(833) 435-6610',
     latitude: 32.7767,
     longitude: -96.7970
@@ -1303,7 +1303,7 @@ Our service area covers all of Harris County and extends to Montgomery, Fort Ben
     state: 'Florida',
     stateCode: 'FL',
     title: 'Portable Toilet Rental in Tampa: Official Same-Day Delivery 2026',
-    metaDescription: 'Tampa Bay portable toilet rental with same-day delivery. Beach events & construction. From $250. Call (833) 435-6610 for free quote.',
+    metaDescription: 'On-site sanitation in Tampa Bay with same-day delivery. Beach events & construction. From $250. Call (833) 435-6610 for free quote.',
     phone: '(833) 435-6610',
     latitude: 27.9506,
     longitude: -82.4572
@@ -1314,7 +1314,7 @@ Our service area covers all of Harris County and extends to Montgomery, Fort Ben
     state: 'Florida',
     stateCode: 'FL',
     title: 'Portable Toilet Rental in Orlando: Official Same-Day Delivery 2026',
-    metaDescription: 'Orlando portable toilet rental for theme park events & construction. Same-day delivery from $250. Call (833) 435-6610 today.',
+    metaDescription: 'Restroom solutions in Orlando for theme park events & construction. Same-day delivery from $250. Call (833) 435-6610 today.',
     phone: '(833) 435-6610',
     latitude: 28.5383,
     longitude: -81.3792
