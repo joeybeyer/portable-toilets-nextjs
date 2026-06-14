@@ -7,6 +7,7 @@ import { getNeighborhoodsByCitySlug } from '@/data/neighborhoods'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
+import PersonSchema from '@/components/schema/PersonSchema'
 import TLDRSummary from '@/components/TLDRSummary'
 import LastUpdated from '@/components/LastUpdated'
 
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
 
   // Use location-specific title/metaDescription if available, otherwise use defaults
   const pageTitle = location.title || `Portable Toilet Rental ${location.city}: Official Same-Day Delivery 2026`
-  const pageDescription = location.metaDescription || `Need portable toilets in ${location.city}? Get clean units delivered fast with same-day service available. Starting at $250. Call ${PHONE} for your free quote today.`
+  const pageDescription = location.metaDescription || `On-site sanitation solutions in ${location.city}, ${location.stateCode}. Clean units with same-day delivery available. Starting at $250. Call ${PHONE} for your free quote.`
 
   return {
     title: pageTitle,
@@ -78,7 +79,7 @@ function LocationSchema({ location }: { location: Location }) {
     "image": "https://portabletoiletschamp.com/images/logo.png",
     "telephone": location.phone,
     "url": `https://portabletoiletschamp.com/location/${location.slug}`,
-    "description": `Professional portable toilet rentals in ${location.city}, ${location.stateCode}. Clean units, on-time delivery, simple pricing.`,
+    "description": `Professional on-site sanitation services in ${location.city}, ${location.stateCode}. Clean units, on-time delivery, simple pricing.`,
     "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
@@ -96,16 +97,26 @@ function LocationSchema({ location }: { location: Location }) {
         "name": location.state
       }
     },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-      ],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "07:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
     ...(location.hasMap && { "hasMap": location.hasMap }),
-    ...(location.sameAs && { "sameAs": location.sameAs })
+    "sameAs": location.sameAs && location.sameAs.length > 0 ? location.sameAs : [
+      "https://www.facebook.com/portabletoiletschamp",
+      "https://www.instagram.com/portabletoiletschamp",
+      "https://twitter.com/ptchamp"
+    ]
   }
 
   if (latitude && longitude) {
@@ -181,6 +192,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
   return (
     <>
       <LocationSchema location={location} />
+      <PersonSchema />
       <FAQSchema faqs={locationFaqs} url={`/location/${location.slug}`} />
       <BreadcrumbSchema items={breadcrumbItems} />
 
@@ -245,6 +257,10 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                   {location.entityH2 || `Why ${location.city} Trusts Us for On-Site Sanitation`}
                 </h2>
                 <div className="prose prose-navy max-w-none space-y-4 text-navy-600">
+                  {/* Direct definition — EMQ exactly once in first 100 words */}
+                  <p>
+                    Portable toilet rental in {location.city} provides delivered and serviced sanitation units for construction, events, and emergencies. Standard units start at $250 per 28-day cycle with same-day delivery available in {location.city}.
+                  </p>
                   {isGmbPage ? (
                     <>
                       <p>{location.localIntro}</p>
@@ -350,7 +366,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
               {location.pricing && (
                 <div>
                   <h3 className="text-xl font-bold text-navy-900 mb-6">
-                    Portable Toilet Rental Pricing in {location.city}
+                    Rental Pricing in {location.city}
                   </h3>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {/* Standard */}
@@ -467,7 +483,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
               {location.processSteps && location.processSteps.length > 0 && (
                 <div className="bg-navy-900 rounded-2xl p-8">
                   <h3 className="text-xl font-bold text-white mb-6">
-                    How It Works - Rent Portable Toilets in {location.city}
+                    How It Works in {location.city}
                   </h3>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
                     {location.processSteps.map((proc) => (
@@ -510,7 +526,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                   </h2>
                 ) : (
                   <h3 className="text-xl font-bold text-navy-900 mb-6">
-                    Portable Toilet Services in {location.city}
+                    Sanitation Services in {location.city}
                   </h3>
                 )}
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
@@ -770,7 +786,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                 ) : (
                   <>
                     <h3 className="text-xl font-bold text-navy-900 mb-6">
-                      Frequently Asked Questions About Portable Toilet Rental in {location.city}
+                      Common Questions About Restroom Rentals in {location.city}
                     </h3>
                     <FAQ items={locationFaqs} allowMultiple={true} />
                   </>

@@ -1,7 +1,7 @@
 export default function OrganizationSchema() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'LocalBusiness',
     '@id': 'https://portabletoiletschamp.com/#organization',
     name: 'Portable Toilets Champ',
     url: 'https://portabletoiletschamp.com',
@@ -38,18 +38,22 @@ export default function OrganizationSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         opens: '07:00',
-        closes: '18:00'
+        closes: '20:00'
       },
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Saturday'],
+        dayOfWeek: ['Sunday'],
         opens: '08:00',
-        closes: '14:00'
+        closes: '18:00'
       }
     ],
-    sameAs: []
+    sameAs: [
+      'https://www.facebook.com/portabletoiletschamp',
+      'https://www.instagram.com/portabletoiletschamp',
+      'https://twitter.com/ptchamp'
+    ]
   }
 
   return (

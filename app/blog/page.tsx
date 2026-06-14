@@ -30,7 +30,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Portable Toilet Rental Blog: Expert Tips & Guides
+              Expert Guides & Tips for Portable Sanitation
             </h1>
             <p className="text-xl text-gray-300">
               Expert insights, planning guides, and industry tips for all your portable sanitation needs.

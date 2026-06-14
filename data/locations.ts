@@ -47,7 +47,7 @@ function generateLocationFAQs(city: string, state: string, stateCode: string): F
 
   return [
     {
-      question: `How much does portable toilet rental cost in ${cityName}?`,
+      question: `How much does restroom rental cost in ${cityName}?`,
       answer: `Portable toilet rental in ${location} typically costs $250-300 for a standard 28-day rental cycle, which includes weekly servicing. Deluxe units with hand washing stations and luxury restroom trailers are available at higher price points. Daily and weekly rentals are also available for events. Call (833) 435-6610 for a free quote tailored to your ${cityName} event or project.`
     },
     {
@@ -63,7 +63,7 @@ function generateLocationFAQs(city: string, state: string, stateCode: string): F
       answer: `In ${location}, we offer standard portable toilets, deluxe flushable units with sinks, ADA-accessible handicap units, luxury restroom trailers with climate control, and high-rise construction units. All portable toilets are thoroughly sanitized and regularly serviced to ensure cleanliness for ${cityName} customers.`
     },
     {
-      question: `Do portable toilet rental companies in ${cityName} provide servicing?`,
+      question: `Do sanitation companies in ${cityName} provide servicing?`,
       answer: `Yes, professional portable toilet companies in ${location} include regular servicing with rentals. This includes waste pumping, sanitizing, restocking supplies, and maintenance. Service frequency depends on usage—typically weekly for standard use, more often for high-traffic events. Servicing is included in most rental packages.`
     }
   ]
@@ -77,13 +77,13 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Top-Rated Portable Toilet Rental in Los Angeles: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Los Angeles, CA? Portable Toilets Champ offers top-notch service for events and construction sites in LA.',
+    metaDescription: 'On-site sanitation in Los Angeles, CA. top-notch service for events and construction sites in LA.',
     phone: '(213) 714-8399',
     address: '6132 Wilshire Blvd, Los Angeles, CA 90048',
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9795.267287888637!2d-118.3626757!3d34.0629217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b900025eb477%3A0xe2a174376deff14b!2sPortable%20Toilets%20Champ!5e1!3m2!1sen!2sus!4v1767702668217!5m2!1sen!2sus',
     paaFaqs: [
       {
-        question: 'How much does portable toilet rental cost in Los Angeles?',
+        question: 'How much does restroom rental cost in Los Angeles?',
         answer: 'Portable toilet rental in Los Angeles typically ranges from $250-$350 for a standard 28-day rental period with weekly servicing. Daily rates start at $75-$125 per unit, while weekly rentals cost $150-$200. Deluxe units with hand-washing stations run $175-$275 per week. Luxury restroom trailers, popular for Hollywood events and upscale gatherings, start at $400-$600 per day. Los Angeles pricing accounts for traffic, parking, and permit considerations. Call (213) 714-8399 for your custom quote.'
       },
       {
@@ -115,11 +115,11 @@ export const locations: Location[] = [
         answer: 'For best availability in Los Angeles, we recommend booking 2-4 weeks in advance for standard events. For large-scale events (500+ guests), film productions, or luxury trailer rentals during peak season (spring/summer), book 4-6 weeks ahead. However, we often accommodate last-minute orders in LA due to our large fleet and multiple service routes. Emergency same-day service is available for urgent needs.'
       },
       {
-        question: 'What makes LA portable toilet rental different from other cities?',
+        question: 'What makes LA restroom rental different from other cities?',
         answer: 'Los Angeles presents unique challenges: heavy traffic affecting delivery times, limited parking requiring strategic placement, permit requirements for many venues, beach/sand placement needs in Santa Monica and Venice, high-rise construction in Downtown LA, and the need for premium units for Hollywood events. Our LA team has experience with all these situations and provides specialized solutions including sand-friendly units, crane-accessible high-rise toilets, and luxury trailers for celebrity events.'
       },
       {
-        question: 'Do you provide portable toilet rental for film productions in Los Angeles?',
+        question: 'Do you provide restroom rental for film productions in Los Angeles?',
         answer: 'Absolutely. We specialize in film and TV production portable restroom services throughout Los Angeles. Our film industry offerings include: restroom trailers with Hollywood-style amenities, on-set units for cast and crew, makeup stations with vanities, portable showers for location shoots, and VIP units for talent. We understand union requirements, studio access protocols, and the need for discreet, high-quality facilities. Our Burbank and Hollywood location ensures fast response to studio lots.'
       }
     ],
@@ -148,7 +148,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Portable Toilet Rental in Anaheim: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Anaheim, CA? Portable Toilets Champ offers top-notch service for events and construction sites.',
+    metaDescription: 'On-site sanitation in Anaheim, CA. top-notch service for events and construction sites.',
     phone: '(714) 551-7552',
     address: '201 E Center St, Anaheim, CA 92805',
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4910.713453163733!2d-117.9128628!3d33.8359366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd700448d83a7%3A0x441f1ddc837ef942!2sPortable%20Toilets%20Champ!5e1!3m2!1sen!2sus!4v1767702927069!5m2!1sen!2sus'
@@ -159,7 +159,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Exceptional Portable Toilet Rental Services in Beverly Hills: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Beverly Hills, CA? Portable Toilets Champ offers premium service for upscale events.',
+    metaDescription: 'On-site sanitation in Beverly Hills, CA. premium service for upscale events.',
     phone: '(833) 435-6610'
   },
   {
@@ -168,7 +168,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Portable Toilet Rental in Burbank - Your Ultimate Guide: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Burbank, CA? Portable Toilets Champ offers reliable service for events and construction sites.',
+    metaDescription: 'On-site sanitation in Burbank, CA. reliable service for events and construction sites.',
     phone: '(833) 435-6610'
   },
   {
@@ -177,7 +177,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Portable Toilet Rental Solutions in Malibu: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Malibu, CA? Portable Toilets Champ offers beach-ready service for events.',
+    metaDescription: 'On-site sanitation in Malibu, CA. beach-ready service for events.',
     phone: '(833) 435-6610'
   },
   {
@@ -186,7 +186,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'The Ultimate Guide to Portable Toilet Rental in Riverside: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Riverside, CA? Portable Toilets Champ offers comprehensive service for all needs.',
+    metaDescription: 'On-site sanitation in Riverside, CA. comprehensive service for all needs.',
     phone: '(833) 435-6610'
   },
   {
@@ -195,7 +195,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Portable Toilet Rental Solutions in Torrance: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Torrance, CA? Portable Toilets Champ offers reliable service.',
+    metaDescription: 'On-site sanitation in Torrance, CA. reliable service.',
     phone: '(833) 435-6610'
   },
   {
@@ -216,7 +216,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'High-Quality Portable Toilet Services in Bakersfield: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Bakersfield, CA? Portable Toilets Champ offers high-quality service.',
+    metaDescription: 'On-site sanitation in Bakersfield, CA. high-quality service.',
     phone: '(833) 435-6610'
   },
   {
@@ -237,7 +237,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Top-Notch Portable Toilet Services in Thousand Oaks: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Thousand Oaks, CA? Portable Toilets Champ offers top-notch service.',
+    metaDescription: 'On-site sanitation in Thousand Oaks, CA. top-notch service.',
     phone: '(805) 269-9118',
     address: '1596 N Moorpark Rd, Thousand Oaks, CA 91360'
   },
@@ -247,7 +247,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Premium Portable Toilet Services in Glendale: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Glendale, CA? Portable Toilets Champ offers premium service.',
+    metaDescription: 'On-site sanitation in Glendale, CA. premium service.',
     phone: '(833) 435-6610'
   },
   {
@@ -256,7 +256,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Top-Rated Portable Toilet Service in Long Beach: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Long Beach, CA? Portable Toilets Champ offers top-rated service.',
+    metaDescription: 'On-site sanitation in Long Beach, CA. top-rated service.',
     phone: '(833) 435-6610'
   },
   {
@@ -265,7 +265,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Portable Toilet Services in Huntington Beach: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Huntington Beach, CA? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Huntington Beach, CA. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -286,7 +286,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Top-Quality Portable Toilet Service in Garden Grove: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Garden Grove, CA? Portable Toilets Champ offers top-quality service.',
+    metaDescription: 'On-site sanitation in Garden Grove, CA. top-quality service.',
     phone: '(657) 551-5463',
     address: '10102 Stanford Ave, Garden Grove, CA 92840',
     latitude: 33.777346699999995,
@@ -298,7 +298,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Costa Mesa\'s Premier Portable Toilet Service: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Costa Mesa, CA? Portable Toilets Champ offers premier service.',
+    metaDescription: 'On-site sanitation in Costa Mesa, CA. premier service.',
     phone: '(833) 435-6610'
   },
   {
@@ -307,7 +307,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Comprehensive Guide to Portable Toilet Service in Westminster: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Westminster, CA? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Westminster, CA. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -316,7 +316,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Portable Toilet Service in Simi Valley: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Simi Valley, CA? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Simi Valley, CA. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -325,7 +325,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'The Leading Portable Toilet Service in Chula Vista: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Chula Vista, CA? Portable Toilets Champ offers leading service.',
+    metaDescription: 'On-site sanitation in Chula Vista, CA. leading service.',
     phone: '(833) 435-6610'
   },
   {
@@ -334,7 +334,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Premium Portable Toilet Service in Victorville: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Victorville, CA? Portable Toilets Champ offers premium service.',
+    metaDescription: 'On-site sanitation in Victorville, CA. premium service.',
     phone: '(833) 435-6610'
   },
   {
@@ -343,7 +343,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Premium Portable Toilet Services in Inglewood: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Inglewood, CA? Portable Toilets Champ offers premium service.',
+    metaDescription: 'On-site sanitation in Inglewood, CA. premium service.',
     phone: '(833) 435-6610'
   },
   {
@@ -352,7 +352,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Comprehensive Guide to Portable Toilet Services in Visalia: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Visalia, CA? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Visalia, CA. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -361,7 +361,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Portable Toilet Services in Roseville: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Roseville, CA? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Roseville, CA. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -370,7 +370,7 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Your Go-To Portable Toilet Service in Concord: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Concord, CA? Portable Toilets Champ offers reliable service.',
+    metaDescription: 'On-site sanitation in Concord, CA. reliable service.',
     phone: '(833) 435-6610'
   },
   {
@@ -379,13 +379,13 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Your Premier Portable Toilet Service in Claremont: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Claremont, CA? Portable Toilets Champ offers premier service for events, construction sites, and the Claremont Colleges.',
+    metaDescription: 'On-site sanitation in Claremont, CA. premier service for events, construction sites, and the Claremont Colleges.',
     phone: '(909) 245-9073',
     address: '2209 E Baseline Rd Suite 300 265, Claremont, CA 91711',
     latitude: 34.122924,
     longitude: -117.693395,
     neighborhoods: ['Claremont Village', 'Claremont Colleges', 'Indian Hill', 'North Claremont', 'South Claremont', 'East Claremont', 'The Claremont Hills', 'Pomona', 'La Verne', 'San Dimas', 'Upland', 'Montclair', 'Ontario', 'Chino', 'Claremont Meadows', 'Blaisdell', 'Chapparal', 'Canyon View', 'York Manor', 'Miramar', 'Glenhurst'],
-    description: `Claremont\'s premier portable toilet rental service serving the entire Pomona Valley region from the Claremont Colleges to Pomona, La Verne, San Dimas, and surrounding communities. Whether you're managing a construction project at the Claremont Village, organizing a community event at the Claremont Folk Festival, hosting a graduation event at Pomona College, or managing a project at the Claremont Colleges, we deliver clean, well-maintained portable sanitation units directly to your location.
+    description: `Claremont\'s premier on-site sanitation service serving the entire Pomona Valley region from the Claremont Colleges to Pomona, La Verne, San Dimas, and surrounding communities. Whether you're managing a construction project at the Claremont Village, organizing a community event at the Claremont Folk Festival, hosting a graduation event at Pomona College, or managing a project at the Claremont Colleges, we deliver clean, well-maintained portable sanitation units directly to your location.
 
 Our comprehensive inventory includes standard portable toilets perfect for construction sites and outdoor events, deluxe units featuring built-in hand washing stations ideal for weddings and corporate gatherings, ADA-compliant accessible units ensuring compliance with California accessibility requirements, and luxury restroom trailers with climate control, flushing toilets, and premium amenities for upscale events and VIP experiences.
 
@@ -398,7 +398,7 @@ For construction projects across the Claremont metropolitan area, we provide rel
 Our service area covers all of Claremont and surrounding communities including Pomona, La Verne, San Dimas, Upland, Montclair, and Ontario. We offer same-day and next-day delivery throughout the Pomona Valley area, competitive pricing, and exceptional customer service from our locally-based team with deep roots in the Claremont community.`,
     paaFaqs: [
       {
-        question: 'How much does portable toilet rental cost in Claremont?',
+        question: 'How much does restroom rental cost in Claremont?',
         answer: 'Portable toilet rental in Claremont, CA costs $275-$325 per month for a standard 28-day rental cycle with weekly servicing included. Deluxe units with hand washing stations range from $300-$350 per month. ADA-accessible units are $325-$375 per month. Luxury restroom trailers for events start at $500 per day. Daily event rentals begin at $150-$200 per unit. Same-day delivery available throughout the Pomona Valley for rush orders. Call (909) 245-9073 for a free customized quote for your Claremont event or construction project.'
       },
       {
@@ -450,7 +450,7 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'California',
     stateCode: 'CA',
     title: 'Portable Toilet Services in West Covina: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in West Covina, CA? Portable Toilets Champ offers quality service.',
+    metaDescription: 'On-site sanitation in West Covina, CA. quality service.',
     phone: '(833) 435-6610'
   },
   {
@@ -459,7 +459,7 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'California',
     stateCode: 'CA',
     title: 'Portable Toilet Service in Downey: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Downey, CA? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Downey, CA. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -468,7 +468,7 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'California',
     stateCode: 'CA',
     title: 'Superior Portable Toilet Services in El Monte: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in El Monte, CA? Portable Toilets Champ offers superior service.',
+    metaDescription: 'On-site sanitation in El Monte, CA. superior service.',
     phone: '(833) 435-6610'
   },
   {
@@ -477,7 +477,7 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'California',
     stateCode: 'CA',
     title: 'Best Portable Toilet Service in Lakewood: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Lakewood, CA? Portable Toilets Champ offers the best service.',
+    metaDescription: 'On-site sanitation in Lakewood, CA. the best service.',
     phone: '(833) 435-6610'
   },
   // New York
@@ -487,7 +487,7 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'New York',
     stateCode: 'NY',
     title: 'Premium Portable Toilet Services in: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in New York, NY? Portable Toilets Champ offers premium service.',
+    metaDescription: 'On-site sanitation in New York, NY. premium service.',
     phone: '(833) 435-6610'
   },
   {
@@ -496,7 +496,7 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'New York',
     stateCode: 'NY',
     title: 'Portable Toilet Services in the Bronx: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in the Bronx, NY? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in the Bronx, NY. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -505,7 +505,7 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'New York',
     stateCode: 'NY',
     title: 'The Ultimate Guide to Portable Toilet Services in Brooklyn: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Brooklyn, NY? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Brooklyn, NY. comprehensive service.',
     phone: '(929) 658-9620',
     address: '1236 Atlantic Ave, Brooklyn, NY 11216',
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4483.548044227606!2d-73.9517055!3d40.6782884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b00555959e7%3A0xc8feacb5f454ff68!2sPortable%20Toilets%20Champ!5e1!3m2!1sen!2sus!4v1767702720860!5m2!1sen!2sus'
@@ -516,7 +516,7 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'New York',
     stateCode: 'NY',
     title: 'Portable Toilet Rental in Buffalo: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Buffalo, NY? Portable Toilets Champ offers professional service for events and construction sites.',
+    metaDescription: 'On-site sanitation in Buffalo, NY. professional service for events and construction sites.',
     phone: '(716) 203-5512',
     address: '43 Hamburg St, Buffalo, NY 14204',
     latitude: 42.865158699999995,
@@ -528,7 +528,7 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'New York',
     stateCode: 'NY',
     title: 'Portable Toilet Services in East Rutherford: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in East Rutherford, NY? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in East Rutherford, NY. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -537,7 +537,7 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'New York',
     stateCode: 'NY',
     title: 'Portable Toilet Service in Jamaica: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Jamaica, NY? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Jamaica, NY. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -546,7 +546,7 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'New York',
     stateCode: 'NY',
     title: 'Portable Toilet Services in Yonkers: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Yonkers, NY? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Yonkers, NY. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -555,7 +555,7 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'New York',
     stateCode: 'NY',
     title: 'Top-Notch Portable Toilet Services in Rochester: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Rochester, NY? Portable Toilets Champ offers top-notch service.',
+    metaDescription: 'On-site sanitation in Rochester, NY. top-notch service.',
     phone: '(833) 435-6610'
   },
   // Other States
@@ -565,13 +565,13 @@ Our service area covers all of Claremont and surrounding communities including P
     state: 'Florida',
     stateCode: 'FL',
     title: 'Ultimate Guide to Portable Toilet Services in Miami: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Miami, FL? Portable Toilets Champ offers comprehensive service for events, construction sites, and beach venues across South Florida.',
+    metaDescription: 'On-site sanitation in Miami, FL. comprehensive service for events, construction sites, and beach venues across South Florida.',
     phone: '(833) 435-6610',
     address: '3900 NW 25th St, Miami, FL 33142',
     latitude: 25.8075,
     longitude: -80.2596,
     neighborhoods: ['Miami Beach', 'Brickell', 'Downtown Miami', 'Wynwood', 'Coral Gables', 'South Beach', 'Key Biscayne', 'Little Havana', 'Midtown Miami', 'Coconut Grove', 'Aventura', 'Hallandale Beach', 'Hollywood', 'Fort Lauderdale'],
-    description: `Miami\'s premier portable toilet rental service serving the entire South Florida metropolitan area from Miami Beach to Fort Lauderdale. Whether you're organizing a beach festival in South Beach, managing a construction project in Brickell, or hosting a backyard celebration in Coral Gables, we deliver clean, well-maintained portable toilets directly to your location.
+    description: `Miami\'s premier on-site sanitation service serving the entire South Florida metropolitan area from Miami Beach to Fort Lauderdale. Whether you're organizing a beach festival in South Beach, managing a construction project in Brickell, or hosting a backyard celebration in Coral Gables, we deliver clean, well-maintained portable toilets directly to your location.
 
 Our fleet of modern portable sanitation units includes standard portable toilets perfect for construction sites and outdoor events, deluxe units with built-in hand washing stations ideal for weddings and corporate events, ADA-accessible handicap units ensuring compliance and accessibility for all guests, and luxury restroom trailers with climate control, lighting, and premium finishes for high-end events and VIP areas.
 
@@ -584,7 +584,7 @@ For construction sites throughout Miami-Dade County, we provide reliable portabl
 Our service area encompasses all of Miami-Dade and Broward Counties, including Miami Beach, Fort Lauderdale, Hollywood, Hallandale Beach, Aventura, and surrounding areas. We offer flexible delivery schedules, competitive pricing, and exceptional customer service backed by years of experience in the South Florida portable sanitation industry.`,
     paaFaqs: [
       {
-        question: 'How much does portable toilet rental cost in Miami?',
+        question: 'How much does restroom rental cost in Miami?',
         answer: 'Portable toilet rental in Miami, FL typically costs $275-$350 for a standard 28-day rental cycle with weekly servicing. Standard units for construction sites start at $275 per month, while deluxe units with hand washing stations range from $300-$350. Luxury restroom trailers for high-end events start at $500 per day. Same-day delivery available in Miami-Dade and Broward Counties for an additional rush fee. Call (833) 435-6610 for a free quote tailored to your specific Miami event or project.'
       },
       {
@@ -639,7 +639,7 @@ Our service area encompasses all of Miami-Dade and Broward Counties, including M
     state: 'Florida',
     stateCode: 'FL',
     title: 'Portable Toilet Service in Miami: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Miami, FL? Portable Toilets Champ offers comprehensive service for events, construction sites, and beach venues across South Florida.',
+    metaDescription: 'On-site sanitation in Miami, FL. comprehensive service for events, construction sites, and beach venues across South Florida.',
     phone: '(833) 435-6610',
     address: '3900 NW 25th St, Miami, FL 33142',
     latitude: 25.8075,
@@ -651,7 +651,7 @@ Our service area encompasses all of Miami-Dade and Broward Counties, including M
     state: 'Florida',
     stateCode: 'FL',
     title: 'Portable Toilet Service in Tallahassee: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Tallahassee, FL? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Tallahassee, FL. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -660,7 +660,7 @@ Our service area encompasses all of Miami-Dade and Broward Counties, including M
     state: 'Florida',
     stateCode: 'FL',
     title: 'Premium Portable Toilet Services in Boca Raton: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Boca Raton, FL? Portable Toilets Champ offers premium service.',
+    metaDescription: 'On-site sanitation in Boca Raton, FL. premium service.',
     phone: '(561) 916-4387',
     address: '1800 N Military Trl, Boca Raton, FL 33431',
     latitude: 26.3615864,
@@ -672,7 +672,7 @@ Our service area encompasses all of Miami-Dade and Broward Counties, including M
     state: 'Illinois',
     stateCode: 'IL',
     title: 'Portable Toilet Service in Chicago: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Chicago, IL? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Chicago, IL. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -681,13 +681,13 @@ Our service area encompasses all of Miami-Dade and Broward Counties, including M
     state: 'Illinois',
     stateCode: 'IL',
     title: 'Top-Notch Portable Toilet Services in Peoria: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Peoria, IL? Portable Toilets Champ offers top-notch service for events and construction sites across the Peoria metropolitan area.',
+    metaDescription: 'On-site sanitation in Peoria, IL. top-notch service for events and construction sites across the Peoria metropolitan area.',
     phone: '(833) 435-6610',
     address: '3300 W Lincoln Ave, Peoria, IL 61614',
     latitude: 40.6936,
     longitude: -89.5890,
     neighborhoods: ['Downtown Peoria', 'North Peoria', 'South Peoria', 'East Peoria', 'Peoria Heights', 'West Bluff', 'Garden Street', 'University District', 'Bradley University Area', 'Bartonville', 'Germantown Hills', 'Metamora', 'Washington', 'Dunlap', 'Mossville', 'Bellevue', 'Mapleton', 'Hanna City', 'Wyoming', 'Toulon', 'St. Francisville'],
-    description: `Peoria\'s trusted portable toilet rental service serving the entire Central Illinois region from downtown Peoria to East Peoria, Washington, and surrounding communities. Whether you're managing a construction project at the Peoria Riverfront, organizing a community event at the Peoria Civic Center, or hosting a backyard celebration in the Peoria Heights neighborhood, we deliver clean, well-maintained portable sanitation units directly to your location.
+    description: `Peoria\'s trusted on-site sanitation service serving the entire Central Illinois region from downtown Peoria to East Peoria, Washington, and surrounding communities. Whether you're managing a construction project at the Peoria Riverfront, organizing a community event at the Peoria Civic Center, or hosting a backyard celebration in the Peoria Heights neighborhood, we deliver clean, well-maintained portable sanitation units directly to your location.
 
 Our comprehensive inventory includes standard portable toilets perfect for construction sites and outdoor events, deluxe units featuring built-in hand washing stations ideal for weddings and corporate gatherings, ADA-compliant accessible units ensuring compliance with Illinois accessibility requirements, and luxury restroom trailers with climate control, flushing toilets, and premium amenities for upscale events and VIP experiences.
 
@@ -700,7 +700,7 @@ For construction projects across the Peoria metropolitan area, we provide reliab
 Our service area covers all of Peoria, East Peoria, Washington, and surrounding communities including Bartonville, Germantown Hills, Metamora, Dunlap, and Bellevue. We offer same-day and next-day delivery throughout the Central Illinois area, competitive pricing, and exceptional customer service from our locally-based team with deep roots in the Peoria community.`,
     paaFaqs: [
       {
-        question: 'How much does portable toilet rental cost in Peoria?',
+        question: 'How much does restroom rental cost in Peoria?',
         answer: 'Portable toilet rental in Peoria, IL costs $225-$275 per month for a standard 28-day rental cycle with weekly servicing included. Deluxe units with hand washing stations range from $250-$300 per month. ADA-accessible units are $275-$325 per month. Luxury restroom trailers for events start at $400 per day. Daily event rentals begin at $100-$150 per unit. Same-day delivery available throughout the Peoria metro area for rush orders. Call (833) 435-6610 for a free customized quote for your Peoria event or construction project.'
       },
       {
@@ -752,7 +752,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'Illinois',
     stateCode: 'IL',
     title: 'Portable Toilet Services in Springfield: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Springfield, IL? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Springfield, IL. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -761,7 +761,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'Colorado',
     stateCode: 'CO',
     title: 'Ultimate Guide to Portable Toilet Services in Denver: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Denver, CO? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Denver, CO. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -770,7 +770,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'Colorado',
     stateCode: 'CO',
     title: 'Portable Toilet Services in Arvada: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Arvada, CO? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Arvada, CO. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -779,7 +779,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'District of Columbia',
     stateCode: 'DC',
     title: 'High-Quality Portable Toilet Services in: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Washington, DC? Portable Toilets Champ offers high-quality service.',
+    metaDescription: 'On-site sanitation in Washington, DC. high-quality service.',
     phone: '(833) 435-6610'
   },
   {
@@ -788,7 +788,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'Michigan',
     stateCode: 'MI',
     title: 'Portable Toilet Service in Detroit: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Detroit, MI? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Detroit, MI. comprehensive service.',
     phone: '(313) 547-5676',
     address: '4417 2nd Ave, Detroit, MI 48201',
     latitude: 42.3512385,
@@ -800,7 +800,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'Michigan',
     stateCode: 'MI',
     title: 'Top-Quality Portable Toilet Service in Ann Arbor: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Ann Arbor, MI? Portable Toilets Champ offers top-quality service.',
+    metaDescription: 'On-site sanitation in Ann Arbor, MI. top-quality service.',
     phone: '(833) 435-6610'
   },
   {
@@ -809,7 +809,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'Minnesota',
     stateCode: 'MN',
     title: 'Top-Rated Portable Toilet Services in Minneapolis: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Minneapolis, MN? Portable Toilets Champ offers top-rated service.',
+    metaDescription: 'On-site sanitation in Minneapolis, MN. top-rated service.',
     phone: '(833) 435-6610'
   },
   {
@@ -818,7 +818,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'Minnesota',
     stateCode: 'MN',
     title: 'Premier Portable Toilet Services in Saint Paul: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Saint Paul, MN? Portable Toilets Champ offers premier service.',
+    metaDescription: 'On-site sanitation in Saint Paul, MN. premier service.',
     phone: '(833) 435-6610'
   },
   {
@@ -827,7 +827,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'Minnesota',
     stateCode: 'MN',
     title: 'Top-Notch Portable Toilet Service in Saint Paul: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Saint Paul, MN? Portable Toilets Champ offers top-notch service.',
+    metaDescription: 'On-site sanitation in Saint Paul, MN. top-notch service.',
     phone: '(833) 435-6610'
   },
   {
@@ -836,7 +836,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'Missouri',
     stateCode: 'MO',
     title: 'Top-Quality Portable Toilet Services in Kansas City: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Kansas City, MO? Portable Toilets Champ offers top-quality service.',
+    metaDescription: 'On-site sanitation in Kansas City, MO. top-quality service.',
     phone: '(833) 435-6610'
   },
   {
@@ -845,7 +845,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'Kansas',
     stateCode: 'KS',
     title: 'Top Portable Toilet Services in Olathe: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Olathe, KS? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Olathe, KS. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -864,7 +864,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'Maryland',
     stateCode: 'MD',
     title: 'Portable Toilet Services in Baltimore: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Baltimore, MD? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Baltimore, MD. comprehensive service.',
     phone: '(410) 226-7914',
     address: '710 S Caton Ave, Baltimore, MD 21229',
     latitude: 39.2762355,
@@ -876,7 +876,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'North Carolina',
     stateCode: 'NC',
     title: 'Portable Toilet Services in Charlotte: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Charlotte, NC? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Charlotte, NC. comprehensive service.',
     phone: '(704) 440-3491',
     address: '3301 Woodpark Blvd, Charlotte, NC 28206',
     latitude: 35.2692502,
@@ -888,7 +888,7 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'North Carolina',
     stateCode: 'NC',
     title: 'Portable Toilet Services in Raleigh: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Raleigh, NC? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Raleigh, NC. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -897,13 +897,13 @@ Our service area covers all of Peoria, East Peoria, Washington, and surrounding 
     state: 'Nevada',
     stateCode: 'NV',
     title: 'Top-Quality Portable Toilet Services in Reno: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Reno, NV? Portable Toilets Champ offers top-quality service for events and construction sites across the Biggest Little City in the World.',
+    metaDescription: 'On-site sanitation in Reno, NV. top-quality service for events and construction sites across the Biggest Little City in the World.',
     phone: '(775) 307-5143',
     address: '100 W Liberty St, Reno, NV 89501',
     latitude: 39.521126,
     longitude: -119.8127126,
     neighborhoods: ['Downtown Reno', 'Midtown', 'Sparks', 'North Valleys', 'South Reno', 'Old Southwest', 'Caughlin Ranch', 'McRan', 'Double Diamond', 'Damonte Ranch', 'South Truckee Meadows', 'Verdi', 'Incline Village', 'Crystal Bay', 'Sun Valley', 'Spanish Springs'],
-    description: `Reno\'s trusted portable toilet rental service serving the entire Truckee Meadows region from downtown Reno to Sparks, Incline Village, and surrounding Northern Nevada communities. Whether you're managing a construction project at the Reno/Tahoe Industrial Center, organizing a community event at Wingfield Park, or hosting a backyard celebration in the Caughlin Ranch neighborhood, we deliver clean, well-maintained portable sanitation units directly to your location.
+    description: `Reno\'s trusted on-site sanitation service serving the entire Truckee Meadows region from downtown Reno to Sparks, Incline Village, and surrounding Northern Nevada communities. Whether you're managing a construction project at the Reno/Tahoe Industrial Center, organizing a community event at Wingfield Park, or hosting a backyard celebration in the Caughlin Ranch neighborhood, we deliver clean, well-maintained portable sanitation units directly to your location.
 
 Our comprehensive inventory includes standard portable toilets perfect for construction sites and outdoor events, deluxe units featuring built-in hand washing stations ideal for weddings and corporate gatherings, ADA-compliant accessible units ensuring compliance with Nevada accessibility requirements, and luxury restroom trailers with climate control, flushing toilets, and premium amenities for upscale events and VIP experiences.
 
@@ -916,7 +916,7 @@ For construction projects across the Reno-Sparks metropolitan area, we provide r
 Our service area covers all of Reno, Sparks, and surrounding communities including Incline Village, Verdi, Sun Valley, and Spanish Springs. We offer same-day and next-day delivery throughout the Reno-Tahoe metro area, competitive pricing, and exceptional customer service from our locally-based team with deep roots in the Northern Nevada community.`,
     paaFaqs: [
       {
-        question: 'How much does portable toilet rental cost in Reno?',
+        question: 'How much does restroom rental cost in Reno?',
         answer: 'Portable toilet rental in Reno, NV costs $250-$300 per month for a standard 28-day rental cycle with weekly servicing included. Deluxe units with hand washing stations range from $275-$325 per month. ADA-accessible units are $300-$350 per month. Luxury restroom trailers for events start at $450 per day. Daily event rentals begin at $125-$175 per unit. Same-day delivery available throughout Washoe County for rush orders. Call (775) 307-5143 for a free customized quote for your Reno event or construction project.'
       },
       {
@@ -968,7 +968,7 @@ Our service area covers all of Reno, Sparks, and surrounding communities includi
     state: 'Oklahoma',
     stateCode: 'OK',
     title: 'Premium Portable Toilet Services in Oklahoma City: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Oklahoma City, OK? Portable Toilets Champ offers premium service.',
+    metaDescription: 'On-site sanitation in Oklahoma City, OK. premium service.',
     phone: '(405) 357-0013',
     address: '4832 Richmond Square, Oklahoma City, OK 73118',
     latitude: 35.519499599999996,
@@ -980,7 +980,7 @@ Our service area covers all of Reno, Sparks, and surrounding communities includi
     state: 'Texas',
     stateCode: 'TX',
     title: 'Comprehensive Portable Toilet Services in Fort Worth: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Fort Worth, TX? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Fort Worth, TX. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -989,13 +989,13 @@ Our service area covers all of Reno, Sparks, and surrounding communities includi
     state: 'Wisconsin',
     stateCode: 'WI',
     title: 'Portable Toilet Services in Milwaukee: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Milwaukee, WI? Portable Toilets Champ offers comprehensive service for events, construction sites, and venues across Brew City.',
+    metaDescription: 'On-site sanitation in Milwaukee, WI. comprehensive service for events, construction sites, and venues across Brew City.',
     phone: '(414) 279-4967',
     address: '11301 W Lake Park Dr, Milwaukee, WI 53224',
     latitude: 43.157168,
     longitude: -88.0531039,
     neighborhoods: ['Downtown Milwaukee', 'Historic Third Ward', 'East Side', 'Bay View', 'Walker\'s Point', 'Riverwest', 'Bronzeville', 'Hayti', 'Harbor View', 'Merrill Park', 'River Hills', 'Whitefish Bay', 'Shorewood', 'Cudahy', 'St. Francis', 'South Milwaukee', 'Oak Creek', 'Wauwatosa', 'West Allis', 'Greenfield', 'Franklin', 'Greendale', 'Hales Corners', 'New Berlin', 'Brookfield', 'Elm Grove', 'Waukesha', 'Pewaukee', 'Sussex', 'Menomonee Falls', 'Germantown'],
-    description: `Milwaukee\'s premier portable toilet rental service serving the entire southeastern Wisconsin region from downtown Milwaukee to Waukesha, Brookfield, and surrounding communities. Whether you're managing a construction project at the Milwaukee Intermodal Station, organizing a community event at Henry Maier Festival Park, or hosting a backyard celebration in Bay View, we deliver clean, well-maintained portable sanitation units directly to your location.
+    description: `Milwaukee\'s premier on-site sanitation service serving the entire southeastern Wisconsin region from downtown Milwaukee to Waukesha, Brookfield, and surrounding communities. Whether you're managing a construction project at the Milwaukee Intermodal Station, organizing a community event at Henry Maier Festival Park, or hosting a backyard celebration in Bay View, we deliver clean, well-maintained portable sanitation units directly to your location.
 
 Our comprehensive inventory includes standard portable toilets perfect for construction sites and outdoor events, deluxe units featuring built-in hand washing stations ideal for weddings and corporate gatherings, ADA-compliant accessible units ensuring compliance with Wisconsin accessibility requirements, and luxury restroom trailers with climate control, flushing toilets, and premium amenities for upscale events and VIP experiences.
 
@@ -1008,7 +1008,7 @@ For construction projects across the Milwaukee metropolitan area, we provide rel
 Our service area covers all of Milwaukee and surrounding communities including Wauwatosa, West Allis, Oak Creek, Waukesha, Brookfield, and beyond. We offer same-day and next-day delivery throughout the southeastern Wisconsin area, competitive pricing, and exceptional customer service from our locally-based team with deep roots in the Milwaukee community.`,
     paaFaqs: [
       {
-        question: 'How much does portable toilet rental cost in Milwaukee?',
+        question: 'How much does restroom rental cost in Milwaukee?',
         answer: 'Portable toilet rental in Milwaukee, WI costs $250-$300 per month for a standard 28-day rental cycle with weekly servicing included. Deluxe units with hand washing stations range from $275-$325 per month. ADA-accessible units are $300-$350 per month. Luxury restroom trailers for events start at $450 per day. Daily event rentals begin at $125-$175 per unit. Same-day delivery available throughout the Milwaukee metro area for rush orders. Call (414) 279-4967 for a free customized quote for your Milwaukee event or construction project.'
       },
       {
@@ -1060,7 +1060,7 @@ Our service area covers all of Milwaukee and surrounding communities including W
     state: 'Connecticut',
     stateCode: 'CT',
     title: 'Comprehensive Guide to Portable Toilet Services in Bridgeport: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Bridgeport, CT? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Bridgeport, CT. comprehensive service.',
     phone: '(833) 435-6610',
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4449.446391153683!2d-73.2056212!3d41.182751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e80f535f886a5f%3A0xf41770db1b1c403c!2sPortable%20Toilets%20Champ!5e1!3m2!1sen!2sus!4v1779057794887!5m2!1sen!2sus',
     hasMap: 'https://www.google.com/maps?cid=17588650956073746492',
@@ -1073,7 +1073,7 @@ Our service area covers all of Milwaukee and surrounding communities including W
     state: 'Arizona',
     stateCode: 'AZ',
     title: 'Comprehensive Guide to Portable Toilet Services in Gilbert: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Gilbert, AZ? Portable Toilets Champ offers comprehensive service.',
+    metaDescription: 'On-site sanitation in Gilbert, AZ. comprehensive service.',
     phone: '(833) 435-6610'
   },
   {
@@ -1082,7 +1082,7 @@ Our service area covers all of Milwaukee and surrounding communities including W
     state: 'Arizona',
     stateCode: 'AZ',
     title: 'Portable Toilet Rental Services in Peoria: Official Same-Day Delivery 2026',
-    metaDescription: 'Looking for Portable Toilet Rental in Peoria, AZ? Portable Toilets Champ offers reliable service for events and construction sites.',
+    metaDescription: 'On-site sanitation in Peoria, AZ. reliable service for events and construction sites.',
     phone: '(928) 212-1228',
     address: '9132 W Cactus Rd, Peoria, AZ 85381',
     latitude: 33.5963209,
@@ -1234,7 +1234,7 @@ Our service area covers all of Milwaukee and surrounding communities including W
     longitude: -95.3698,
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.53872706806!2d-95.4193265!3d29.7331181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c1e1d63f519b%3A0xd30622b9f829562d!2sPortable%20Toilets%20Champ!5e0!3m2!1sen!2sus!4v1777555318819!5m2!1sen!2sus',
     neighborhoods: ['Downtown Houston', 'Midtown', 'Montrose', 'Heights', 'Galleria', 'Texas Medical Center', 'Museum District', 'Energy Corridor', 'West University Place', 'Rice Village', 'Spring Branch', 'Memorial', 'River Oaks', 'Clear Lake', 'Pearland', 'Sugar Land', 'The Woodlands', 'Kingwood', 'Humble', 'Cypress', 'Katy', 'Missouri City', 'League City', 'Baytown', 'Pasadena'],
-    description: `Houston\'s trusted portable toilet rental service serving the entire Greater Houston metropolitan area, from Downtown Houston to The Woodlands, Sugar Land, and beyond. Whether you're managing a construction project in the Energy Corridor, hosting a community event in Miller Outdoor Theatre, or organizing a large-scale festival, we deliver clean, well-maintained portable sanitation units to locations throughout Harris County and surrounding areas.
+    description: `Houston\'s trusted on-site sanitation service serving the entire Greater Houston metropolitan area, from Downtown Houston to The Woodlands, Sugar Land, and beyond. Whether you're managing a construction project in the Energy Corridor, hosting a community event in Miller Outdoor Theatre, or organizing a large-scale festival, we deliver clean, well-maintained portable sanitation units to locations throughout Harris County and surrounding areas.
 
 Our comprehensive inventory includes standard portable toilets suitable for construction sites and outdoor events, deluxe units featuring built-in hand washing stations perfect for weddings and corporate gatherings, ADA-compliant accessible units ensuring compliance with Texas accessibility requirements, high-rise construction units designed for downtown Houston high-rises, and luxury restroom trailers with climate control, flushing toilets, and premium amenities for upscale events and VIP experiences.
 
@@ -1247,7 +1247,7 @@ For construction projects across Houston, we provide reliable portable sanitatio
 Our service area covers all of Harris County and extends to Montgomery, Fort Bend, Brazoria, Galveston, and Liberty Counties. We offer same-day and next-day delivery throughout the Houston area, competitive pricing, and exceptional customer service from our locally-based team with deep roots in the Houston community.`,
     paaFaqs: [
       {
-        question: 'How much does portable toilet rental cost in Houston?',
+        question: 'How much does restroom rental cost in Houston?',
         answer: 'Portable toilet rental in Houston, TX costs $250-$300 per month for a standard 28-day rental cycle with weekly servicing included. Deluxe units with hand washing stations range from $275-$325 per month. ADA-accessible units are $300-$350 per month. Luxury restroom trailers for events start at $450 per day. Daily event rentals begin at $125-$175 per unit. Same-day delivery available throughout Harris County for rush orders. Call (346) 680-0708 for a free customized quote for your Houston event or construction project.'
       },
       {

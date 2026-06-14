@@ -49,7 +49,7 @@ export default function Header() {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/location', label: 'Service Areas' },
-    { href: '/blog', label: 'Blog' },
+    { href: '/blog', label: 'Guides' },
     { href: '/contact', label: 'Contact' },
   ]
 
@@ -158,7 +158,7 @@ export default function Header() {
             {[
               { href: '/about', label: 'About' },
               { href: '/location', label: 'Service Areas' },
-              { href: '/blog', label: 'Blog' },
+              { href: '/blog', label: 'Guides' },
               { href: '/contact', label: 'Contact' },
             ].map((link) => (
               <Link
@@ -257,7 +257,7 @@ export default function Header() {
               {[
                 { href: '/about', label: 'About' },
                 { href: '/location', label: 'Service Areas' },
-                { href: '/blog', label: 'Blog' },
+                { href: '/blog', label: 'Guides' },
                 { href: '/contact', label: 'Contact' },
               ].map((link) => (
                 <Link

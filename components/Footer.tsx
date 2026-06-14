@@ -51,7 +51,7 @@ export default function Footer() {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About Us' },
     { href: '/location', label: 'Service Areas' },
-    { href: '/blog', label: 'Blog' },
+    { href: '/blog', label: 'Guides' },
     { href: '/contact', label: 'Contact' },
     { href: '/citations', label: 'Trust & Citations' },
     { href: '/privacy-policy', label: 'Privacy Policy' },

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   description: 'Call (833) 435-6610 for same-day portable toilet delivery. Clean units from $250, all 50 states. 99% on-time guarantee.',
   keywords: ['portable toilet rental', 'porta potty rental', 'portable restroom', 'event restrooms', 'construction site toilets', 'ADA portable toilet', 'luxury restroom trailer'],
-  authors: [{ name: 'Portable Toilets Champ' }],
+  authors: [{ name: 'Joey Beyer' }],
   verification: {
     google: 'dxlk6iHYw2jOUpAlhFWpKS8K8_B40F11MtRjo7S_S7M',
   },
@@ -76,8 +76,8 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col">
-        {/* Organization Schema for SEO */}
-        <OrganizationSchema />
+        {/* LocalBusiness Schema for SEO - only rendered on homepage */}
+        {/* OrganizationSchema /> */}
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

@@ -5,6 +5,8 @@ import { blogPosts } from '@/data/blog'
 import Testimonials from '@/components/Testimonials'
 import TrustBadges from '@/components/TrustBadges'
 import ReviewSchema from '@/components/schema/ReviewSchema'
+import OrganizationSchema from '@/components/schema/OrganizationSchema'
+import PersonSchema from '@/components/schema/PersonSchema'
 import ZipChecker from '@/components/ZipChecker'
 import UnitCalculator from '@/components/UnitCalculator'
 import UnitComparisonTable from '@/components/UnitComparisonTable'
@@ -160,6 +162,8 @@ const featuredPosts = blogPosts.slice(0, 4)
 export default function Home() {
   return (
     <>
+      <OrganizationSchema />
+      <PersonSchema />
       <ReviewSchema />
 
       {/* Hero Section - Bright, clean aesthetic for sanitation industry */}
