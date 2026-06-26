@@ -8,6 +8,7 @@ import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import PersonSchema from '@/components/schema/PersonSchema'
+import AIOPlanningSection from '@/components/AIOPlanningSection'
 import TLDRSummary from '@/components/TLDRSummary'
 import LastUpdated from '@/components/LastUpdated'
 
@@ -516,6 +517,15 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                     ))}
                   </div>
                 </div>
+              )}
+
+              {/* AIO-Target Content — Reddit-mined planning guidance per SITE-BUILD-2026 §4.0 */}
+              {isGmbPage && (
+                <AIOPlanningSection
+                  city={location.city}
+                  stateCode={location.stateCode}
+                  variant="event"
+                />
               )}
 
               {/* Services */}
