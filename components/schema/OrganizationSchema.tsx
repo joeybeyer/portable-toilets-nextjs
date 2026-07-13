@@ -52,7 +52,16 @@ export default function OrganizationSchema() {
     sameAs: [
       'https://www.facebook.com/portabletoiletschamp',
       'https://www.instagram.com/portabletoiletschamp',
-      'https://twitter.com/ptchamp'
+      'https://twitter.com/ptchamp',
+      'https://www.linkedin.com/company/portable-toilets-champ',
+      'https://www.yelp.com/biz/portable-toilets-champ-los-angeles',
+      'https://www.google.com/maps/place/Portable+Toilets+Champ',
+      'https://www.bbb.org/us/ca/los-angeles/profile/portable-toilet-rental/portable-toilets-champ',
+      'https://www.yellowpages.com/los-angeles-ca/portable-toilet-rental/portable-toilets-champ',
+      'https://www.superpages.com/los-angeles-ca/portable-toilet-rental/portable-toilets-champ',
+      'https://m.yelp.com/biz/portable-toilets-champ-los-angeles',
+      'https://www.mapquest.com/us/los-angeles-ca/portable-toilets-champ',
+      'https://foursquare.com/v/portable-toilets-champ'
     ]
   }
 
