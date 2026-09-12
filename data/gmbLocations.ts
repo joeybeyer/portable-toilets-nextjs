@@ -96,8 +96,6 @@ const locations = [
     metaDescription: meta('Chula Vista'),
     phone,
     address: '521A Orange Ave, Chula Vista, CA 91911',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9969.575116032276!2d-117.0717951!3d32.6029581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d94f5aa3d4247d%3A0xd79f082162337e24!2sPortable%20Toilets%20Champ!5e1!3m2!1sen!2sus!4v1779073392906!5m2!1sen!2sus',
-    hasMap: 'https://www.google.com/maps?cid=15533904099606855204',
     latitude: 32.6045,
     longitude: -117.0559,
     sidekick: 'With Higher Standards.',
