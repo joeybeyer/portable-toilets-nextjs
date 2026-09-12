@@ -225,8 +225,8 @@ export const locations: Location[] = [
     state: 'California',
     stateCode: 'CA',
     title: 'Porta Potty Rental San Francisco | Same-Day Delivery Available: Official Same-Day Delivery 2026',
-    metaDescription: 'Rent porta potties in San Francisco today! Same-day delivery, clean units from $250. Call (231) 452-0319 for your free quote on events & construction.',
-    phone: '(231) 452-0319',
+    metaDescription: 'Rent porta potties in San Francisco today! Same-day delivery, clean units from $250. Call (628) 281-2820 for your free quote on events & construction.',
+    phone: '(628) 281-2820',
     address: '1201 Pacific Ave, San Francisco, CA 94109',
     latitude: 37.79571,
     longitude: -122.4151800
