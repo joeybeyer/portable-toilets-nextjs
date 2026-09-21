@@ -458,6 +458,33 @@ const locations = [
       { title: 'Hospitality and private events', description: 'Hotels, restaurants, and waterfront venues often require restroom trailers or deluxe units with discreet delivery timing.' },
     ],
   },
+  {
+    slug: 'portable-toilet-rental-san-antonio-tx-jackson-keller',
+    city: 'San Antonio',
+    state: 'Texas',
+    stateCode: 'TX',
+    county: 'Bexar County',
+    postalCode: '78213',
+    title: 'Portable Toilet Rental San Antonio: Official Rapid Delivery 2026',
+    metaDescription: meta('San Antonio', '(726) 259-2495'),
+    phone: '(726) 259-2495',
+    address: '1602 Jackson Keller Rd, San Antonio, TX 78213',
+    latitude: 29.5095,
+    longitude: -98.5202,
+    sidekick: 'With Higher Standards.',
+    entityH2: 'Portable Toilets in San Antonio, Texas',
+    permitAuthority: 'City of San Antonio Parks and Recreation Department, Development Services, and the San Antonio Metropolitan Health District',
+    neighborhoods: ['Castle Hills', 'Shearer Hills', 'Dellview', 'Harmony Hills', 'Los Angeles Heights', 'Olmos Park', 'Balcones Heights'],
+    venues: ['Frost Bank Center', 'Alamodome', 'Freeman Coliseum', 'Phil Hardberger Park'],
+    industryClusters: ['medical center construction', 'Loop 410 highway work', 'festival and rodeo events', 'residential remodels'],
+    seasonalNotes: 'San Antonio rentals peak around the Stock Show & Rodeo in February, Fiesta in late April, and a long run of triple-digit summer days that call for tighter service intervals. Flash-flood season and occasional winter freezes can both affect soft-ground access and delivery timing.',
+    localIntro: 'Portable toilet rental in San Antonio from the Jackson Keller corridor covers North Central jobsites, Castle Hills remodels, medical district projects, and events across Bexar County. Our official service process accounts for Loop 410 and US 281 construction detours, South Texas Medical Center access rules, park permit conditions, and the servicing schedule that Texas summer heat demands.',
+    useCases: [
+      { title: 'Fiesta and rodeo season events', description: 'Permitted public events need ADA units, handwash stations, and a service plan that fits street closures, parade routes, and multi-day schedules.' },
+      { title: 'Medical center and Loop 410 jobsites', description: 'Hospital campus work and highway projects need units placed clear of lane closures and loading zones, with weekly or twice-weekly service in summer heat.' },
+      { title: 'North Central remodels and backyard events', description: 'Castle Hills, Olmos Park, and Shearer Hills projects usually need one or two compact units placed for narrow driveway and alley access.' },
+    ],
+  },
 ]
 
 export const gmbLocations = locations.map((location) => ({
