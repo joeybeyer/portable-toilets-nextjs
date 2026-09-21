@@ -1205,8 +1205,8 @@ Our service area covers all of Milwaukee and surrounding communities including W
     state: 'Texas',
     stateCode: 'TX',
     title: 'Portable Toilet Rental in San Antonio: Official Same-Day Delivery 2026',
-    metaDescription: 'Need porta potties in San Antonio? Same-day delivery for Fiesta & year-round events. From $250. Call (833) 435-6610 for free quote.',
-    phone: '(833) 435-6610',
+    metaDescription: 'Need porta potties in San Antonio? Same-day delivery for Fiesta & year-round events. From $250. Call (726) 255-7085 for free quote.',
+    phone: '(726) 255-7085',
     latitude: 29.4241,
     longitude: -98.4936
   },
