@@ -7,6 +7,9 @@ export interface Location {
   state: string
   stateCode: string
   title: string
+  // Locked H1 for already-indexed pages. Set this when a page gains GBP
+  // content (entityH2) after indexation, so the H1 does not silently change.
+  h1?: string
   metaDescription: string
   phone: string
   address?: string
@@ -1198,17 +1201,6 @@ Our service area covers all of Milwaukee and surrounding communities including W
     phone: '(833) 435-6610',
     latitude: 30.2672,
     longitude: -97.7431
-  },
-  {
-    slug: 'portable-toilet-rental-san-antonio-tx',
-    city: 'San Antonio',
-    state: 'Texas',
-    stateCode: 'TX',
-    title: 'Portable Toilet Rental in San Antonio: Official Same-Day Delivery 2026',
-    metaDescription: 'Need porta potties in San Antonio? Same-day delivery for Fiesta & year-round events. From $250. Call (726) 255-7085 for free quote.',
-    phone: '(726) 255-7085',
-    latitude: 29.4241,
-    longitude: -98.4936
   },
   {
     slug: 'portable-toilet-rental-dallas-tx',

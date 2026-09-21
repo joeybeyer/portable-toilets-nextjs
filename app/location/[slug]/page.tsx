@@ -176,7 +176,7 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
   const cityNeighborhoods = getNeighborhoodsByCitySlug(slug)
   const locationPhoneHref = `tel:${location.phone.replace(/[^0-9]/g, '')}`
   const isGmbPage = Boolean(location.entityH2)
-  const h1Text = isGmbPage ? `Portable Toilet Rental ${location.city}` : `Portable Toilet Rental in ${location.city}`
+  const h1Text = location.h1 || (isGmbPage ? `Portable Toilet Rental ${location.city}` : `Portable Toilet Rental in ${location.city}`)
 
   // Get blog posts - rotate through clusters based on location slug hash
   const clusters = ['event-rentals', 'construction-site', 'luxury-premium', 'ada-accessibility']
