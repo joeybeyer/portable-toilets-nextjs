@@ -803,26 +803,8 @@ export default async function LocationDetailPage({ params }: LocationPageProps) 
                 )}
               </div>
 
-              {/* Google Map Embed */}
-              {location.mapEmbed && (
-                <div>
-                  <h3 className="text-xl font-bold text-navy-900 mb-6">
-                    Our Location in {location.city}
-                  </h3>
-                  <div className="rounded-2xl overflow-hidden shadow-lg">
-                    <iframe
-                      src={location.mapEmbed}
-                      width="100%"
-                      height="400"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title={`Portable Toilets Champ location in ${location.city}`}
-                    />
-                  </div>
-                </div>
-              )}
+              {/* Map lives in the sidebar Find Us card only - this block used to
+                  render the same embed a second time on every GBP page. */}
             </div>
 
             {/* Sidebar */}
