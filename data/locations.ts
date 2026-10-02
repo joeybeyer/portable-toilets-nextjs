@@ -1181,17 +1181,6 @@ Our service area covers all of Milwaukee and surrounding communities including W
     longitude: -71.0589
   },
   {
-    slug: 'portable-toilet-rental-philadelphia-pa',
-    city: 'Philadelphia',
-    state: 'Pennsylvania',
-    stateCode: 'PA',
-    title: 'Portable Toilet Rental in Philadelphia: Official Same-Day Delivery 2026',
-    metaDescription: 'Philly event or construction site? Get portable toilets delivered fast. Clean units from $250. Call (833) 435-6610 for your free quote.',
-    phone: '(833) 435-6610',
-    latitude: 39.9526,
-    longitude: -75.1652
-  },
-  {
     slug: 'portable-toilet-rental-austin-tx',
     city: 'Austin',
     state: 'Texas',

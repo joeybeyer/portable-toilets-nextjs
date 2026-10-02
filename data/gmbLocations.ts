@@ -808,6 +808,37 @@ const locations = [
       { title: 'Industrial and road crews', description: 'Long-running industrial work and moving work zones need durable placement near gates and servicing around closures.' },
     ],
   },
+  {
+    slug: 'portable-toilet-rental-philadelphia-pa',
+    city: 'Philadelphia',
+    state: 'Pennsylvania',
+    stateCode: 'PA',
+    county: 'Philadelphia County',
+    postalCode: '19136',
+    // Title and h1 are locked to the indexed values on this URL. Do not edit.
+    title: 'Portable Toilet Rental in Philadelphia: Official Same-Day Delivery 2026',
+    h1: 'Portable Toilet Rental in Philadelphia',
+    metaDescription: meta('Philadelphia'),
+    phone,
+    address: '7601 Frankford Ave, Philadelphia, PA 19136',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.230194250766!2d-75.0344743!3d40.0387525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6b5457b9b886f%3A0x519522207cb79b52!2sPortable%20Toilets%20Champ!5e1!3m2!1sen!2sus!4v1790692137977!5m2!1sen!2sus',
+    hasMap: 'https://www.google.com/maps?cid=5878642411528756050',
+    latitude: 40.0388,
+    longitude: -75.0345,
+    sidekick: 'With Higher Standards.',
+    entityH2: 'Portable Toilets in Philadelphia, Pennsylvania',
+    permitAuthority: 'the Philadelphia Office of Special Events, Philadelphia Parks & Recreation, and the Streets Department for block parties',
+    neighborhoods: ['Holmesburg', 'Mayfair', 'Tacony', 'Frankford', 'Rhawnhurst', 'Bustleton', 'Torresdale'],
+    venues: ['Pennypack Park', 'Glen Foerd on the Delaware', 'FDR Park', 'Lincoln Financial Field'],
+    industryClusters: ['rowhome renovations', 'block parties', 'park festivals', 'riverfront industrial work'],
+    seasonalNotes: 'Philadelphia rentals run heaviest from spring through fall on block parties, park festivals, and street events, with freeze-thaw winters that affect ground access and humid summers that call for tighter service intervals.',
+    localIntro: 'Portable toilet rental in Philadelphia from the Frankford Avenue corridor covers Northeast Philly block parties, Pennypack Park events, rowhome renovations, and riverfront industrial work. Our official service process accounts for a few city rules that catch organizers out: Parks & Recreation does not supply restrooms, so the permit holder provides them, and an event running more than four days or using more than 15 units needs its own portable chemical toilet permit on top of the event permit.',
+    useCases: [
+      { title: 'Block parties and street events', description: 'Residential block parties are not special events in Philadelphia and go through the Streets Department on a separate application, so confirm the route before booking units.' },
+      { title: 'Park events and festivals', description: 'Parks & Rec provides no restrooms, and units on grass carry a per-unit fee plus another if left past 48 hours, so pickup timing matters as much as delivery.' },
+      { title: 'Rowhome and Northeast Philly construction', description: 'Narrow streets and shared driveways usually take one compact unit placed where the service truck can still reach it.' },
+    ],
+  },
 ]
 
 export const gmbLocations = locations.map((location) => ({
