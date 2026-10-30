@@ -192,7 +192,7 @@ async function sendBuyerFormLead(lead: { name?: string; email?: string; phone?: 
     const g = (k: string) => parts.find((x) => x.type === k)?.value || '';
     const date = `${g('month')}/${g('day')}/${g('year')} ${g('hour') === '24' ? '00' : g('hour')}:${g('minute')}:${g('second')}`;
     const extra = [lead.unit_type ? 'Unit: ' + lead.unit_type : '', lead.project_type ? 'Project: ' + lead.project_type : '',
-      lead.zip_code ? 'ZIP ' + lead.zip_code : '', 'Site: portabletoiletschamp.com'].filter(Boolean).join(' | ');
+      lead.zip_code ? 'ZIP ' + lead.zip_code : ''].filter(Boolean).join(' | ');
     const msg = [lead.message, extra].filter(Boolean).join('\n\n');
     const html = `<div style="font-family:Arial,sans-serif;font-size:14px;color:#222">
 <p><b>Date:</b> ${esc(date)}<br><b>Type:</b> Porta Potty Rental</p>
