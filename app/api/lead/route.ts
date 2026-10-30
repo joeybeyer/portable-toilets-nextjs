@@ -85,8 +85,7 @@ export async function POST(req: Request) {
     // Send email via Resend
     const { error } = await resend.emails.send({
       from: 'Portable Toilets Champ <info@portabletoiletschamp.com>',
-      to: ['info@portabletoiletschamp.com', 'garrett@primedumpster.com'],
-      bcc: ['leads@primedumpster.com'],
+      to: ['info@portabletoiletschamp.com'],
       replyTo: email || 'info@portabletoiletschamp.com',
       subject: emailSubject,
       html: `
@@ -108,6 +107,9 @@ export async function POST(req: Request) {
         <p><strong>UTM Campaign:</strong> ${utm_campaign || ''}</p>
       `,
     });
+
+    // The buyer (Prime Dumpster) gets its OWN copy in the layout its inbox already expects.
+    await sendBuyerFormLead({ name, email, phone, message, project_type, unit_type, zip_code });
 
     if (error) {
       console.error(error);
@@ -174,5 +176,38 @@ export async function POST(req: Request) {
       { success: false, error: 'Failed to submit lead' },
       { status: 500 }
     );
+  }
+}
+
+const esc = (v: unknown) => String(v ?? '').replace(/[<>&"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c] as string));
+
+// Prime Dumpster's "New Form Lead" layout (what their other publishers send):
+// Date / Type / Name / Email / Phone / Message, subject exactly "New Form Lead".
+async function sendBuyerFormLead(lead: { name?: string; email?: string; phone?: string; message?: string;
+  project_type?: string; unit_type?: string; zip_code?: string }) {
+  try {
+    const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', hour12: false,
+      year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' })
+      .formatToParts(new Date());
+    const g = (k: string) => parts.find((x) => x.type === k)?.value || '';
+    const date = `${g('month')}/${g('day')}/${g('year')} ${g('hour') === '24' ? '00' : g('hour')}:${g('minute')}:${g('second')}`;
+    const extra = [lead.unit_type ? 'Unit: ' + lead.unit_type : '', lead.project_type ? 'Project: ' + lead.project_type : '',
+      lead.zip_code ? 'ZIP ' + lead.zip_code : '', 'Site: portabletoiletschamp.com'].filter(Boolean).join(' | ');
+    const msg = [lead.message, extra].filter(Boolean).join('\n\n');
+    const html = `<div style="font-family:Arial,sans-serif;font-size:14px;color:#222">
+<p><b>Date:</b> ${esc(date)}<br><b>Type:</b> Porta Potty Rental</p>
+<p><b>Name:</b> ${esc(lead.name || '-')}<br><b>Email:</b> ${esc(lead.email || '-')}<br><b>Phone:</b> ${esc(lead.phone || '-')}</p>
+<p><b>Message:</b></p><p>${esc(msg).replace(/\n/g, '<br>')}</p></div>`;
+    const { error } = await resend.emails.send({
+      from: 'Portable Toilets Champ <info@portabletoiletschamp.com>',
+      to: ['garrett@primedumpster.com'],
+      bcc: ['leads@primedumpster.com'],
+      ...(lead.email ? { replyTo: lead.email } : {}),
+      subject: 'New Form Lead',
+      html,
+    });
+    if (error) console.error('Error sending buyer form lead:', error);
+  } catch (e) {
+    console.error('Error sending buyer form lead:', e);
   }
 }
